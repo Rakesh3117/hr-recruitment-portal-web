@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { 
-  Briefcase, 
   Menu, 
   X, 
   ChevronRight, 
@@ -12,6 +11,7 @@ import {
   FileCheck2,
   Handshake
 } from 'lucide-react';
+import logoImg from '../../assets/logo.jpg';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -70,13 +70,13 @@ const Navbar = () => {
           
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 2xl:gap-3 group shrink-0 whitespace-nowrap">
-            <div className="w-10 h-10 2xl:w-11 2xl:h-11 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white shadow-md shadow-primary/20 group-hover:scale-105 transition-transform duration-200 shrink-0">
-              <Briefcase className="w-5 h-5 2xl:w-6 2xl:h-6" />
+            <div className="w-10 h-10 2xl:w-11 2xl:h-11 rounded-xl bg-white border border-border/80 p-0.5 flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform duration-200 shrink-0 overflow-hidden">
+              <img src={logoImg} alt="HR ANAND Logo" className="w-full h-full object-contain" />
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5">
-                <span className="text-lg 2xl:text-xl font-bold tracking-tight text-navy font-sans">
-                  Acuity
+                <span className="text-lg 2xl:text-xl font-extrabold tracking-tight text-navy font-sans">
+                  HR ANAND
                 </span>
                 <span className="text-[10px] 2xl:text-xs font-semibold px-1.5 py-0.5 rounded bg-lavender-soft text-primary">
                   GLOBAL

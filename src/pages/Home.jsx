@@ -646,7 +646,7 @@ const Home = () => {
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
           <div>
             <span className="text-xs font-bold uppercase tracking-wider text-teal">
-              Acuity In Action
+              HR ANAND In Action
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-navy mt-1">
               Enterprise Talent & Global Delivery Hubs

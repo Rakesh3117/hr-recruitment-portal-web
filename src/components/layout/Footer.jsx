@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { 
-  Briefcase, 
   MapPin, 
   Phone, 
   Mail, 
@@ -9,6 +8,7 @@ import {
   CheckCircle2 
 } from 'lucide-react';
 import statsData from '../../data/stats.json';
+import logoImg from '../../assets/logo.jpg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -23,13 +23,13 @@ const Footer = () => {
           
           {/* Brand & Corporate Office Column */}
           <div className="lg:col-span-2 space-y-4">
-            <Link to="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white shadow-md">
-                <Briefcase className="w-5 h-5" />
+            <Link to="/" className="flex items-center gap-3 group">
+              <div className="w-10 h-10 rounded-xl bg-white p-0.5 flex items-center justify-center shadow-md overflow-hidden shrink-0 group-hover:scale-105 transition-transform duration-200">
+                <img src={logoImg} alt="HR ANAND Logo" className="w-full h-full object-contain" />
               </div>
               <div>
                 <span className="text-xl font-bold tracking-tight text-white">
-                  Acuity Talent Partners
+                  HR ANAND
                 </span>
                 <p className="text-xs text-lavender-soft/70">
                   Global Executive Search & Staffing
@@ -60,8 +60,8 @@ const Footer = () => {
 
               <div className="flex items-center gap-2.5 pl-6 text-xs">
                 <Mail className="w-3.5 h-3.5 text-teal" />
-                <a href="mailto:info@acuitytalent.com" className="hover:text-white transition-colors">
-                  info@acuitytalent.com
+                <a href="mailto:info@hranand.com" className="hover:text-white transition-colors">
+                  info@hranand.com
                 </a>
               </div>
             </div>
@@ -187,7 +187,7 @@ const Footer = () => {
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-grey-light">
           
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-center md:text-left">
-            <span>© {currentYear} Acuity Talent Partners. All rights reserved.</span>
+            <span>© {currentYear} HR ANAND. All rights reserved.</span>
             <Link to="/contact" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/contact" className="hover:text-white transition-colors">Terms of Service</Link>
             <Link to="/contact" className="hover:text-white transition-colors">Candidate Charter</Link>

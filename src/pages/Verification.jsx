@@ -72,7 +72,7 @@ const Verification = () => {
     },
     {
       q: "What is your Genuineness & Replacement Guarantee?",
-      a: "If any candidate placed through Acuity exits, underperforms, or is found to have misrepresented verified information within 90 calendar days of joining, we source and place an equivalent replacement at zero additional recruitment cost."
+      a: "If any candidate placed through HR ANAND exits, underperforms, or is found to have misrepresented verified information within 90 calendar days of joining, we source and place an equivalent replacement at zero additional recruitment cost."
     },
     {
       q: "How fast can you deliver verified candidate shortlists?",
@@ -96,7 +96,7 @@ const Verification = () => {
             <div className="lg:col-span-7 space-y-6 text-left">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-success border border-success/30 shadow-xs text-xs font-bold uppercase tracking-wider">
                 <ShieldCheck className="w-4 h-4 text-success" />
-                <span>The Acuity Trust Standard</span>
+                <span>The HR ANAND Trust Standard</span>
               </div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-navy leading-tight">
                 100% Genuine.<br />
@@ -399,7 +399,7 @@ const Verification = () => {
             <div className="pt-4 border-t border-white/10 flex items-center justify-between gap-3 flex-wrap">
               <div className="text-xs text-grey-light flex items-center gap-1.5">
                 <Lock className="w-3.5 h-3.5 text-teal" />
-                <span>Verified on {activeCandidate.verification.verifiedOn} by Acuity Enterprise Desk</span>
+                <span>Verified on {activeCandidate.verification.verifiedOn} by HR ANAND Enterprise Desk</span>
               </div>
 
               <div className="flex items-center gap-2">
@@ -435,7 +435,7 @@ const Verification = () => {
                 Digital Verification Summary
               </span>
               <h3 className="text-2xl font-bold text-navy mt-1">
-                The Acuity Verification Certificate
+                The HR ANAND Verification Certificate
               </h3>
               <p className="text-xs text-grey mt-0.5">
                 Included with every candidate profile shared with client hiring authorities.

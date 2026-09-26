@@ -207,7 +207,7 @@ const SuccessStories = () => {
           <div className="max-w-3xl mx-auto text-center space-y-6 relative z-10">
             <ShieldCheck className="w-12 h-12 text-success mx-auto" />
             <blockquote className="text-xl sm:text-2xl font-medium tracking-tight text-white leading-relaxed">
-              "Every candidate Acuity sent us had already been through reference and background checks — it cut our internal screening time in half."
+              "Every candidate HR ANAND sent us had already been through reference and background checks — it cut our internal screening time in half."
             </blockquote>
             <div className="flex items-center justify-center gap-3">
               <img 

@@ -64,19 +64,19 @@ const Company = () => {
       <section className="bg-gradient-to-b from-lavender-light via-lavender-soft/30 to-background py-16 lg:py-24 border-b border-border/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
           <span className="inline-block px-3.5 py-1 rounded-full text-xs font-semibold bg-white text-primary border border-lavender-soft mb-4">
-            About Acuity Talent Partners
+            About HR ANAND
           </span>
           <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-navy leading-tight">
             Building Leadership & Human Capital That Endures
           </h1>
           <p className="mt-4 text-base sm:text-lg text-grey leading-relaxed">
-            For more than three decades, Acuity has served as the strategic talent partner for Fortune 500 MNCs, high-growth technology enterprises, and leading Indian conglomerates.
+            For more than three decades, HR ANAND has served as the strategic talent partner for Fortune 500 MNCs, high-growth technology enterprises, and leading Indian conglomerates.
           </p>
 
           <div className="mt-10 max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-card border border-lavender-soft relative">
             <img 
               src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" 
-              alt="Acuity Corporate Headquarters" 
+              alt="HR ANAND Corporate Headquarters" 
               className="w-full h-64 sm:h-80 object-cover"
               loading="lazy"
             />
@@ -148,7 +148,7 @@ const Company = () => {
                 Leadership Council
               </div>
               <div className="text-xs text-lavender-soft/70">
-                Acuity Talent Partners Global Board
+                HR ANAND Global Board
               </div>
             </div>
           </div>

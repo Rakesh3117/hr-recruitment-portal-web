@@ -130,7 +130,7 @@ const Contact = () => {
                 </span>
                 <div className="absolute bottom-3 left-4 right-4">
                   <h3 className="text-xl font-bold text-white drop-shadow-xs">
-                    Acuity Talent Partners
+                    HR ANAND
                   </h3>
                 </div>
               </div>
@@ -161,8 +161,8 @@ const Contact = () => {
                   <Mail className="w-5 h-5 text-teal shrink-0" />
                   <div>
                     <div className="font-semibold text-white text-xs">Email Desk</div>
-                    <a href="mailto:info@acuitytalent.com" className="hover:text-white transition-colors text-xs text-teal-light">
-                      info@acuitytalent.com
+                    <a href="mailto:info@hranand.com" className="hover:text-white transition-colors text-xs text-teal-light">
+                      info@hranand.com
                     </a>
                   </div>
                 </div>
