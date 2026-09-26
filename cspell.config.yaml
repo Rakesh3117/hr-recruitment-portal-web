@@ -10,6 +10,8 @@ ignorePaths:
   - ".git/**"
   - "**/*.svg"
   - "public/**"
+  - "netlify.toml"
+  - "_redirects"
 
 words:
   - Actimize
