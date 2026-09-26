@@ -1,0 +1,116 @@
+[
+  {
+    "id": "search-capabilities",
+    "title": "Search Capabilities",
+    "tagline": "Executive and Specialist Search",
+    "description": "Finding senior, hard-to-source talent for critical, high-impact leadership and technical roles through rigorous market mapping and discreet headhunting.",
+    "deliverables": [
+      "Board, C-Suite, and VP-level executive searches",
+      "Discreet passive candidate mapping across competitor landscapes",
+      "Comprehensive leadership competency and culture-fit assessments",
+      "Confidential compensation benchmarking and negotiation advisory"
+    ],
+    "idealFor": "MNCs seeking transformative CXOs, practice heads, and niche technology architects.",
+    "icon": "Search"
+  },
+  {
+    "id": "interview-as-a-service",
+    "title": "Interview as a Service (IaaS)",
+    "tagline": "Vetted Subject Matter Expert Panels at Scale",
+    "description": "Structured interview panels and technical evaluation delivered on the client's behalf, removing internal hiring bottlenecks and standardizing assessment rubrics.",
+    "deliverables": [
+      "On-demand panels of certified domain practitioners & tech leads",
+      "Standardized coding, architectural, and behavioral evaluation rubrics",
+      "Detailed candidate scorecard with interview video recording and analysis",
+      "5x reduction in internal engineering and manager interview hours"
+    ],
+    "idealFor": "Rapid hiring blitzes and technical calibrations without overburdening core engineering teams.",
+    "icon": "Video"
+  },
+  {
+    "id": "contingency-recruitment",
+    "title": "Contingency Recruitment",
+    "tagline": "Pay-on-Placement Agility",
+    "description": "Rapid fulfillment of individual roles without long-term retainers. Pay only upon successful placement and candidate onboarding.",
+    "deliverables": [
+      "Access to our pre-screened database of 1.1L+ active and passive candidates",
+      "Shortlist delivery within 48 to 72 hours of mandate calibration",
+      "90-day candidate replacement guarantee for peace of mind",
+      "Dedicated vertical recruiter assigned as your single point of contact"
+    ],
+    "idealFor": "Mid-to-senior volume hiring where speed-to-hire and flexibility are paramount.",
+    "icon": "Zap"
+  },
+  {
+    "id": "staffing-services",
+    "title": "Staffing Services",
+    "tagline": "Contract, Temporary & Flex Workforce",
+    "description": "Flexible workforce deployment for project-based, seasonal, or specialized surge requirements with complete statutory compliance handling.",
+    "deliverables": [
+      "Contract-to-hire and project-based specialist deployment",
+      "100% statutory, labor law, payroll, and benefits compliance",
+      "Rapid turnaround: onboard specialized talent in under 10 business days",
+      "Transparent monthly billing and SLA-driven performance reviews"
+    ],
+    "idealFor": "Time-sensitive engineering projects, maternity covers, and seasonal scale-ups.",
+    "icon": "Users"
+  },
+  {
+    "id": "incubating-gics",
+    "title": "Incubating Global In-House Centers (GICs)",
+    "tagline": "Captive Center Build-Out & Scale",
+    "description": "End-to-end turnkey support standing up a client's captive delivery center, technology hub, or CoE from greenfield entity setup to 1,000+ headcount.",
+    "deliverables": [
+      "Talent availability and city tiering feasibility studies",
+      "Leadership core hiring followed by synchronized cohort wave onboarding",
+      "Employer branding, local campus alliances, and market compensation indexing",
+      "Facility advisory, statutory registrations, and vendor ecosystem setup"
+    ],
+    "idealFor": "Fortune 500s and global unicorns establishing strategic engineering or shared service hubs in India.",
+    "icon": "Building2"
+  },
+  {
+    "id": "rpo",
+    "title": "Recruitment Process Outsourcing (RPO)",
+    "tagline": "Embedded Pipeline Ownership",
+    "description": "Full or modular ownership of your talent acquisition pipeline — sourcing, screening, coordination, ATS management, through final onboarding.",
+    "deliverables": [
+      "Dedicated onsite/remote talent acquisition partner teams",
+      "Modern ATS tech stack integration and recruitment analytics dashboards",
+      "Significant reduction in cost-per-hire (typically 25-40% savings)",
+      "Standardized employer value proposition (EVP) and candidate journey"
+    ],
+    "idealFor": "Enterprises scaling rapidly across multiple geographies needing institutional hiring maturity.",
+    "icon": "Repeat"
+  },
+  {
+    "id": "candidate-verification-services",
+    "title": "Candidate Verification Services",
+    "tagline": "Standalone or Bundled Background & Credential Verification",
+    "description": "Comprehensive identity, education, employment tenure, and professional reference verification for candidates you've already sourced yourself — ensuring zero fabricated profiles.",
+    "deliverables": [
+      "Government-issued identity & photo biometric authentication",
+      "Direct university & institutional degree certificate validation",
+      "Past employer HR tenure, designation, and exit reason confirmation",
+      "Two independent professional reference interviews with written transcripts"
+    ],
+    "idealFor": "Enterprises seeking to de-risk self-sourced candidate funnels and contract staff.",
+    "icon": "ShieldCheck",
+    "link": "/verification"
+  },
+  {
+    "id": "diversity-inclusion-practice",
+    "title": "Diversity & Inclusion Practice",
+    "tagline": "Equitable & Representative Talent Pipelines",
+    "description": "A dedicated advisory and sourcing service line empowering organizations to build genuinely balanced, high-performing, and inclusive workforces.",
+    "deliverables": [
+      "Curated sourcing through affinity networks and return-to-work programs",
+      "Bias-neutral job descriptions and structured blind resume reviews",
+      "Representation dashboards tracking diversity metrics across hiring funnels",
+      "Sensitization workshops for hiring managers and interview panels"
+    ],
+    "idealFor": "Organizations committed to measurable ESG and workplace diversity goals.",
+    "icon": "HeartHandshake",
+    "link": "/diversity-inclusion"
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "partner-req-001",
+    "companyName": "Novartis Healthcare GBS",
+    "industry": "IT Enabled Services",
+    "companySize": "10,000+ employees",
+    "annualHiringVolume": "250 - 500 hires/year",
+    "locations": ["Hyderabad", "Bengaluru", "Basel"],
+    "preferredModel": "RPO (full pipeline)",
+    "currentChallenges": "Need dedicated clinical research & data engineering pipelines with strict FDA/ICH-GCP regulatory pre-screening.",
+    "contact": {
+      "name": "Dr. Sarah Thornton",
+      "designation": "Global Head of Strategic Talent Acquisition",
+      "email": "sarah.thornton@novartis.example.com",
+      "phone": "+41 61 324 1111"
+    },
+    "preferredCallSlot": "2026-10-02T14:30",
+    "status": "Proposal Review"
+  },
+  {
+    "id": "partner-req-002",
+    "companyName": "Schneider Electric Tech Hub",
+    "industry": "Power & Energy",
+    "companySize": "5,000 - 10,000 employees",
+    "annualHiringVolume": "100 - 250 hires/year",
+    "locations": ["Bengaluru", "Chennai"],
+    "preferredModel": "Embedded Staffing Team",
+    "currentChallenges": "Rapid multi-year scaling for smart grid, microgrid, and IoT firmware teams requiring continuous talent benchmarking.",
+    "contact": {
+      "name": "Arun K. Nair",
+      "designation": "Director — HR Global Innovation",
+      "email": "arun.nair@se.example.com",
+      "phone": "+91 80 4900 2000"
+    },
+    "preferredCallSlot": "2026-10-05T11:00",
+    "status": "Discovery Call Completed"
+  }
+]

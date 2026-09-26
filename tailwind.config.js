@@ -9,13 +9,41 @@ export default {
          ================================ */
       colors: {
         /* Brand */
-        primary: "#4F46E5",
+        primary: {
+          DEFAULT: "#4338CA",
+          hover: "#3730A3",
+          light: "#EEF2FF",
+        },
         secondary: "#6366F1",
         tertiary: "#8B5CF6",
+        accent: {
+          DEFAULT: "#7C3AED",
+          hover: "#6D28D9",
+          light: "#F5F3FF",
+        },
+        teal: {
+          DEFAULT: "#0E7490",
+          hover: "#155E75",
+          light: "#ECFEFF",
+          subtle: "#F0FDFA",
+          dark: "#083344",
+        },
 
-        /* Base */
+        /* Text & Base */
+        navy: {
+          DEFAULT: "#1E1B4B",
+          dark: "#0F172A",
+          muted: "#312E81",
+        },
         white: "#FFFFFF",
-        grey: "#64748B",
+        grey: {
+          DEFAULT: "#6B7280",
+          light: "#9CA3AF",
+          dark: "#4B5563",
+          50: "#F9FAFB",
+          100: "#F3F4F6",
+          200: "#E5E7EB",
+        },
 
         /* Background */
         background: "#F8FAFC",
@@ -28,7 +56,8 @@ export default {
 
         /* Lavender */
         "lavender-light": "#F5F3FF",
-        "lavender-soft": "#EEF2FF",
+        "lavender-soft": "#EDE9FE",
+        "lavender-muted": "#EEF2FF",
 
         /* Status */
         success: "#16A34A",

@@ -1,0 +1,95 @@
+{
+  "footprint": [
+    {
+      "value": "30+",
+      "label": "Years",
+      "subtext": "A quarter century of executive search, building leadership pipelines that endure.",
+      "highlight": "Interns we placed years ago are today senior executives — that network still works for our clients."
+    },
+    {
+      "value": "1.1L+",
+      "label": "Placements",
+      "subtext": "Successful career moves engineered across entry to C-suite roles worldwide.",
+      "highlight": "Over 88% of our placed candidates stay 3+ years in their respective organizations."
+    },
+    {
+      "value": "25+",
+      "label": "Verticals",
+      "subtext": "Specialized sector practice leads with deep domain and functional immersion.",
+      "highlight": "From DeepTech and Autonomous Systems to High Finance and Luxury Hospitality."
+    },
+    {
+      "value": "7",
+      "label": "Locations",
+      "subtext": "Pan-India delivery hubs plus strategic international offices in Singapore, Qatar, and Dubai.",
+      "highlight": "Local market knowledge coupled with cross-border search capabilities."
+    }
+  ],
+  "keyMetrics": {
+    "openRolesCount": 1797,
+    "clientRetentionRate": "96%",
+    "avgFulfillmentDays": "18 Days",
+    "interviewToOfferRatio": "3:1",
+    "verifiedPercentage": "100%",
+    "minReferencesChecked": "2+",
+    "replacementGuaranteeDays": "90"
+  },
+  "offices": [
+    {
+      "city": "Mumbai",
+      "address": "Level 14, Tower B, One International Center, Senapati Bapat Marg, Elphinstone Road",
+      "pincode": "400013",
+      "phone": "+91-22-6789-4000",
+      "email": "mumbai@acuitytalent.com",
+      "isHeadquarters": true
+    },
+    {
+      "city": "Bengaluru",
+      "address": "Prestige Meridian, 8th Floor, MG Road",
+      "pincode": "560001",
+      "phone": "+91-80-4123-8900",
+      "email": "bengaluru@acuitytalent.com",
+      "isHeadquarters": false
+    },
+    {
+      "city": "Delhi NCR / Gurugram",
+      "address": "DLF Cyber City, Building 10, Tower C, DLF Phase 2",
+      "pincode": "122002",
+      "phone": "+91-124-456-7890",
+      "email": "delhincr@acuitytalent.com",
+      "isHeadquarters": false
+    },
+    {
+      "city": "Pune",
+      "address": "Panchshil Business Park, Tower A, Baner",
+      "pincode": "411045",
+      "phone": "+91-20-6644-2200",
+      "email": "pune@acuitytalent.com",
+      "isHeadquarters": false
+    },
+    {
+      "city": "Hyderabad",
+      "address": "Cyber Towers, Hitec City, Madhapur",
+      "pincode": "500081",
+      "phone": "+91-40-6712-3400",
+      "email": "hyderabad@acuitytalent.com",
+      "isHeadquarters": false
+    },
+    {
+      "city": "Chennai",
+      "address": "Olympia Technology Park, Guindy",
+      "pincode": "600032",
+      "phone": "+91-44-4289-5500",
+      "email": "chennai@acuitytalent.com",
+      "isHeadquarters": false
+    },
+    {
+      "city": "Singapore (International Hub)",
+      "address": "Marina Bay Financial Centre, Tower 2, Level 28",
+      "pincode": "018983",
+      "phone": "+65-6817-9100",
+      "email": "singapore@acuitytalent.com",
+      "isHeadquarters": false
+    }
+  ]
+}

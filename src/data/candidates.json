@@ -1,0 +1,83 @@
+[
+  {
+    "id": "cand-001",
+    "name": "Arjun Sundaram",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=250&q=80",
+    "roleAppliedFor": "DevOps Platform Engineer",
+    "currentCompany": "Global Cloud Services Ltd",
+    "experience": "8.5 Years",
+    "location": "Pune, India",
+    "roleFitScore": "94%",
+    "verification": {
+      "identityVerified": true,
+      "educationVerified": true,
+      "employmentVerified": true,
+      "referencesChecked": 2,
+      "skillAssessmentScore": "92%",
+      "backgroundCheckStatus": "Cleared",
+      "verifiedOn": "2026-09-18",
+      "verifiedBy": "Rohan Deshmukh (Principal SRE Assessor)"
+    },
+    "verifiedBadges": [
+      "Government ID Authenticated",
+      "B.Tech Computer Science Confirmed",
+      "Previous HR Tenure Validated",
+      "2 Managerial References Contacted",
+      "Hands-On Terraform & K8s Evaluated"
+    ]
+  },
+  {
+    "id": "cand-002",
+    "name": "Meera Nambiar",
+    "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=250&q=80",
+    "roleAppliedFor": "VP — Institutional Equities",
+    "currentCompany": "Tier-1 Domestic Securities",
+    "experience": "11 Years",
+    "location": "Mumbai, India",
+    "roleFitScore": "96%",
+    "verification": {
+      "identityVerified": true,
+      "educationVerified": true,
+      "employmentVerified": true,
+      "referencesChecked": 3,
+      "skillAssessmentScore": "95%",
+      "backgroundCheckStatus": "Cleared",
+      "verifiedOn": "2026-09-21",
+      "verifiedBy": "Sunita Rao (BFSI Executive Practice Head)"
+    },
+    "verifiedBadges": [
+      "Passport & Aadhaar Verified",
+      "IIM MBA & CFA Charter Confirmed",
+      "FPI Compliance Track Record Vetted",
+      "3 Managing Director References Checked",
+      "Financial Modeling Test Scored 95%"
+    ]
+  },
+  {
+    "id": "cand-003",
+    "name": "Karthik Venkatraman",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=250&q=80",
+    "roleAppliedFor": "Principal Architect — ADAS",
+    "currentCompany": "Tier-1 Automotive R&D",
+    "experience": "13 Years",
+    "location": "Bengaluru, India",
+    "roleFitScore": "91%",
+    "verification": {
+      "identityVerified": true,
+      "educationVerified": true,
+      "employmentVerified": true,
+      "referencesChecked": 2,
+      "skillAssessmentScore": "89%",
+      "backgroundCheckStatus": "Cleared",
+      "verifiedOn": "2026-09-22",
+      "verifiedBy": "Anand Kulkarni (Auto Tech Practice Lead)"
+    },
+    "verifiedBadges": [
+      "National Identity Verified",
+      "M.Tech Embedded Systems Verified",
+      "12-Year OEM Tenure Documented",
+      "ISO 26262 ASIL-D Credentials Vetted",
+      "Technical Panel Evaluation Score 89%"
+    ]
+  }
+]

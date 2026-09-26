@@ -1,0 +1,137 @@
+[
+  {
+    "id": "automotive-engineering-manufacturing",
+    "name": "Automotive, Engineering & Manufacturing",
+    "industryQuery": "Automotive, Engineering & Manufacturing",
+    "icon": "Car",
+    "description": "Connecting OEMs, Tier-1 suppliers, and precision manufacturers with innovators across EV powertrains, ADAS, Industry 4.0, and robotics.",
+    "sampleRoles": [
+      "Chief Technology Officer — EV",
+      "Principal ADAS Software Architect",
+      "Plant Operations Director",
+      "Head of Global Sourcing & Procurement"
+    ],
+    "placementsCount": "14,200+",
+    "highlights": "Partnered with 4 of the world's top 10 automotive OEMs in building India R&D centers."
+  },
+  {
+    "id": "banking-financial-services",
+    "name": "Banking & Financial Services",
+    "industryQuery": "Banking & Financial Services",
+    "icon": "Landmark",
+    "description": "Empowering investment banks, private equity funds, retail lenders, and FinTech pioneers with front-office, quantitative, and risk talent.",
+    "sampleRoles": [
+      "VP — Institutional Equities",
+      "Chief Risk Officer (CRO)",
+      "Head of Financial Crime Compliance",
+      "Senior Quant Portfolio Manager"
+    ],
+    "placementsCount": "22,500+",
+    "highlights": "Over 20 years placing institutional desks across Mumbai, Singapore, and London corridors."
+  },
+  {
+    "id": "information-technology",
+    "name": "Information Technology",
+    "industryQuery": "Information Technology",
+    "icon": "Code2",
+    "description": "Fulfilling urgent mandates across Generative AI, cloud platform engineering, cybersecurity, microservices, and enterprise SaaS systems.",
+    "sampleRoles": [
+      "DevOps / SRE Platform Architect",
+      "Staff Full-Stack AI Engineer",
+      "Chief Information Security Officer (CISO)",
+      "Principal Data Platform Engineer"
+    ],
+    "placementsCount": "38,000+",
+    "highlights": "Specialized tech recruiters with hands-on coding and systems evaluation backgrounds."
+  },
+  {
+    "id": "it-enabled-services",
+    "name": "IT Enabled Services",
+    "industryQuery": "IT Enabled Services",
+    "icon": "Server",
+    "description": "Powering global capability centers (GCCs), clinical data operations, shared service centers, and high-velocity BPO operations.",
+    "sampleRoles": [
+      "Lead Clinical Data Architect",
+      "Director — Center Operations & Quality",
+      "Global Delivery Head",
+      "Process Automation & RPA Lead"
+    ],
+    "placementsCount": "19,800+",
+    "highlights": "Built 15+ GCC captive centers from initial charter to 1,500+ professionals."
+  },
+  {
+    "id": "shipping-logistics",
+    "name": "Shipping & Logistics",
+    "industryQuery": "Shipping & Logistics",
+    "icon": "Ship",
+    "description": "Strengthening supply chains with leaders in multimodal freight forwarding, maritime operations, automated warehousing, and cold chain.",
+    "sampleRoles": [
+      "Director — Global Supply Chain",
+      "Maritime Fleet Operations Manager",
+      "Regional Distribution Hub Head",
+      "Customs & Trade Compliance Lead"
+    ],
+    "placementsCount": "8,400+",
+    "highlights": "Dominant recruitment partner for leading international ocean liners and 3PL networks."
+  },
+  {
+    "id": "retail-ecommerce",
+    "name": "Retail & E-Commerce",
+    "industryQuery": "Retail & E-Commerce",
+    "icon": "ShoppingBag",
+    "description": "Catalyzing omnichannel growth, quick commerce logistics, digital merchandising, and direct-to-consumer (D2C) brand scale.",
+    "sampleRoles": [
+      "Head of Omnichannel Growth",
+      "VP — Category Management & Merchandising",
+      "Chief Marketing Officer (CMO)",
+      "Dark Store Operations Director"
+    ],
+    "placementsCount": "9,600+",
+    "highlights": "Placed key executives across India's largest retail conglomerates and hyper-growth apps."
+  },
+  {
+    "id": "travel-hospitality",
+    "name": "Travel & Hospitality",
+    "industryQuery": "Travel & Hospitality",
+    "icon": "Compass",
+    "description": "Curating exceptional leaders for ultra-luxury resorts, corporate business hotels, aviation carriers, and online travel booking aggregators.",
+    "sampleRoles": [
+      "General Manager — Luxury Resort",
+      "VP — Global Sales & Revenue Management",
+      "Corporate Executive Chef",
+      "Aviation Operations Director"
+    ],
+    "placementsCount": "6,300+",
+    "highlights": "Exclusive executive search mandate partner for award-winning luxury hotel chains."
+  },
+  {
+    "id": "education",
+    "name": "Education",
+    "industryQuery": "Education",
+    "icon": "GraduationCap",
+    "description": "Shaping academic excellence and modern pedagogy across international K-12 networks, premier universities, and venture-backed EdTechs.",
+    "sampleRoles": [
+      "Director of STEM Academics",
+      "University Vice Chancellor",
+      "Head of Digital Learning & Instructional Design",
+      "Dean of Executive Education"
+    ],
+    "placementsCount": "4,900+",
+    "highlights": "Trusted advisor to leading global school foundations and higher education institutions."
+  },
+  {
+    "id": "power-energy",
+    "name": "Power & Energy",
+    "industryQuery": "Power & Energy",
+    "icon": "Zap",
+    "description": "Accelerating the energy transition with proven specialists across utility-scale Solar PV, green hydrogen, battery storage, and transmission.",
+    "sampleRoles": [
+      "Chief Engineer — Solar & Grid Storage",
+      "VP — Green Hydrogen Project Development",
+      "Head of Regulatory Affairs & PPA",
+      "Wind Farm EPC Project Director"
+    ],
+    "placementsCount": "5,700+",
+    "highlights": "Deeply engaged in gigawatt-scale renewable infrastructure projects across South Asia."
+  }
+]

@@ -1,0 +1,367 @@
+[
+  {
+    "id": "devops-platform-engineer-pune",
+    "title": "DevOps Platform Engineer",
+    "clientType": "Tier-1 Global IT Service MNC",
+    "location": "Pune, Kharadi",
+    "workMode": "Hybrid",
+    "experience": "8+ years",
+    "compensation": "₹22 - ₹28 LPA",
+    "industry": "Information Technology",
+    "category": "Cloud & Infrastructure",
+    "postedDate": "2 days ago",
+    "openings": 4,
+    "aboutRole": "We are seeking a senior DevOps Platform Engineer for a Tier-1 Global IT MNC to architect, automate, and scale containerized multi-cloud infrastructure supporting mission-critical enterprise applications.",
+    "responsibilities": [
+      "Architect and maintain production Kubernetes clusters on AWS and Azure with zero-downtime deployment pipelines.",
+      "Implement Infrastructure-as-Code (IaC) using Terraform, Ansible, and Helm charts across multi-region environments.",
+      "Build CI/CD automation pipelines using GitHub Actions, GitLab CI, and ArgoCD with automated security gates.",
+      "Establish observability, distributed tracing, and automated alerting using Prometheus, Grafana, and Datadog.",
+      "Partner with development teams to optimize containerized microservices and drive cloud-native FinOps practices."
+    ],
+    "requiredSkills": [
+      "Kubernetes & Docker container orchestration",
+      "Terraform / OpenTofu (IaC)",
+      "AWS / Azure Cloud Solutions Architecture",
+      "CI/CD Pipelines (ArgoCD, GitHub Actions, Jenkins)",
+      "Python or Bash scripting for automation"
+    ],
+    "niceToHave": [
+      "CKA (Certified Kubernetes Administrator) certification",
+      "Experience with Istio / Envoy Service Mesh",
+      "Hands-on FinOps cloud cost optimization experience"
+    ]
+  },
+  {
+    "id": "vp-investment-banking-mumbai",
+    "title": "Vice President — Institutional Equities",
+    "clientType": "Premier Global Investment Bank",
+    "location": "Mumbai, BKC",
+    "workMode": "Onsite",
+    "experience": "10 - 14 years",
+    "compensation": "₹45 - ₹65 LPA + Bonus",
+    "industry": "Banking & Financial Services",
+    "category": "Front-Office Banking",
+    "postedDate": "1 day ago",
+    "openings": 1,
+    "aboutRole": "Lead equity research coverage and advisory for institutional foreign portfolio investors (FPIs) and domestic institutional investors (DIIs) in large-cap BFSI and Industrials sectors.",
+    "responsibilities": [
+      "Spearhead comprehensive equity research reports and financial models for institutional portfolio managers.",
+      "Lead originating roadshows, thematic corporate conferences, and analyst briefings across financial hubs.",
+      "Collaborate directly with cross-border trading desks to execute complex institutional block transactions.",
+      "Mentor a cohort of equity associates and manage rigorous regulatory compliance adhering to SEBI norms."
+    ],
+    "requiredSkills": [
+      "Deep financial modeling & DCF valuation expertise",
+      "Institutional client relationship management",
+      "SEBI regulatory knowledge & FPI mandate handling",
+      "CFA Charter or Top-Tier MBA Finance"
+    ],
+    "niceToHave": [
+      "Existing network with sovereign wealth funds & marquee DIIs",
+      "Prior institutional investor rankings (Institutional Investor / AsiaMoney)"
+    ]
+  },
+  {
+    "id": "principal-embedded-automotive-bengaluru",
+    "title": "Principal Architect — ADAS & Autonomous Systems",
+    "clientType": "Fortune 500 Automotive OEM",
+    "location": "Bengaluru, Whitefield",
+    "workMode": "Hybrid",
+    "experience": "12+ years",
+    "compensation": "₹38 - ₹50 LPA",
+    "industry": "Automotive, Engineering & Manufacturing",
+    "category": "Embedded & Autonomous",
+    "postedDate": "3 days ago",
+    "openings": 2,
+    "aboutRole": "Drive the system software architecture for Next-Gen Autonomous Driving (ADAS Level 2+/Level 3) sensor fusion stacks deployed in commercial electric vehicles globally.",
+    "responsibilities": [
+      "Define embedded software architecture adhering to ISO 26262 (ASIL-D) functional safety standards.",
+      "Lead camera, radar, and lidar sensor fusion algorithms on AUTOSAR Adaptive and QNX RTOS platforms.",
+      "Collaborate with hardware designers to select high-compute automotive SoCs (Qualcomm Snapdragon Ride / NVIDIA Orin).",
+      "Guide software validation teams through rigorous HIL (Hardware-in-the-Loop) and SIL testing regimes."
+    ],
+    "requiredSkills": [
+      "Modern Embedded C++ (14/17/20)",
+      "AUTOSAR Adaptive & Classic architecture",
+      "ISO 26262 Functional Safety certification",
+      "RTOS (QNX, FreeRTOS, Embedded Linux)",
+      "Computer Vision / Sensor Fusion paradigms"
+    ],
+    "niceToHave": [
+      "Experience with ROS2 (Robot Operating System)",
+      "Patents filed in vehicular telemetry or perception algorithms"
+    ]
+  },
+  {
+    "id": "global-supply-chain-director-chennai",
+    "title": "Director — Global Supply Chain & Logistics",
+    "clientType": "Multinational Freight & Logistics Leader",
+    "location": "Chennai, Guindy",
+    "workMode": "Hybrid",
+    "experience": "15+ years",
+    "compensation": "₹42 - ₹55 LPA",
+    "industry": "Shipping & Logistics",
+    "category": "Supply Chain Operations",
+    "postedDate": "4 days ago",
+    "openings": 1,
+    "aboutRole": "Command end-to-end supply chain logistics, multimodal international freight forwarding, and smart warehousing across APAC and Middle East shipping lanes.",
+    "responsibilities": [
+      "Direct international maritime shipping, customs clearance, and inland intermodal networks across 12 ports.",
+      "Optimize multi-facility warehousing operations leveraging automated sorting and IoT tracking systems.",
+      "Negotiate multi-million dollar master service agreements (MSAs) with ocean freight carriers and 3PL partners.",
+      "Drive ESG sustainability initiatives to achieve a 20% reduction in carbon footprint across logistics fleets."
+    ],
+    "requiredSkills": [
+      "Multimodal freight forwarding & ocean maritime operations",
+      "SAP S/4HANA Supply Chain & Warehouse Management",
+      "Contract negotiation & SLA governance",
+      "Strategic vendor risk management"
+    ],
+    "niceToHave": [
+      "APICS CSCP or CPIM certification",
+      "Experience setting up Free Trade Warehousing Zones (FTWZ)"
+    ]
+  },
+  {
+    "id": "head-of-ecommerce-gurugram",
+    "title": "Head of Omnichannel & E-Commerce Growth",
+    "clientType": "Leading Global Retail Conglomerate",
+    "location": "Gurugram, Cyber City",
+    "workMode": "Hybrid",
+    "experience": "10 - 15 years",
+    "compensation": "₹35 - ₹48 LPA + Equity",
+    "industry": "Retail & E-Commerce",
+    "category": "Digital Commerce & Marketing",
+    "postedDate": "Just now",
+    "openings": 1,
+    "aboutRole": "Accelerate direct-to-consumer (D2C) and quick-commerce revenues, harmonizing physical store footfalls with next-gen digital loyalty platforms across India and SEA.",
+    "responsibilities": [
+      "Drive GMV growth across proprietary mobile apps, brand webstores, and marketplace channels (Amazon, Flipkart, Blinkit).",
+      "Oversee performance marketing budgets with rigorous CAC:LTV optimization and retention cohort modeling.",
+      "Champion customer experience (CX), conversion rate optimization (CRO), and frictionless checkout experiences.",
+      "Lead cross-functional teams spanning UI/UX design, catalog management, and customer lifecycle retention."
+    ],
+    "requiredSkills": [
+      "Enterprise e-commerce platforms (Shopify Plus, Magento, CommerceTools)",
+      "Performance marketing & programmatic ad attribution",
+      "Omnichannel inventory synchronization",
+      "P&L management exceeding ₹150 Cr ARR"
+    ],
+    "niceToHave": [
+      "Hands-on expertise with headless commerce and AI personalization engines",
+      "Deep understanding of Quick Commerce supply chain SLAs"
+    ]
+  },
+  {
+    "id": "chief-engineer-clean-energy-hyderabad",
+    "title": "Chief Engineer — Solar & Grid Storage Systems",
+    "clientType": "Renewable Energy Independent Power Producer (IPP)",
+    "location": "Hyderabad, Hitec City",
+    "workMode": "Hybrid",
+    "experience": "12 - 16 years",
+    "compensation": "₹36 - ₹46 LPA",
+    "industry": "Power & Energy",
+    "category": "Renewables & Utilities",
+    "postedDate": "5 days ago",
+    "openings": 2,
+    "aboutRole": "Lead the engineering design and grid interconnectivity for utility-scale solar PV installations (>500MW) and integrated Battery Energy Storage Systems (BESS).",
+    "responsibilities": [
+      "Oversee detailed engineering, electrical single-line diagrams, substation designs, and transmission line tie-ins.",
+      "Conduct solar resource assessments, yield simulations (PVsyst), and BESS degradation performance modeling.",
+      "Liaise with Central Electricity Authority (CEA) and State Transmission Utilities for statutory grid synchronization.",
+      "Lead technical due diligence for international M&A acquisitions and clean energy bond issuances."
+    ],
+    "requiredSkills": [
+      "Utility-scale Solar PV design & BESS architecture",
+      "PVsyst, ETAP, and AutoCAD Electrical modeling",
+      "High Voltage (132kV/220kV/400kV) substation integration",
+      "Regulatory grid code compliance"
+    ],
+    "niceToHave": [
+      "Experience with Green Hydrogen production integration",
+      "Project management certification (PMP)"
+    ]
+  },
+  {
+    "id": "senior-fullstack-ai-delhi",
+    "title": "Staff Full-Stack AI Engineer",
+    "clientType": "Silicon Valley MNC Innovation Hub",
+    "location": "Delhi NCR / Noida",
+    "workMode": "Remote / Hybrid",
+    "experience": "6 - 9 years",
+    "compensation": "₹28 - ₹38 LPA",
+    "industry": "Information Technology",
+    "category": "Software Engineering & GenAI",
+    "postedDate": "1 day ago",
+    "openings": 3,
+    "aboutRole": "Build enterprise-grade AI-powered applications, combining modern React/Next.js frontends with high-throughput Python backends leveraging LLM orchestrators and vector databases.",
+    "responsibilities": [
+      "Architect micro-frontends and responsive Web portals using React 19, TypeScript, and Tailwind CSS.",
+      "Build low-latency asynchronous APIs in FastAPI and Node.js integrating LangChain, LlamaIndex, and OpenAI/Anthropic APIs.",
+      "Implement Retrieval-Augmented Generation (RAG) pipelines over milvus and pgvector databases.",
+      "Ensure robust security, prompt injection defense, and OWASP compliance across AI endpoints."
+    ],
+    "requiredSkills": [
+      "React, TypeScript, Next.js / Vite",
+      "Python (FastAPI, PyTorch, LangChain)",
+      "Vector search (Pinecone, pgvector, Qdrant)",
+      "PostgreSQL and Redis caching architectures",
+      "Docker & Cloud deployment (AWS/GCP)"
+    ],
+    "niceToHave": [
+      "Contributions to open-source GenAI tooling",
+      "Experience fine-tuning open-weights models (Llama 3, Mistral)"
+    ]
+  },
+  {
+    "id": "general-manager-hospitality-singapore",
+    "title": "General Manager — Luxury Resort Operations",
+    "clientType": "Ultra-Luxury International Hospitality Group",
+    "location": "Singapore / Regional Hub",
+    "workMode": "Onsite",
+    "experience": "12 - 18 years",
+    "compensation": "$180,000 - $240,000 SGD",
+    "industry": "Travel & Hospitality",
+    "category": "Executive Management",
+    "postedDate": "3 days ago",
+    "openings": 1,
+    "aboutRole": "Champion brand excellence, financial performance, and world-class guest satisfaction across a flagship luxury hospitality property with 350+ premium villas and Michelin-starred dining.",
+    "responsibilities": [
+      "Steer overall resort P&L, RevPAR growth, ADR yield management, and operational efficiency.",
+      "Cultivate high-touch hospitality culture resulting in top-tier Forbes Travel Guide and TripAdvisor rankings.",
+      "Manage senior leadership teams spanning F&B, Rooms, Sales & Marketing, and Engineering operations.",
+      "Ensure adherence to international health, safety, and ESG green resort certifications."
+    ],
+    "requiredSkills": [
+      "Luxury 5-star hotel/resort operational leadership",
+      "Revenue management & commercial distribution",
+      "Multicultural talent development & workforce planning",
+      "Bespoke guest experience personalization"
+    ],
+    "niceToHave": [
+      "Fluent in English and regional Asian languages",
+      "Prior experience managing Michelin-standard culinary concepts"
+    ]
+  },
+  {
+    "id": "lead-clinical-data-manager-hyderabad",
+    "title": "Lead Clinical Data Architect — Healthcare & Life Sciences",
+    "clientType": "Global Biopharmaceutical MNC",
+    "location": "Hyderabad, Gachibowli",
+    "workMode": "Hybrid",
+    "experience": "7 - 11 years",
+    "compensation": "₹24 - ₹32 LPA",
+    "industry": "IT Enabled Services",
+    "category": "Life Sciences & Analytics",
+    "postedDate": "4 days ago",
+    "openings": 2,
+    "aboutRole": "Oversee end-to-end clinical trial data management and electronic data capture (EDC) systems for multi-phase oncology and cardiovascular clinical drug development trials.",
+    "responsibilities": [
+      "Design clinical trial databases, eCRF questionnaires, and edit checks in Medidata Rave and Oracle InForm.",
+      "Lead data quality reviews, medical coding (MedDRA / WHO-DD), and external biomarker data reconciliation.",
+      "Ensure strict compliance with FDA 21 CFR Part 11, ICH-GCP, and CDISC SDTM / ADaM regulatory standards.",
+      "Author Data Management Plans (DMP) and coordinate database locks for regulatory submissions."
+    ],
+    "requiredSkills": [
+      "Clinical Data Management (Medidata Rave / Oracle Clinical)",
+      "CDISC SDTM / ADaM data standards",
+      "ICH-GCP & FDA 21 CFR Part 11 regulatory compliance",
+      "SAS or SQL for clinical data validation"
+    ],
+    "niceToHave": [
+      "CCDM (Certified Clinical Data Manager) credential",
+      "Experience with decentralized clinical trials (DCT)"
+    ]
+  },
+  {
+    "id": "head-of-stem-curriculum-bengaluru",
+    "title": "Director of STEM Academics & EdTech Pedagogy",
+    "clientType": "Premier K-12 International Education Network",
+    "location": "Bengaluru, Koramangala",
+    "workMode": "Onsite",
+    "experience": "10 - 15 years",
+    "compensation": "₹26 - ₹36 LPA",
+    "industry": "Education",
+    "category": "Curriculum & Academic Leadership",
+    "postedDate": "6 days ago",
+    "openings": 1,
+    "aboutRole": "Shape future-ready STEM curricula, inquiry-based pedagogical frameworks, and immersive digital learning tools across 28 international campuses.",
+    "responsibilities": [
+      "Spearhead curriculum design integrating AI literacy, robotics, and applied scientific research for IB / Cambridge curricula.",
+      "Conduct nationwide faculty training and continuous professional development workshops.",
+      "Implement adaptive learning assessment platforms that personalize educational intervention.",
+      "Oversee accreditation standards and parent-educator collaborative councils."
+    ],
+    "requiredSkills": [
+      "IB Diploma / Cambridge International curriculum governance",
+      "STEM pedagogy & learning science",
+      "Teacher capability development and instructional coaching",
+      "Educational technology integration"
+    ],
+    "niceToHave": [
+      "Master's or Ph.D. in Education / STEM discipline",
+      "Author of published textbooks or peer-reviewed educational papers"
+    ]
+  },
+  {
+    "id": "financial-crime-compliance-head-mumbai",
+    "title": "Head of Financial Crime Compliance (AML / CFT)",
+    "clientType": "Leading Multi-National Commercial Bank",
+    "location": "Mumbai, Fort",
+    "workMode": "Hybrid",
+    "experience": "11 - 15 years",
+    "compensation": "₹34 - ₹48 LPA",
+    "industry": "Banking & Financial Services",
+    "category": "Risk & Compliance",
+    "postedDate": "1 week ago",
+    "openings": 1,
+    "aboutRole": "Oversee enterprise Anti-Money Laundering (AML), Counter-Financing of Terrorism (CFT), and Sanctions Screening programs across commercial and institutional banking lines.",
+    "responsibilities": [
+      "Maintain enterprise AML policy framework in compliance with RBI, FATF, and OFAC sanctions regulations.",
+      "Supervise suspicious transaction reporting (STR) and transaction monitoring triage operations.",
+      "Deploy AI-driven anomaly detection models to diminish false-positive compliance transaction alerts.",
+      "Serve as chief liaison for regulatory inspections, internal audit reviews, and statutory reporting."
+    ],
+    "requiredSkills": [
+      "CAMS (Certified Anti-Money Laundering Specialist)",
+      "RBI Master Directions on KYC/AML",
+      "Transaction monitoring platforms (Actimize / SAS AML / Fenergo)",
+      "Regulatory liaison and audit defense"
+    ],
+    "niceToHave": [
+      "Experience with Trade-Based Money Laundering (TBML) detection",
+      "Law degree or Chartered Accountancy"
+    ]
+  },
+  {
+    "id": "ev-powertrain-lead-pune",
+    "title": "Lead Powertrain Integration Engineer — Electric Vehicles",
+    "clientType": "Next-Gen Commercial EV Manufacturer",
+    "location": "Pune, Chakan",
+    "workMode": "Onsite",
+    "experience": "8 - 12 years",
+    "compensation": "₹25 - ₹35 LPA",
+    "industry": "Automotive, Engineering & Manufacturing",
+    "category": "EV Systems",
+    "postedDate": "5 days ago",
+    "openings": 2,
+    "aboutRole": "Drive the mechanical and high-voltage electrical integration of battery packs, inverters, and e-axles into heavy commercial electric vehicle platforms.",
+    "responsibilities": [
+      "Lead 800V high-voltage architecture design, wire harness packaging, and thermal management loops.",
+      "Perform dyno testing, thermal runaway validation, and vehicle crashworthiness simulations.",
+      "Work closely with battery cell suppliers to optimize state-of-charge (SoC) estimation algorithms.",
+      "Ensure AIS-038 Rev 2 and AIS-156 EV safety homologation compliance."
+    ],
+    "requiredSkills": [
+      "High Voltage (HV) EV powertrain architecture",
+      "Battery Management Systems (BMS) integration",
+      "CAN / CAN-FD vehicular communications",
+      "Automotive homologation & AIS safety norms"
+    ],
+    "niceToHave": [
+      "Six Sigma Green / Black Belt",
+      "Experience with liquid immersion cooling battery concepts"
+    ]
+  }
+]
