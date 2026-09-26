@@ -41,7 +41,8 @@
       "pincode": "400013",
       "phone": "+91-22-6789-4000",
       "email": "mumbai@acuitytalent.com",
-      "isHeadquarters": true
+      "isHeadquarters": true,
+      "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80"
     },
     {
       "city": "Bengaluru",
@@ -49,7 +50,8 @@
       "pincode": "560001",
       "phone": "+91-80-4123-8900",
       "email": "bengaluru@acuitytalent.com",
-      "isHeadquarters": false
+      "isHeadquarters": false,
+      "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=600&q=80"
     },
     {
       "city": "Delhi NCR / Gurugram",
@@ -57,7 +59,8 @@
       "pincode": "122002",
       "phone": "+91-124-456-7890",
       "email": "delhincr@acuitytalent.com",
-      "isHeadquarters": false
+      "isHeadquarters": false,
+      "image": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=600&q=80"
     },
     {
       "city": "Pune",
@@ -65,7 +68,8 @@
       "pincode": "411045",
       "phone": "+91-20-6644-2200",
       "email": "pune@acuitytalent.com",
-      "isHeadquarters": false
+      "isHeadquarters": false,
+      "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=600&q=80"
     },
     {
       "city": "Hyderabad",
@@ -73,7 +77,8 @@
       "pincode": "500081",
       "phone": "+91-40-6712-3400",
       "email": "hyderabad@acuitytalent.com",
-      "isHeadquarters": false
+      "isHeadquarters": false,
+      "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80"
     },
     {
       "city": "Chennai",
@@ -81,7 +86,8 @@
       "pincode": "600032",
       "phone": "+91-44-4289-5500",
       "email": "chennai@acuitytalent.com",
-      "isHeadquarters": false
+      "isHeadquarters": false,
+      "image": "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80"
     },
     {
       "city": "Singapore (International Hub)",
@@ -89,7 +95,8 @@
       "pincode": "018983",
       "phone": "+65-6817-9100",
       "email": "singapore@acuitytalent.com",
-      "isHeadquarters": false
+      "isHeadquarters": false,
+      "image": "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&fit=crop&w=600&q=80"
     }
   ]
 }

@@ -22,32 +22,38 @@ const Verification = () => {
     {
       step: '1',
       title: 'Identity Verification',
-      desc: 'Government-issued ID (Passport, Aadhaar, National ID) cross-checked and photo confirmed against application biometric records to prevent proxy candidates.'
+      desc: 'Government-issued ID (Passport, Aadhaar, National ID) cross-checked and photo confirmed against application biometric records to prevent proxy candidates.',
+      image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80'
     },
     {
       step: '2',
       title: 'Education Verification',
-      desc: 'Degree, institution, and graduation year confirmed directly with the issuing university registrar or accredited background verification agency.'
+      desc: 'Degree, institution, and graduation year confirmed directly with the issuing university registrar or accredited background verification agency.',
+      image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80'
     },
     {
       step: '3',
       title: 'Employment History Check',
-      desc: 'Past employers, tenure dates, official designations, and exit clearances validated directly with HR records — never relying on unverified resume claims.'
+      desc: 'Past employers, tenure dates, official designations, and exit clearances validated directly with HR records — never relying on unverified resume claims.',
+      image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80'
     },
     {
       step: '4',
       title: 'Reference Checks',
-      desc: 'A minimum of two independent managerial and peer references interviewed regarding work quality, reliability, ethics, and team collaboration.'
+      desc: 'A minimum of two independent managerial and peer references interviewed regarding work quality, reliability, ethics, and team collaboration.',
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80'
     },
     {
       step: '5',
       title: 'Skill & Technical Assessment',
-      desc: 'Role-specific live coding tests, system architecture evaluations, or domain rubrics scored by our practicing subject matter expert panels.'
+      desc: 'Role-specific live coding tests, system architecture evaluations, or domain rubrics scored by our practicing subject matter expert panels.',
+      image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80'
     },
     {
       step: '6',
       title: 'Final Quality Review',
-      desc: 'A senior sector practice consultant conducts the final sanity check and signs off on the digital verification summary before client submission.'
+      desc: 'A senior sector practice consultant conducts the final sanity check and signs off on the digital verification summary before client submission.',
+      image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80'
     }
   ];
 
@@ -84,33 +90,87 @@ const Verification = () => {
       
       {/* 1. HERO (Spec Section 5) */}
       <section className="bg-gradient-to-b from-success/5 via-lavender-light/40 to-background py-16 lg:py-24 border-b border-border/40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-success border border-success/30 shadow-xs mb-4 text-xs font-bold uppercase tracking-wider">
-            <ShieldCheck className="w-4 h-4 text-success" />
-            <span>The Acuity Trust Standard</span>
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-navy leading-tight">
-            100% Genuine. 100% Verified.
-          </h1>
-          <p className="mt-4 text-base sm:text-lg text-grey leading-relaxed">
-            Every candidate we present has been checked, confirmed and quality-assured — so your hiring managers make offers with confidence, not hope.
-          </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div className="lg:col-span-7 space-y-6 text-left">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white text-success border border-success/30 shadow-xs text-xs font-bold uppercase tracking-wider">
+                <ShieldCheck className="w-4 h-4 text-success" />
+                <span>The Acuity Trust Standard</span>
+              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-navy leading-tight">
+                100% Genuine.<br />
+                <span className="text-success">100% Verified.</span>
+              </h1>
+              <p className="text-base sm:text-lg text-grey leading-relaxed max-w-2xl">
+                Every candidate we present has been checked, confirmed and quality-assured — so your hiring managers make offers with confidence, not hope.
+              </p>
 
-          <div className="mt-8 flex flex-wrap justify-center items-center gap-4">
-            <Link
-              to="/employers"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-white bg-teal hover:bg-teal-hover shadow-md hover:shadow-lg transition-all"
-            >
-              <PhoneCall className="w-4 h-4" />
-              <span>Request Verified Shortlist</span>
-            </Link>
-            <a
-              href="#verification-pipeline"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-semibold text-navy bg-white hover:bg-lavender-light border border-border shadow-xs transition-colors"
-            >
-              <span>Explore 6-Step Pipeline</span>
-              <ChevronDown className="w-4 h-4 text-grey" />
-            </a>
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <Link
+                  to="/employers"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-white bg-teal hover:bg-teal-hover shadow-md hover:shadow-lg transition-all"
+                >
+                  <PhoneCall className="w-4 h-4" />
+                  <span>Request Verified Shortlist</span>
+                </Link>
+                <a
+                  href="#verification-pipeline"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-semibold text-navy bg-white hover:bg-lavender-light border border-border shadow-xs transition-colors"
+                >
+                  <span>Explore 6-Step Pipeline</span>
+                  <ChevronDown className="w-4 h-4 text-grey" />
+                </a>
+              </div>
+
+              {/* Quick trust metrics */}
+              <div className="pt-4 flex flex-wrap items-center gap-6 text-xs text-grey font-medium border-t border-border/60">
+                <span className="flex items-center gap-1.5 text-navy font-semibold">
+                  <CheckCircle2 className="w-4 h-4 text-success" /> Zero Document Tampering
+                </span>
+                <span className="flex items-center gap-1.5 text-navy font-semibold">
+                  <CheckCircle2 className="w-4 h-4 text-success" /> Direct HR Desk Confirmation
+                </span>
+                <span className="flex items-center gap-1.5 text-navy font-semibold">
+                  <CheckCircle2 className="w-4 h-4 text-success" /> Multi-Source Biometric Check
+                </span>
+              </div>
+            </div>
+
+            {/* Visual Hero Showcase Card */}
+            <div className="lg:col-span-5 relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-success/30 group">
+                <img
+                  src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1000&q=80"
+                  alt="Enterprise Credential Audit & Background Verification Session"
+                  loading="lazy"
+                  className="w-full h-80 sm:h-96 object-cover transform group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/40 to-transparent" />
+                
+                {/* Floating Status Badges */}
+                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-success/40 shadow-md flex items-center gap-2 text-xs font-bold text-navy">
+                  <span className="w-2.5 h-2.5 rounded-full bg-success animate-pulse" />
+                  <span>ISO 27001 & BGV Passed</span>
+                </div>
+
+                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-lg space-y-1.5">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="font-bold text-navy flex items-center gap-1.5">
+                      <ShieldCheck className="w-4 h-4 text-success" />
+                      Multi-Tier Authentication Active
+                    </span>
+                    <span className="font-extrabold text-success text-[11px] bg-success/10 px-2 py-0.5 rounded-md">
+                      100% Genuine
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-grey leading-tight">
+                    All candidate degrees, tenure records, and criminal disclosures digitally validated before client submission.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -161,26 +221,43 @@ const Verification = () => {
           {pipelineSteps.map((step) => (
             <div
               key={step.step}
-              className="bg-white rounded-3xl p-7 border border-border hover:border-success/50 shadow-card hover:shadow-card-hover transition-all duration-200 relative group flex flex-col justify-between"
+              className="bg-white rounded-3xl overflow-hidden border border-border hover:border-success/50 shadow-card hover:shadow-card-hover transition-all duration-300 relative group flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-10 h-10 rounded-2xl bg-success/10 text-success font-extrabold flex items-center justify-center text-sm border border-success/20">
+                {/* Visual Step Image Banner */}
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={step.image}
+                    alt={step.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/30 to-transparent" />
+                  
+                  {/* Step Badge */}
+                  <div className="absolute top-3 left-3 w-8 h-8 rounded-xl bg-success text-white font-extrabold flex items-center justify-center text-xs shadow-md">
                     {step.step}
                   </div>
-                  <span className="text-[11px] font-bold px-2 py-0.5 rounded-full bg-success/10 text-success">
-                    Verified
+
+                  <span className="absolute top-3 right-3 text-[11px] font-bold px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-xs text-success shadow-xs">
+                    Stage {step.step} Audit
                   </span>
+
+                  <div className="absolute bottom-2.5 left-3.5 right-3.5">
+                    <h3 className="text-base font-bold text-white drop-shadow-xs">
+                      {step.title}
+                    </h3>
+                  </div>
                 </div>
-                <h3 className="text-base font-bold text-navy group-hover:text-success transition-colors mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-xs sm:text-sm text-grey leading-relaxed">
-                  {step.desc}
-                </p>
+
+                <div className="p-6">
+                  <p className="text-xs sm:text-sm text-grey leading-relaxed">
+                    {step.desc}
+                  </p>
+                </div>
               </div>
 
-              <div className="pt-4 mt-4 border-t border-border/60 flex items-center gap-1.5 text-xs font-semibold text-success">
+              <div className="px-6 pb-6 pt-2 border-t border-border/60 flex items-center gap-1.5 text-xs font-semibold text-success">
                 <CheckCircle2 className="w-3.5 h-3.5" />
                 <span>Zero Tolerance Standard</span>
               </div>
@@ -421,7 +498,16 @@ const Verification = () => {
 
       {/* 6. REPLACEMENT GUARANTEE (Spec Section 5) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-navy via-[#1E1B4B] to-primary rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
+        <div className="rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
+          {/* Open-source backdrop photo with gradient overlay */}
+          <img
+            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80"
+            alt="Corporate executive consultation and placement guarantee"
+            loading="lazy"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/95 to-primary/85" />
+
           <div className="max-w-3xl space-y-4 relative z-10">
             <span className="inline-block px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/20 text-teal-light">
               100% Client Protection

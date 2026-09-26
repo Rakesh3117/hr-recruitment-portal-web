@@ -121,34 +121,87 @@ const Employers = () => {
     <div className="space-y-16 lg:space-y-24 pb-20">
       
       {/* 1. HERO (Spec Section 6: H1 in teal) */}
-      <section className="bg-gradient-to-b from-teal-subtle via-lavender-light/40 to-background py-16 lg:py-20 border-b border-border/40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
-          <span className="inline-block px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-teal/10 text-teal border border-teal-light mb-4">
-            FOR MNC CLIENTS & ENTERPRISES
-          </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-teal leading-tight">
-            Tell us who you need. We'll find them — verified.
-          </h1>
-          <p className="mt-4 text-base sm:text-lg text-grey leading-relaxed">
-            Share your open role or bulk hiring plan and our delivery team takes it from there. Every candidate we shortlist is verified —{' '}
-            <Link to="/verification" className="text-teal font-bold underline hover:text-teal-hover transition-colors">
-              see how →
-            </Link>
-          </p>
+      <section className="bg-gradient-to-b from-teal-subtle via-lavender-light/40 to-background py-16 lg:py-24 border-b border-border/40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div className="lg:col-span-7 space-y-6 text-left">
+              <span className="inline-block px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-teal/10 text-teal border border-teal-light">
+                FOR MNC CLIENTS & ENTERPRISES
+              </span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-teal leading-tight">
+                Tell us who you need.<br />
+                <span className="text-navy">We'll find them — verified.</span>
+              </h1>
+              <p className="text-base sm:text-lg text-grey leading-relaxed max-w-2xl">
+                Share your open role or bulk hiring plan and our delivery team takes it from there. Every candidate we shortlist is verified —{' '}
+                <Link to="/verification" className="text-teal font-bold underline hover:text-teal-hover transition-colors">
+                  see how →
+                </Link>
+              </p>
 
-          <div className="mt-8 flex flex-wrap justify-center items-center gap-6 text-xs font-semibold text-navy">
-            <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-success" />
-              100% Verified Candidates
-            </span>
-            <span className="flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-success" />
-              90-Day Replacement Guarantee
-            </span>
-            <span className="flex items-center gap-1.5">
-              <CheckCircle2 className="w-4 h-4 text-teal" />
-              30+ Years of Delivery
-            </span>
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <a
+                  href="#intake-form"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-white bg-teal hover:bg-teal-hover shadow-md hover:shadow-lg transition-all"
+                >
+                  <Send className="w-4 h-4" />
+                  <span>Submit Open Mandate</span>
+                </a>
+                <a
+                  href="#tracker-section"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-navy bg-white hover:bg-lavender-light border border-border shadow-xs transition-colors"
+                >
+                  <span>Track Existing Mandate</span>
+                </a>
+              </div>
+
+              <div className="pt-4 flex flex-wrap items-center gap-6 text-xs font-semibold text-navy border-t border-border/60">
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-success" />
+                  100% Verified Candidates
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <ShieldCheck className="w-4 h-4 text-success" />
+                  90-Day Replacement Guarantee
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-teal" />
+                  30+ Years of Delivery
+                </span>
+              </div>
+            </div>
+
+            {/* Visual Hero Showcase Card */}
+            <div className="lg:col-span-5 relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-teal-light group">
+                <img
+                  src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1000&q=80"
+                  alt="Senior Talent Partner discussing executive recruitment requirements with client director"
+                  loading="lazy"
+                  className="w-full h-80 sm:h-96 object-cover transform group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent" />
+                
+                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-teal-light shadow-md flex items-center gap-2 text-xs font-bold text-navy">
+                  <span className="w-2.5 h-2.5 rounded-full bg-teal animate-pulse" />
+                  <span>Dedicated Delivery Squads</span>
+                </div>
+
+                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-lg space-y-1.5">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="font-bold text-navy">Average Shortlist Turnaround</span>
+                    <span className="font-extrabold text-teal text-[11px] bg-teal-subtle px-2 py-0.5 rounded-md">
+                      5 – 7 Business Days
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-grey leading-tight">
+                    Every profile calibrated against your technical benchmarks and authenticated for credentials prior to submission.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -552,70 +605,90 @@ const Employers = () => {
           </p>
         </div>
 
-        {/* 6-step Grid */}
+        {/* 6-step Grid with Open-Source Process Photography */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
               step: '1',
               title: 'Requirement Review',
               desc: 'A dedicated account manager reviews your intake within 24–48 hours and reaches out to clarify scope, technical benchmarks, and cultural fit.',
-              timeframe: 'Day 1–2'
+              timeframe: 'Day 1–2',
+              image: 'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80'
             },
             {
               step: '2',
               title: 'Sourcing Strategy',
               desc: 'The team maps the role against our talent database and active vertical network, and defines a targeted search plan.',
-              timeframe: 'Day 3–4'
+              timeframe: 'Day 3–4',
+              image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80'
             },
             {
               step: '3',
               title: 'Screening & Verification',
               desc: 'Candidates are screened for skills and experience, then run through our full verification pipeline before shortlisting.',
-              timeframe: 'Day 5–7'
+              timeframe: 'Day 5–7',
+              image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80'
             },
             {
               step: '4',
               title: 'Verified Shortlist Delivered',
               desc: 'A shortlist with verification summaries attached is shared for your review — no unverified profiles are ever sent.',
-              timeframe: 'Day 7–9'
+              timeframe: 'Day 7–9',
+              image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80'
             },
             {
               step: '5',
               title: 'Interview Coordination',
               desc: 'We schedule and coordinate interviews — optionally running first-round evaluations as Interview-as-a-Service.',
-              timeframe: 'Day 10–16'
+              timeframe: 'Day 10–16',
+              image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80'
             },
             {
               step: '6',
               title: 'Offer, Onboarding & Guarantee',
               desc: 'We support offer negotiation and onboarding. Our 90-day replacement guarantee applies from day one.',
-              timeframe: 'Day 17–90'
+              timeframe: 'Day 17–90',
+              image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80'
             }
           ].map((item) => (
             <div
               key={item.step}
-              className="bg-white rounded-2xl p-6 border border-border hover:border-teal/50 shadow-card hover:shadow-card-hover transition-all duration-200 relative group flex flex-col justify-between"
+              className="bg-white rounded-3xl overflow-hidden border border-border hover:border-teal/50 shadow-card hover:shadow-card-hover transition-all duration-300 relative group flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-9 h-9 rounded-xl bg-teal-subtle text-teal font-extrabold flex items-center justify-center text-sm border border-teal-light">
+                {/* Visual Step Banner */}
+                <div className="relative h-40 overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/30 to-transparent" />
+                  
+                  <div className="absolute top-3 left-3 w-8 h-8 rounded-xl bg-teal text-white font-extrabold flex items-center justify-center text-xs shadow-md">
                     {item.step}
                   </div>
-                  <span className="text-[11px] font-semibold px-2 py-0.5 rounded bg-background-secondary text-grey">
+
+                  <span className="absolute top-3 right-3 text-[11px] font-bold px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-xs text-teal shadow-xs">
                     {item.timeframe}
                   </span>
+
+                  <div className="absolute bottom-2.5 left-3.5 right-3.5">
+                    <h3 className="text-base font-bold text-white drop-shadow-xs">
+                      {item.title}
+                    </h3>
+                  </div>
                 </div>
 
-                <h3 className="text-base font-bold text-navy group-hover:text-teal transition-colors mb-2">
-                  {item.title}
-                </h3>
-
-                <p className="text-xs text-grey leading-relaxed">
-                  {item.desc}
-                </p>
+                <div className="p-6">
+                  <p className="text-xs sm:text-sm text-grey leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
               </div>
 
-              <div className="pt-4 mt-4 border-t border-border/60 flex items-center gap-1.5 text-xs font-semibold text-teal">
+              <div className="px-6 pb-6 pt-2 border-t border-border/60 flex items-center gap-1.5 text-xs font-semibold text-teal">
                 <CheckCircle2 className="w-3.5 h-3.5" />
                 <span>Standard SLA Governed</span>
               </div>
@@ -777,17 +850,25 @@ const Employers = () => {
 
       {/* Enterprise Partnership Cross-Link */}
       <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-teal-subtle via-lavender-light to-white border border-teal-light rounded-3xl p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
-          <div className="space-y-1.5 text-center md:text-left">
-            <span className="text-xs font-bold uppercase tracking-wider text-teal">
-              Looking for ongoing enterprise collaboration?
-            </span>
-            <h3 className="text-xl sm:text-2xl font-extrabold text-navy">
-              Become an Enterprise Hiring Partner
-            </h3>
-            <p className="text-xs sm:text-sm text-grey max-w-xl">
-              For MNCs requiring dedicated account teams, volume SLAs, standing talent pipelines, and multi-location deployment.
-            </p>
+        <div className="bg-gradient-to-r from-teal-subtle via-lavender-light to-white border border-teal-light rounded-3xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm overflow-hidden">
+          <div className="flex flex-col sm:flex-row items-center gap-5 text-center md:text-left">
+            <img
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=600&q=80"
+              alt="Global enterprise corporate headquarters"
+              loading="lazy"
+              className="w-24 h-24 rounded-2xl object-cover shrink-0 border border-teal-light shadow-xs hidden sm:block"
+            />
+            <div className="space-y-1">
+              <span className="text-xs font-bold uppercase tracking-wider text-teal">
+                Looking for ongoing enterprise collaboration?
+              </span>
+              <h3 className="text-xl sm:text-2xl font-extrabold text-navy">
+                Become an Enterprise Hiring Partner
+              </h3>
+              <p className="text-xs sm:text-sm text-grey max-w-lg">
+                For MNCs requiring dedicated account teams, volume SLAs, standing talent pipelines, and multi-location deployment.
+              </p>
+            </div>
           </div>
           <Link
             to="/partner-with-us"

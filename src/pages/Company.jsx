@@ -72,6 +72,20 @@ const Company = () => {
           <p className="mt-4 text-base sm:text-lg text-grey leading-relaxed">
             For more than three decades, Acuity has served as the strategic talent partner for Fortune 500 MNCs, high-growth technology enterprises, and leading Indian conglomerates.
           </p>
+
+          <div className="mt-10 max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-card border border-lavender-soft relative">
+            <img 
+              src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" 
+              alt="Acuity Corporate Headquarters" 
+              className="w-full h-64 sm:h-80 object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
+            <div className="absolute bottom-4 left-6 text-white text-left">
+              <span className="text-xs uppercase font-bold tracking-wider text-teal-light">Corporate Headquarters & Search Delivery</span>
+              <h3 className="text-lg font-bold">BKC Center of Excellence, Mumbai</h3>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -118,6 +132,12 @@ const Company = () => {
       {/* Team / Culture Quote Block (Spec Section 2) */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-gradient-to-r from-navy via-navy-muted to-[#1E1B4B] rounded-3xl p-8 sm:p-14 text-white shadow-xl relative overflow-hidden">
+          <img 
+            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1200&q=80" 
+            alt="People & Culture" 
+            className="absolute inset-0 w-full h-full object-cover opacity-15 mix-blend-overlay" 
+            loading="lazy" 
+          />
           <div className="max-w-3xl mx-auto text-center space-y-6 relative z-10">
             <Quote className="w-12 h-12 text-teal mx-auto opacity-70" />
             <blockquote className="text-xl sm:text-2xl lg:text-3xl font-medium tracking-tight text-white leading-relaxed">
@@ -211,22 +231,40 @@ const Company = () => {
             {statsData.offices.map((office) => (
               <div 
                 key={office.city}
-                className="p-5 rounded-xl bg-background border border-border/60 hover:border-primary/40 transition-colors"
+                className="bg-white rounded-3xl overflow-hidden border border-border/80 hover:border-primary/40 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group"
               >
-                <div className="flex items-center justify-between mb-2">
-                  <span className="font-bold text-sm text-navy">{office.city}</span>
-                  {office.isHeadquarters && (
-                    <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-primary text-white">
-                      HQ
-                    </span>
-                  )}
-                </div>
-                <p className="text-xs text-grey leading-relaxed mb-3">
-                  {office.address}
-                </p>
-                <div className="text-xs font-medium text-teal space-y-0.5">
-                  <div>{office.phone}</div>
-                  <div className="text-grey">{office.email}</div>
+                <div>
+                  <div className="relative h-40 overflow-hidden">
+                    <img
+                      src={office.image}
+                      alt={`${office.city} Office Hub`}
+                      loading="lazy"
+                      className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/20 to-transparent" />
+                    {office.isHeadquarters ? (
+                      <span className="absolute top-3 right-3 text-[10px] font-bold px-2.5 py-1 rounded-full bg-primary text-white shadow-xs">
+                        Global Headquarters
+                      </span>
+                    ) : (
+                      <span className="absolute top-3 right-3 text-[10px] font-bold px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-xs text-navy shadow-xs">
+                        Regional Hub
+                      </span>
+                    )}
+                    <div className="absolute bottom-2.5 left-3.5 right-3.5">
+                      <span className="font-bold text-base text-white drop-shadow-xs">{office.city}</span>
+                    </div>
+                  </div>
+
+                  <div className="p-5 space-y-2">
+                    <p className="text-xs text-grey leading-relaxed line-clamp-2">
+                      {office.address}
+                    </p>
+                    <div className="text-xs font-semibold text-teal pt-1 border-t border-border/60">
+                      <div>{office.phone}</div>
+                      <div className="text-grey font-normal text-[11px]">{office.email}</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             ))}

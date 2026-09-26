@@ -139,7 +139,22 @@ const Services = () => {
                 </div>
 
                 {/* Right Context & Value Card */}
-                <div className="lg:col-span-5">
+                <div className="lg:col-span-5 space-y-4">
+                  {service.image && (
+                    <div className="relative h-48 w-full rounded-2xl overflow-hidden shadow-xs border border-border/80">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
+                      <span className="absolute bottom-3 left-3 text-[11px] font-bold text-white bg-black/50 backdrop-blur-xs px-2.5 py-1 rounded-lg">
+                        {service.tagline}
+                      </span>
+                    </div>
+                  )}
+
                   <div className="p-6 sm:p-7 rounded-2xl bg-lavender-light/70 border border-lavender-soft space-y-4">
                     <span className="text-xs font-bold uppercase tracking-wider text-primary">
                       Ideal Engagement Scenario

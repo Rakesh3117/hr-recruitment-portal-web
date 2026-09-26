@@ -13,21 +13,25 @@ const DiversityInclusion = () => {
       title: 'Diversity-Focused Sourcing Channels & Communities',
       desc: 'Proactive engagement across specialized talent networks, women-in-STEM alliances, veteran reintegration programs, and LGBTQIA+ professional forums.',
       icon: <Users className="w-6 h-6 text-primary" />,
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80'
     },
     {
       title: 'Structured, Bias-Aware Screening Criteria',
       desc: 'Blind resume initial evaluations, standardized interview scorecards, and objective skill rubrics that eliminate unconscious hiring biases.',
       icon: <ShieldCheck className="w-6 h-6 text-teal" />,
+      image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80'
     },
     {
       title: 'Reporting on Pipeline Diversity for Hiring Teams',
       desc: 'Transparent representation analytics at every stage of the funnel — from initial talent mapping to final interview panel ratios.',
       icon: <BarChart3 className="w-6 h-6 text-accent" />,
+      image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80'
     },
     {
       title: 'Partnerships with Diversity-Focused Networks',
       desc: 'Formal alliances with return-to-work initiatives, affirmative action educational trusts, and accessible workplace advocacy organizations.',
       icon: <HeartHandshake className="w-6 h-6 text-primary" />,
+      image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80'
     },
   ];
 
@@ -54,6 +58,20 @@ const DiversityInclusion = () => {
               Consult Our D&I Practice Leads
             </Link>
           </div>
+
+          <div className="mt-10 max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-card border border-lavender-soft relative">
+            <img 
+              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80" 
+              alt="Diversity and Inclusive Leadership" 
+              className="w-full h-64 sm:h-80 object-cover"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
+            <div className="absolute bottom-4 left-6 text-white text-left">
+              <span className="text-xs uppercase font-bold tracking-wider text-teal-light">Representation with Meritocracy</span>
+              <h3 className="text-lg font-bold">Inclusive Talent Pipelines & Executive Search</h3>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -75,17 +93,33 @@ const DiversityInclusion = () => {
           {pillars.map((pillar, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-3xl p-8 border border-border hover:border-primary/40 shadow-card hover:shadow-card-hover transition-all duration-200 space-y-4"
+              className="bg-white rounded-3xl overflow-hidden border border-border hover:border-primary/40 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group"
             >
-              <div className="w-12 h-12 rounded-2xl bg-lavender-light flex items-center justify-center">
-                {pillar.icon}
+              <div>
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={pillar.image}
+                    alt={pillar.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/20 to-transparent" />
+                  <div className="absolute top-4 left-4 w-10 h-10 rounded-2xl bg-white/90 backdrop-blur-xs flex items-center justify-center shadow-xs">
+                    {pillar.icon}
+                  </div>
+                  <div className="absolute bottom-3 left-4 right-4 text-white">
+                    <h3 className="text-base font-bold text-white drop-shadow-xs">
+                      {pillar.title}
+                    </h3>
+                  </div>
+                </div>
+
+                <div className="p-6">
+                  <p className="text-xs sm:text-sm text-grey leading-relaxed">
+                    {pillar.desc}
+                  </p>
+                </div>
               </div>
-              <h3 className="text-lg font-bold text-navy">
-                {pillar.title}
-              </h3>
-              <p className="text-xs sm:text-sm text-grey leading-relaxed">
-                {pillar.desc}
-              </p>
             </div>
           ))}
         </div>

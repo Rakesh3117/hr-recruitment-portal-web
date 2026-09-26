@@ -3,6 +3,7 @@
     "id": "search-capabilities",
     "title": "Search Capabilities",
     "tagline": "Executive and Specialist Search",
+    "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
     "description": "Finding senior, hard-to-source talent for critical, high-impact leadership and technical roles through rigorous market mapping and discreet headhunting.",
     "deliverables": [
       "Board, C-Suite, and VP-level executive searches",
@@ -17,6 +18,7 @@
     "id": "interview-as-a-service",
     "title": "Interview as a Service (IaaS)",
     "tagline": "Vetted Subject Matter Expert Panels at Scale",
+    "image": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80",
     "description": "Structured interview panels and technical evaluation delivered on the client's behalf, removing internal hiring bottlenecks and standardizing assessment rubrics.",
     "deliverables": [
       "On-demand panels of certified domain practitioners & tech leads",
@@ -31,6 +33,7 @@
     "id": "contingency-recruitment",
     "title": "Contingency Recruitment",
     "tagline": "Pay-on-Placement Agility",
+    "image": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=800&q=80",
     "description": "Rapid fulfillment of individual roles without long-term retainers. Pay only upon successful placement and candidate onboarding.",
     "deliverables": [
       "Access to our pre-screened database of 1.1L+ active and passive candidates",
@@ -45,6 +48,7 @@
     "id": "staffing-services",
     "title": "Staffing Services",
     "tagline": "Contract, Temporary & Flex Workforce",
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
     "description": "Flexible workforce deployment for project-based, seasonal, or specialized surge requirements with complete statutory compliance handling.",
     "deliverables": [
       "Contract-to-hire and project-based specialist deployment",
@@ -58,25 +62,27 @@
   {
     "id": "incubating-gics",
     "title": "Incubating Global In-House Centers (GICs)",
-    "tagline": "Captive Center Build-Out & Scale",
-    "description": "End-to-end turnkey support standing up a client's captive delivery center, technology hub, or CoE from greenfield entity setup to 1,000+ headcount.",
+    "tagline": "Turnkey Captive Center Build-Out",
+    "image": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
+    "description": "End-to-end support standing up a client's captive delivery center in India or international markets from inception to steady-state maturity.",
     "deliverables": [
-      "Talent availability and city tiering feasibility studies",
-      "Leadership core hiring followed by synchronized cohort wave onboarding",
-      "Employer branding, local campus alliances, and market compensation indexing",
-      "Facility advisory, statutory registrations, and vendor ecosystem setup"
+      "Location intelligence, infrastructure setup, and entity benchmarking",
+      "Founding leadership team acquisition (Managing Director, Functional Heads)",
+      "Phased ramp-up: scaling 50 to 500+ specialized FTEs in 6-12 months",
+      "Continuous compliance, payroll operations, and local HR alignment"
     ],
-    "idealFor": "Fortune 500s and global unicorns establishing strategic engineering or shared service hubs in India.",
+    "idealFor": "Foreign MNCs establishing their first offshore R&D or shared services footprint.",
     "icon": "Building2"
   },
   {
-    "id": "rpo",
+    "id": "recruitment-process-outsourcing",
     "title": "Recruitment Process Outsourcing (RPO)",
-    "tagline": "Embedded Pipeline Ownership",
-    "description": "Full or modular ownership of your talent acquisition pipeline — sourcing, screening, coordination, ATS management, through final onboarding.",
+    "tagline": "Full or Modular Talent Pipeline Ownership",
+    "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80",
+    "description": "Embedded talent acquisition teams acting as an extension of your internal HR, owning candidate sourcing through final onboarding under strict SLAs.",
     "deliverables": [
-      "Dedicated onsite/remote talent acquisition partner teams",
-      "Modern ATS tech stack integration and recruitment analytics dashboards",
+      "Dedicated onsite/remote recruiters, sourcers, and interview coordinators",
+      "AI-driven applicant tracking, pipeline metrics, and weekly governance",
       "Significant reduction in cost-per-hire (typically 25-40% savings)",
       "Standardized employer value proposition (EVP) and candidate journey"
     ],
@@ -87,6 +93,7 @@
     "id": "candidate-verification-services",
     "title": "Candidate Verification Services",
     "tagline": "Standalone or Bundled Background & Credential Verification",
+    "image": "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=800&q=80",
     "description": "Comprehensive identity, education, employment tenure, and professional reference verification for candidates you've already sourced yourself — ensuring zero fabricated profiles.",
     "deliverables": [
       "Government-issued identity & photo biometric authentication",
@@ -102,6 +109,7 @@
     "id": "diversity-inclusion-practice",
     "title": "Diversity & Inclusion Practice",
     "tagline": "Equitable & Representative Talent Pipelines",
+    "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80",
     "description": "A dedicated advisory and sourcing service line empowering organizations to build genuinely balanced, high-performing, and inclusive workforces.",
     "deliverables": [
       "Curated sourcing through affinity networks and return-to-work programs",

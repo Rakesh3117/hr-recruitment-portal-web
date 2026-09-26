@@ -4,6 +4,7 @@
     "name": "Automotive, Engineering & Manufacturing",
     "industryQuery": "Automotive, Engineering & Manufacturing",
     "icon": "Car",
+    "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
     "description": "Connecting OEMs, Tier-1 suppliers, and precision manufacturers with innovators across EV powertrains, ADAS, Industry 4.0, and robotics.",
     "sampleRoles": [
       "Chief Technology Officer — EV",
@@ -19,6 +20,7 @@
     "name": "Banking & Financial Services",
     "industryQuery": "Banking & Financial Services",
     "icon": "Landmark",
+    "image": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=800&q=80",
     "description": "Empowering investment banks, private equity funds, retail lenders, and FinTech pioneers with front-office, quantitative, and risk talent.",
     "sampleRoles": [
       "VP — Institutional Equities",
@@ -34,6 +36,7 @@
     "name": "Information Technology",
     "industryQuery": "Information Technology",
     "icon": "Code2",
+    "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
     "description": "Fulfilling urgent mandates across Generative AI, cloud platform engineering, cybersecurity, microservices, and enterprise SaaS systems.",
     "sampleRoles": [
       "DevOps / SRE Platform Architect",
@@ -49,6 +52,7 @@
     "name": "IT Enabled Services",
     "industryQuery": "IT Enabled Services",
     "icon": "Server",
+    "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80",
     "description": "Powering global capability centers (GCCs), clinical data operations, shared service centers, and high-velocity BPO operations.",
     "sampleRoles": [
       "Lead Clinical Data Architect",
@@ -64,6 +68,7 @@
     "name": "Shipping & Logistics",
     "industryQuery": "Shipping & Logistics",
     "icon": "Ship",
+    "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
     "description": "Strengthening supply chains with leaders in multimodal freight forwarding, maritime operations, automated warehousing, and cold chain.",
     "sampleRoles": [
       "Director — Global Supply Chain",
@@ -79,6 +84,7 @@
     "name": "Retail & E-Commerce",
     "industryQuery": "Retail & E-Commerce",
     "icon": "ShoppingBag",
+    "image": "https://images.unsplash.com/photo-1556742049-0a67c5574f73?auto=format&fit=crop&w=800&q=80",
     "description": "Catalyzing omnichannel growth, quick commerce logistics, digital merchandising, and direct-to-consumer (D2C) brand scale.",
     "sampleRoles": [
       "Head of Omnichannel Growth",
@@ -94,6 +100,7 @@
     "name": "Travel & Hospitality",
     "industryQuery": "Travel & Hospitality",
     "icon": "Compass",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80",
     "description": "Curating exceptional leaders for ultra-luxury resorts, corporate business hotels, aviation carriers, and online travel booking aggregators.",
     "sampleRoles": [
       "General Manager — Luxury Resort",
@@ -109,6 +116,7 @@
     "name": "Education",
     "industryQuery": "Education",
     "icon": "GraduationCap",
+    "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
     "description": "Shaping academic excellence and modern pedagogy across international K-12 networks, premier universities, and venture-backed EdTechs.",
     "sampleRoles": [
       "Director of STEM Academics",
@@ -124,6 +132,7 @@
     "name": "Power & Energy",
     "industryQuery": "Power & Energy",
     "icon": "Zap",
+    "image": "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=800&q=80",
     "description": "Accelerating the energy transition with proven specialists across utility-scale Solar PV, green hydrogen, battery storage, and transmission.",
     "sampleRoles": [
       "Chief Engineer — Solar & Grid Storage",

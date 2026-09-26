@@ -86,25 +86,29 @@ const PartnerWithUs = () => {
       model: 'RPO (Full Pipeline)',
       bestFor: 'Ongoing, high-volume enterprise hiring across multiple verticals',
       whatYouGet: 'We own sourcing, screening, coordination, ATS administration, through onboarding end-to-end.',
-      recommended: true
+      recommended: true,
+      image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80'
     },
     {
       model: 'Embedded Staffing Team',
       bestFor: 'Steady but variable headcount needs without increasing internal HR payroll',
       whatYouGet: 'Dedicated recruitment specialists operating seamlessly as an extension of your talent team.',
-      recommended: false
+      recommended: false,
+      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80'
     },
     {
       model: 'Contingency / Volume Hiring',
       bestFor: 'Periodic bulk hiring drives and critical specialist leadership searches',
       whatYouGet: 'Pay-per-placement flexibility with volume-discounted fee matrices and SLA commitments.',
-      recommended: false
+      recommended: false,
+      image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80'
     },
     {
       model: 'GIC / Captive Build-Out',
       bestFor: 'Setting up a new India or regional global capability delivery center',
       whatYouGet: 'Turnkey incubation from leadership core setup to 1,000+ headcount cohort wave delivery.',
-      recommended: false
+      recommended: false,
+      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80'
     },
   ];
 
@@ -141,32 +145,81 @@ const PartnerWithUs = () => {
       
       {/* 1. HERO (Spec Section 6A: H1 in teal) */}
       <section className="bg-gradient-to-b from-teal-subtle via-lavender-light/40 to-background py-16 lg:py-24 border-b border-border/40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-teal/10 text-teal border border-teal-light mb-4">
-            <Building2 className="w-4 h-4 text-teal" />
-            <span>ENTERPRISE & MNC COLLABORATION</span>
-          </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-teal leading-tight">
-            Partner With Us. Let's Build Your Talent Pipeline Together.
-          </h1>
-          <p className="mt-4 text-base sm:text-lg text-grey leading-relaxed">
-            For MNCs and large enterprises looking for an ongoing hiring partner — not just a one-time vendor. Dedicated delivery squads, enterprise SLAs, and a 100% verified candidate pipeline.
-          </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div className="lg:col-span-7 space-y-6 text-left">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-teal/10 text-teal border border-teal-light">
+                <Building2 className="w-4 h-4 text-teal" />
+                <span>ENTERPRISE & MNC COLLABORATION</span>
+              </div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-teal leading-tight">
+                Partner With Us.<br />
+                <span className="text-navy">Let's Build Your Talent Pipeline Together.</span>
+              </h1>
+              <p className="text-base sm:text-lg text-grey leading-relaxed max-w-2xl">
+                For MNCs and large enterprises looking for an ongoing hiring partner — not just a one-time vendor. Dedicated delivery squads, enterprise SLAs, and a 100% verified candidate pipeline.
+              </p>
 
-          <div className="mt-8 flex flex-wrap justify-center items-center gap-4">
-            <a
-              href="#collaboration-form"
-              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-white bg-teal hover:bg-teal-hover shadow-md hover:shadow-lg transition-all"
-            >
-              <span>Request a Partnership Discussion</span>
-              <ArrowRight className="w-4 h-4" />
-            </a>
-            <Link
-              to="/employers"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-navy bg-white hover:bg-lavender-light border border-border shadow-xs transition-colors"
-            >
-              <span>Need a Quick One-Off Hire?</span>
-            </Link>
+              <div className="flex flex-wrap items-center gap-4 pt-2">
+                <a
+                  href="#collaboration-form"
+                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-white bg-teal hover:bg-teal-hover shadow-md hover:shadow-lg transition-all"
+                >
+                  <span>Request a Partnership Discussion</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+                <Link
+                  to="/employers"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold text-navy bg-white hover:bg-lavender-light border border-border shadow-xs transition-colors"
+                >
+                  <span>Need a Quick One-Off Hire?</span>
+                </Link>
+              </div>
+
+              <div className="pt-4 flex flex-wrap items-center gap-6 text-xs text-grey font-medium border-t border-border/60">
+                <span className="flex items-center gap-1.5 text-navy font-semibold">
+                  <CheckCircle2 className="w-4 h-4 text-teal" /> Dedicated Account Director
+                </span>
+                <span className="flex items-center gap-1.5 text-navy font-semibold">
+                  <CheckCircle2 className="w-4 h-4 text-teal" /> Custom SLA Contracts
+                </span>
+                <span className="flex items-center gap-1.5 text-navy font-semibold">
+                  <CheckCircle2 className="w-4 h-4 text-teal" /> Multi-Metro Delivery
+                </span>
+              </div>
+            </div>
+
+            {/* Visual Hero Showcase Card */}
+            <div className="lg:col-span-5 relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-teal-light group">
+                <img
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80"
+                  alt="Modern global enterprise corporate headquarters and partnership center"
+                  loading="lazy"
+                  className="w-full h-80 sm:h-96 object-cover transform group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent" />
+                
+                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-teal-light shadow-md flex items-center gap-2 text-xs font-bold text-navy">
+                  <span className="w-2.5 h-2.5 rounded-full bg-teal animate-pulse" />
+                  <span>Enterprise MSA Tier</span>
+                </div>
+
+                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-lg space-y-1.5">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="font-bold text-navy">Tailored RPO & Staffing Squads</span>
+                    <span className="font-extrabold text-teal text-[11px] bg-teal-subtle px-2 py-0.5 rounded-md">
+                      Volume Scale
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-grey leading-tight">
+                    Dedicated talent delivery pods synchronized directly with your internal HR leadership and ATS workflows.
+                  </p>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -255,6 +308,53 @@ const PartnerWithUs = () => {
           <p className="text-xs sm:text-sm text-grey mt-2">
             Choose the engagement framework that best fits your enterprise growth trajectory and hiring velocity.
           </p>
+        </div>
+
+        {/* Visual Model Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+          {models.map((m, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-3xl overflow-hidden border border-border hover:border-teal/40 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between group"
+            >
+              <div>
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={m.image}
+                    alt={m.model}
+                    loading="lazy"
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent" />
+                  {m.recommended && (
+                    <span className="absolute top-3 right-3 text-[10px] font-bold px-2.5 py-1 rounded-full bg-teal text-white shadow-xs">
+                      Popular Choice
+                    </span>
+                  )}
+                  <div className="absolute bottom-3 left-3 right-3 text-white">
+                    <h3 className="text-base font-bold text-white drop-shadow-xs">
+                      {m.model}
+                    </h3>
+                  </div>
+                </div>
+                <div className="p-5 space-y-2">
+                  <div className="text-[11px] font-semibold text-teal uppercase tracking-wider">Best For:</div>
+                  <p className="text-xs text-grey leading-relaxed">
+                    {m.bestFor}
+                  </p>
+                </div>
+              </div>
+              <div className="p-5 pt-0">
+                <a
+                  href="#collaboration-form"
+                  onClick={() => setFormData({ ...formData, preferredModel: m.model })}
+                  className="w-full py-2.5 text-center text-xs font-bold rounded-xl bg-teal-subtle text-teal hover:bg-teal hover:text-white transition-colors block"
+                >
+                  Select Model →
+                </a>
+              </div>
+            </div>
+          ))}
         </div>
 
         <div className="bg-white rounded-3xl border border-border shadow-card overflow-hidden">

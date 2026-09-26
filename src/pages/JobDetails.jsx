@@ -13,6 +13,7 @@ import {
   Share2
 } from 'lucide-react';
 import jobsData from '../data/jobs.json';
+import domainsData from '../data/domains.json';
 import ApplyModal from '../components/common/ApplyModal';
 import VerifiedBadge from '../components/common/VerifiedBadge';
 
@@ -24,6 +25,9 @@ const JobDetails = () => {
 
   // Find job by ID or slug
   const job = jobsData.find((j) => j.id === slug) || jobsData[0];
+  const matchingDomain = domainsData.find(
+    (d) => d.name.toLowerCase() === job.industry.toLowerCase() || d.id === job.industry.toLowerCase()
+  );
 
   const handleShare = () => {
     navigator.clipboard?.writeText(window.location.href);
@@ -47,7 +51,18 @@ const JobDetails = () => {
       </div>
 
       {/* 1. HEADER (Spec Section 7) */}
-      <div className="bg-white rounded-3xl p-6 sm:p-10 border border-border shadow-card relative">
+      <div className="bg-white rounded-3xl p-6 sm:p-10 border border-border shadow-card relative overflow-hidden">
+        {matchingDomain?.image && (
+          <div className="h-36 sm:h-44 -mx-6 -mt-6 sm:-mx-10 sm:-mt-10 mb-6 relative overflow-hidden">
+            <img
+              src={matchingDomain.image}
+              alt={matchingDomain.name}
+              loading="lazy"
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-white via-white/50 to-transparent" />
+          </div>
+        )}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-border/80">
           
           <div className="space-y-2">
@@ -207,6 +222,26 @@ const JobDetails = () => {
         {/* Right Column: Why Apply Through Us (Spec Section 7) */}
         <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-28">
           
+          {/* Career Consultant Partner Card */}
+          <div className="bg-white rounded-3xl p-5 border border-border shadow-card overflow-hidden space-y-3">
+            <div className="relative rounded-2xl overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80"
+                alt="Senior Executive Talent Partner"
+                loading="lazy"
+                className="w-full h-44 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/20 to-transparent" />
+              <div className="absolute bottom-3 left-3 text-white">
+                <div className="text-xs font-bold">Dedicated Career Partner</div>
+                <div className="text-[10px] text-lavender-soft">Assigned upon verified submission</div>
+              </div>
+            </div>
+            <p className="text-xs text-grey leading-relaxed">
+              Every applicant to this role is represented directly by our sector practice specialists — offering interview coaching, resume positioning, and compensation guidance.
+            </p>
+          </div>
+
           <div className="bg-gradient-to-br from-lavender-light via-white to-teal-subtle rounded-3xl p-6 border border-lavender-soft shadow-card space-y-5">
             <h3 className="text-base font-bold text-navy">
               Why Apply Through Us

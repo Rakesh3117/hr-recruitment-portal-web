@@ -115,17 +115,102 @@ const Jobs = () => {
     <div className="space-y-8 lg:space-y-12 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
       
       {/* Page Header */}
-      <div className="bg-gradient-to-r from-lavender-light via-white to-teal-subtle p-6 sm:p-8 rounded-3xl border border-border/80 shadow-xs">
-        <div className="max-w-3xl">
-          <span className="text-xs font-bold uppercase tracking-wider text-primary">
-            Candidate Opportunities Portal
-          </span>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-navy mt-1">
+      <div className="relative rounded-3xl overflow-hidden shadow-xl border border-navy/20 p-8 sm:p-12 text-white">
+        <img
+          src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80"
+          alt="Diverse tech professionals collaborating in modern engineering office"
+          loading="lazy"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/95 to-primary/80" />
+
+        <div className="relative z-10 max-w-3xl space-y-3">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-white/10 text-teal-light border border-white/20 backdrop-blur-xs">
+            <ShieldCheck className="w-3.5 h-3.5 text-success" />
+            <span>Direct Client Mandates & Verified Roles</span>
+          </div>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight">
             Find Your Next Career Milestone
           </h1>
-          <p className="text-xs sm:text-sm text-grey mt-2">
+          <p className="text-sm sm:text-base text-lavender-soft/90 max-w-2xl leading-relaxed">
             Direct access to senior, specialist, and leadership roles at Fortune 500 MNCs and hyper-growth enterprises. Transparent compensation, dedicated consultant representation.
           </p>
+
+          <div className="pt-2 flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-grey-light font-medium">
+            <span className="flex items-center gap-1.5 text-white">
+              <span className="w-2 h-2 rounded-full bg-success" />
+              Verified Compensation Packages
+            </span>
+            <span className="flex items-center gap-1.5 text-white">
+              <span className="w-2 h-2 rounded-full bg-teal" />
+              Direct Hiring Manager Presentation
+            </span>
+            <span className="flex items-center gap-1.5 text-white">
+              <span className="w-2 h-2 rounded-full bg-accent" />
+              No Hidden Agency Fees
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Featured Sectors Visual Strip */}
+      <div className="space-y-3">
+        <div className="flex items-center justify-between">
+          <span className="text-xs font-bold uppercase tracking-wider text-grey">
+            Explore Opportunities by Sector
+          </span>
+          {selectedIndustry && (
+            <button
+              type="button"
+              onClick={() => {
+                setSelectedIndustry('');
+                updateURL({ keyword, location: selectedLocation, industry: '', experience: selectedExperience });
+              }}
+              className="text-xs font-semibold text-primary hover:underline cursor-pointer"
+            >
+              Clear Sector Filter
+            </button>
+          )}
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          {domainsData.slice(0, 6).map((dom) => {
+            const isSelected = selectedIndustry.toLowerCase() === dom.name.toLowerCase();
+            return (
+              <button
+                key={dom.id}
+                type="button"
+                onClick={() => {
+                  const newInd = isSelected ? '' : dom.name;
+                  setSelectedIndustry(newInd);
+                  updateURL({ keyword, location: selectedLocation, industry: newInd, experience: selectedExperience });
+                }}
+                className={`group relative rounded-2xl overflow-hidden border transition-all duration-200 text-left cursor-pointer h-28 ${
+                  isSelected 
+                    ? 'ring-2 ring-primary border-transparent shadow-md' 
+                    : 'border-border hover:border-primary/50 shadow-xs'
+                }`}
+              >
+                <img
+                  src={dom.image}
+                  alt={dom.name}
+                  loading="lazy"
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                />
+                <div className={`absolute inset-0 transition-colors ${
+                  isSelected ? 'bg-primary/75' : 'bg-gradient-to-t from-navy/90 via-navy/40 to-transparent group-hover:from-navy/80'
+                }`} />
+                <div className="absolute inset-0 p-3 flex flex-col justify-end text-white">
+                  <span className="text-xs font-bold leading-tight line-clamp-2 drop-shadow-xs">
+                    {dom.name}
+                  </span>
+                  <span className="text-[10px] text-teal-light mt-0.5 font-medium">
+                    {dom.metrics?.placements || 'Active Mandates'}
+                  </span>
+                </div>
+              </button>
+            );
+          })}
         </div>
       </div>
 

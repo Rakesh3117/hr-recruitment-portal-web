@@ -45,17 +45,66 @@ const Contact = () => {
     <div className="space-y-16 lg:space-y-24 pb-20">
       
       {/* Hero Header */}
-      <section className="bg-gradient-to-b from-lavender-light via-lavender-soft/30 to-background py-16 lg:py-20 border-b border-border/40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-3xl">
-          <span className="inline-block px-3.5 py-1 rounded-full text-xs font-semibold bg-white text-primary border border-lavender-soft mb-4">
-            Connect With Our Teams
-          </span>
-          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-navy leading-tight">
-            We're Here to Support Your Growth
-          </h1>
-          <p className="mt-4 text-base sm:text-lg text-grey leading-relaxed">
-            Whether you are an enterprise client looking to scale critical headcount or an executive exploring your next leadership challenge, we're ready to talk.
-          </p>
+      <section className="bg-gradient-to-b from-lavender-light via-lavender-soft/30 to-background py-16 lg:py-24 border-b border-border/40">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div className="lg:col-span-7 space-y-6 text-left">
+              <span className="inline-block px-3.5 py-1 rounded-full text-xs font-semibold bg-white text-primary border border-lavender-soft shadow-xs">
+                Connect With Our Teams
+              </span>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-navy leading-tight">
+                We're Here to Support<br />
+                <span className="text-primary">Your Growth.</span>
+              </h1>
+              <p className="text-base sm:text-lg text-grey leading-relaxed max-w-2xl">
+                Whether you are an enterprise client looking to scale critical headcount or an executive exploring your next leadership challenge, our practice leads are ready to talk.
+              </p>
+
+              <div className="pt-2 flex flex-wrap items-center gap-6 text-xs text-navy font-semibold border-t border-border/60">
+                <span className="flex items-center gap-1.5">
+                  <Clock className="w-4 h-4 text-teal" /> 24-Hour Inquiry Response
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <Users className="w-4 h-4 text-primary" /> Senior Consultant Attention
+                </span>
+                <span className="flex items-center gap-1.5">
+                  <CheckCircle2 className="w-4 h-4 text-success" /> Pan-India & Global Coverage
+                </span>
+              </div>
+            </div>
+
+            {/* Visual Hero Showcase Card */}
+            <div className="lg:col-span-5 relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-lavender-soft group">
+                <img
+                  src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1000&q=80"
+                  alt="Modern corporate reception and client consultation lounge"
+                  loading="lazy"
+                  className="w-full h-80 sm:h-96 object-cover transform group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent" />
+                
+                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-lavender-soft shadow-md flex items-center gap-2 text-xs font-bold text-navy">
+                  <span className="w-2.5 h-2.5 rounded-full bg-teal animate-pulse" />
+                  <span>Global Client Advisory Desk</span>
+                </div>
+
+                <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur-md p-4 rounded-2xl border border-white/60 shadow-lg space-y-1.5">
+                  <div className="flex items-center justify-between text-xs">
+                    <span className="font-bold text-navy">Corporate HQ & Delivery Hubs</span>
+                    <span className="font-extrabold text-primary text-[11px] bg-lavender-light px-2 py-0.5 rounded-md">
+                      Pan-India + Global
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-grey leading-tight">
+                    Walk in to our headquarters at Senapati Bapat Road, Pune or connect with our metro practice directors.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
@@ -66,18 +115,27 @@ const Contact = () => {
           {/* Left Column — Corporate Office & Regional Hubs (Spec Section 9) */}
           <div className="lg:col-span-5 space-y-8">
             
-            {/* Headquarters Card */}
-            <div className="bg-navy text-white rounded-3xl p-8 shadow-xl space-y-6 border border-navy-muted">
-              <div>
-                <span className="px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-teal text-white">
+            {/* Headquarters Card with Office Photo Banner */}
+            <div className="bg-navy text-white rounded-3xl overflow-hidden shadow-xl border border-navy-muted">
+              <div className="relative h-44 overflow-hidden">
+                <img
+                  src={hqOffice.image}
+                  alt="Corporate Headquarters"
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/50 to-transparent" />
+                <span className="absolute top-4 left-4 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-teal text-white shadow-xs">
                   Corporate Headquarters
                 </span>
-                <h3 className="text-2xl font-bold text-white mt-3">
-                  Acuity Talent Partners
-                </h3>
+                <div className="absolute bottom-3 left-4 right-4">
+                  <h3 className="text-xl font-bold text-white drop-shadow-xs">
+                    Acuity Talent Partners
+                  </h3>
+                </div>
               </div>
 
-              <div className="space-y-4 text-sm text-grey-light">
+              <div className="p-8 pt-4 space-y-4 text-sm text-grey-light">
                 <div className="flex items-start gap-3">
                   <MapPin className="w-5 h-5 text-teal shrink-0 mt-0.5" />
                   <div>
@@ -119,8 +177,8 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Regional Delivery Hubs */}
-            <div className="bg-white rounded-3xl p-8 border border-border shadow-card space-y-6">
+            {/* Regional Delivery Hubs with Visual Photo Thumbnails */}
+            <div className="bg-white rounded-3xl p-6 sm:p-8 border border-border shadow-card space-y-6">
               <div>
                 <h3 className="text-lg font-bold text-navy">
                   Regional Operating Hubs
@@ -132,13 +190,26 @@ const Contact = () => {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
                 {regionalOffices.map((office) => (
-                  <div key={office.city} className="p-3.5 rounded-xl bg-background border border-border/60">
-                    <div className="font-bold text-navy mb-1">{office.city}</div>
-                    <p className="text-[11px] text-grey line-clamp-2 mb-2">
-                      {office.address}
-                    </p>
-                    <div className="text-[11px] font-medium text-teal">
-                      {office.phone}
+                  <div key={office.city} className="rounded-2xl bg-background border border-border/60 overflow-hidden group hover:border-primary/40 transition-colors">
+                    <div className="h-24 overflow-hidden relative">
+                      <img
+                        src={office.image}
+                        alt={`${office.city} Office Hub`}
+                        loading="lazy"
+                        className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
+                      <span className="absolute bottom-1.5 left-2.5 font-bold text-xs text-white drop-shadow-xs">
+                        {office.city}
+                      </span>
+                    </div>
+                    <div className="p-3">
+                      <p className="text-[11px] text-grey line-clamp-2 mb-1.5">
+                        {office.address}
+                      </p>
+                      <div className="text-[11px] font-semibold text-teal">
+                        {office.phone}
+                      </div>
                     </div>
                   </div>
                 ))}
