@@ -1,9 +1,9 @@
 const App = () => {
-    return (
-        <div>
-            <h1>App</h1>
-        </div>
-    )
+  return (
+    <div className="min-h-screen bg-background p-8">
+      Hiii
+    </div>
+  )
 }
 
 export default App
