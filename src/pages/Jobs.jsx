@@ -15,6 +15,7 @@ import jobsData from '../data/jobs.json';
 import JobCard from '../components/common/JobCard';
 import ApplyModal from '../components/common/ApplyModal';
 import domainsData from '../data/domains.json';
+import { FormField, TextInput, SelectInput } from '../components/common/FormFields';
 
 const Jobs = () => {
   const location = useLocation();
@@ -219,93 +220,76 @@ const Jobs = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           
           {/* Job Title / Keyword */}
-          <div className="relative">
-            <label className="block text-[11px] font-semibold uppercase tracking-wider text-grey mb-1">
-              Job Title / Keyword
-            </label>
-            <div className="relative flex items-center">
-              <Search className="w-4 h-4 text-grey absolute left-3.5 pointer-events-none" />
-              <input
-                type="text"
-                value={keyword}
-                onChange={(e) => {
-                  setKeyword(e.target.value);
-                  updateURL({ keyword: e.target.value, location: selectedLocation, industry: selectedIndustry, experience: selectedExperience });
-                }}
-                placeholder="e.g. Platform Engineer, VP"
-                className="w-full pl-10 pr-3 py-2 text-sm rounded-xl border border-border text-navy focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-              />
-            </div>
-          </div>
+          <FormField id="jobs-keyword" label="Job Title / Keyword">
+            <TextInput
+              id="jobs-keyword"
+              icon={Search}
+              variant="primary"
+              value={keyword}
+              onChange={(e) => {
+                setKeyword(e.target.value);
+                updateURL({ keyword: e.target.value, location: selectedLocation, industry: selectedIndustry, experience: selectedExperience });
+              }}
+              placeholder="e.g. Platform Engineer, VP"
+            />
+          </FormField>
 
           {/* Location ▾ */}
-          <div>
-            <label className="block text-[11px] font-semibold uppercase tracking-wider text-grey mb-1">
-              Location ▾
-            </label>
-            <div className="relative flex items-center">
-              <MapPin className="w-4 h-4 text-grey absolute left-3.5 pointer-events-none" />
-              <select
-                value={selectedLocation}
-                onChange={(e) => {
-                  setSelectedLocation(e.target.value);
-                  updateURL({ keyword, location: e.target.value, industry: selectedIndustry, experience: selectedExperience });
-                }}
-                className="w-full pl-10 pr-3 py-2 text-sm rounded-xl border border-border text-navy bg-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent cursor-pointer"
-              >
-                <option value="">All Locations</option>
-                {locationsList.map((loc) => (
-                  <option key={loc} value={loc}>{loc}</option>
-                ))}
-              </select>
-            </div>
-          </div>
+          <FormField id="jobs-location" label="Location">
+            <SelectInput
+              id="jobs-location"
+              icon={MapPin}
+              variant="primary"
+              value={selectedLocation}
+              onChange={(e) => {
+                setSelectedLocation(e.target.value);
+                updateURL({ keyword, location: e.target.value, industry: selectedIndustry, experience: selectedExperience });
+              }}
+            >
+              <option value="">All Locations</option>
+              {locationsList.map((loc) => (
+                <option key={loc} value={loc}>{loc}</option>
+              ))}
+            </SelectInput>
+          </FormField>
 
           {/* Industry ▾ */}
-          <div>
-            <label className="block text-[11px] font-semibold uppercase tracking-wider text-grey mb-1">
-              Industry ▾
-            </label>
-            <div className="relative flex items-center">
-              <Briefcase className="w-4 h-4 text-grey absolute left-3.5 pointer-events-none" />
-              <select
-                value={selectedIndustry}
-                onChange={(e) => {
-                  setSelectedIndustry(e.target.value);
-                  updateURL({ keyword, location: selectedLocation, industry: e.target.value, experience: selectedExperience });
-                }}
-                className="w-full pl-10 pr-3 py-2 text-sm rounded-xl border border-border text-navy bg-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent cursor-pointer"
-              >
-                <option value="">All Industries</option>
-                {domainsData.map((dom) => (
-                  <option key={dom.id} value={dom.name}>{dom.name}</option>
-                ))}
-              </select>
-            </div>
-          </div>
+          <FormField id="jobs-industry" label="Industry">
+            <SelectInput
+              id="jobs-industry"
+              icon={Briefcase}
+              variant="primary"
+              value={selectedIndustry}
+              onChange={(e) => {
+                setSelectedIndustry(e.target.value);
+                updateURL({ keyword, location: selectedLocation, industry: e.target.value, experience: selectedExperience });
+              }}
+            >
+              <option value="">All Industries</option>
+              {domainsData.map((dom) => (
+                <option key={dom.id} value={dom.name}>{dom.name}</option>
+              ))}
+            </SelectInput>
+          </FormField>
 
           {/* Experience ▾ */}
-          <div>
-            <label className="block text-[11px] font-semibold uppercase tracking-wider text-grey mb-1">
-              Experience ▾
-            </label>
-            <div className="relative flex items-center">
-              <Filter className="w-4 h-4 text-grey absolute left-3.5 pointer-events-none" />
-              <select
-                value={selectedExperience}
-                onChange={(e) => {
-                  setSelectedExperience(e.target.value);
-                  updateURL({ keyword, location: selectedLocation, industry: selectedIndustry, experience: e.target.value });
-                }}
-                className="w-full pl-10 pr-3 py-2 text-sm rounded-xl border border-border text-navy bg-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent cursor-pointer"
-              >
-                <option value="">Any Experience</option>
-                {experienceList.map((exp) => (
-                  <option key={exp} value={exp}>{exp}</option>
-                ))}
-              </select>
-            </div>
-          </div>
+          <FormField id="jobs-exp" label="Experience">
+            <SelectInput
+              id="jobs-exp"
+              icon={Filter}
+              variant="primary"
+              value={selectedExperience}
+              onChange={(e) => {
+                setSelectedExperience(e.target.value);
+                updateURL({ keyword, location: selectedLocation, industry: selectedIndustry, experience: e.target.value });
+              }}
+            >
+              <option value="">Any Experience</option>
+              {experienceList.map((exp) => (
+                <option key={exp} value={exp}>{exp}</option>
+              ))}
+            </SelectInput>
+          </FormField>
 
         </div>
 

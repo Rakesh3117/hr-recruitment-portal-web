@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Search, MapPin, Briefcase, Filter } from 'lucide-react';
 import statsData from '../../data/stats.json';
 import domainsData from '../../data/domains.json';
+import { FormField, TextInput, SelectInput } from './FormFields';
 
 const JobSearchWidget = ({ initialValues = {}, onSearch = null, isEmbedded = false }) => {
   const navigate = useNavigate();
@@ -86,81 +87,64 @@ const JobSearchWidget = ({ initialValues = {}, onSearch = null, isEmbedded = fal
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           
           {/* Keyword Input */}
-          <div className="relative">
-            <label className="block text-[11px] font-semibold uppercase tracking-wider text-grey mb-1">
-              Job Title or Keyword
-            </label>
-            <div className="relative flex items-center">
-              <Search className="w-4 h-4 text-grey absolute left-3.5 pointer-events-none" />
-              <input
-                type="text"
-                value={keyword}
-                onChange={(e) => setKeyword(e.target.value)}
-                placeholder="e.g. DevOps, Architect, VP"
-                className="w-full pl-10 pr-3 py-2.5 rounded-xl border border-border text-sm text-navy placeholder-grey/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-              />
-            </div>
-          </div>
+          <FormField id="search-keyword" label="Job Title or Keyword">
+            <TextInput
+              id="search-keyword"
+              icon={Search}
+              variant="primary"
+              value={keyword}
+              onChange={(e) => setKeyword(e.target.value)}
+              placeholder="e.g. DevOps, Architect, VP"
+            />
+          </FormField>
 
           {/* Location Select */}
-          <div>
-            <label className="block text-[11px] font-semibold uppercase tracking-wider text-grey mb-1">
-              Location
-            </label>
-            <div className="relative flex items-center">
-              <MapPin className="w-4 h-4 text-grey absolute left-3.5 pointer-events-none" />
-              <select
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
-                className="w-full pl-10 pr-3 py-2.5 rounded-xl border border-border text-sm text-navy bg-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all appearance-none cursor-pointer"
-              >
-                <option value="">All Locations</option>
-                {locations.map((loc) => (
-                  <option key={loc} value={loc}>{loc}</option>
-                ))}
-              </select>
-            </div>
-          </div>
+          <FormField id="search-location" label="Location">
+            <SelectInput
+              id="search-location"
+              icon={MapPin}
+              variant="primary"
+              value={location}
+              onChange={(e) => setLocation(e.target.value)}
+            >
+              <option value="">All Locations</option>
+              {locations.map((loc) => (
+                <option key={loc} value={loc}>{loc}</option>
+              ))}
+            </SelectInput>
+          </FormField>
 
           {/* Industry Select */}
-          <div>
-            <label className="block text-[11px] font-semibold uppercase tracking-wider text-grey mb-1">
-              Industry
-            </label>
-            <div className="relative flex items-center">
-              <Briefcase className="w-4 h-4 text-grey absolute left-3.5 pointer-events-none" />
-              <select
-                value={industry}
-                onChange={(e) => setIndustry(e.target.value)}
-                className="w-full pl-10 pr-3 py-2.5 rounded-xl border border-border text-sm text-navy bg-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all appearance-none cursor-pointer"
-              >
-                <option value="">All Industries</option>
-                {domainsData.map((dom) => (
-                  <option key={dom.id} value={dom.name}>{dom.name}</option>
-                ))}
-              </select>
-            </div>
-          </div>
+          <FormField id="search-industry" label="Industry">
+            <SelectInput
+              id="search-industry"
+              icon={Briefcase}
+              variant="primary"
+              value={industry}
+              onChange={(e) => setIndustry(e.target.value)}
+            >
+              <option value="">All Industries</option>
+              {domainsData.map((dom) => (
+                <option key={dom.id} value={dom.name}>{dom.name}</option>
+              ))}
+            </SelectInput>
+          </FormField>
 
           {/* Experience Select */}
-          <div>
-            <label className="block text-[11px] font-semibold uppercase tracking-wider text-grey mb-1">
-              Experience
-            </label>
-            <div className="relative flex items-center">
-              <Filter className="w-4 h-4 text-grey absolute left-3.5 pointer-events-none" />
-              <select
-                value={experience}
-                onChange={(e) => setExperience(e.target.value)}
-                className="w-full pl-10 pr-3 py-2.5 rounded-xl border border-border text-sm text-navy bg-white focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all appearance-none cursor-pointer"
-              >
-                <option value="">Any Experience</option>
-                {experienceRanges.map((exp) => (
-                  <option key={exp} value={exp}>{exp}</option>
-                ))}
-              </select>
-            </div>
-          </div>
+          <FormField id="search-exp" label="Experience">
+            <SelectInput
+              id="search-exp"
+              icon={Filter}
+              variant="primary"
+              value={experience}
+              onChange={(e) => setExperience(e.target.value)}
+            >
+              <option value="">Any Experience</option>
+              {experienceRanges.map((exp) => (
+                <option key={exp} value={exp}>{exp}</option>
+              ))}
+            </SelectInput>
+          </FormField>
 
         </div>
 

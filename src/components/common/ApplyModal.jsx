@@ -1,5 +1,19 @@
 import { useState } from 'react';
-import { X, CheckCircle2, Upload, FileText, Building, MapPin } from 'lucide-react';
+import { 
+  X, 
+  CheckCircle2, 
+  Upload, 
+  FileText, 
+  Building, 
+  MapPin,
+  User,
+  Mail,
+  Phone,
+  Clock,
+  Calendar,
+  Building2
+} from 'lucide-react';
+import { FormField, TextInput, SelectInput, TextArea } from './FormFields';
 
 const ApplyModal = ({ job, isOpen, onClose }) => {
   const [formData, setFormData] = useState({
@@ -110,99 +124,93 @@ const ApplyModal = ({ job, isOpen, onClose }) => {
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1">
-                    Full Name *
-                  </label>
-                  <input
+                <FormField id="apply-fullname" label="Full Name" required>
+                  <TextInput
+                    id="apply-fullname"
                     type="text"
                     required
+                    icon={User}
+                    variant="primary"
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     placeholder="e.g. Rahul Sharma"
-                    className="w-full px-3 py-2 text-sm rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                   />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1">
-                    Email Address *
-                  </label>
-                  <input
+                </FormField>
+
+                <FormField id="apply-email" label="Email Address" required>
+                  <TextInput
+                    id="apply-email"
                     type="email"
                     required
+                    icon={Mail}
+                    variant="primary"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="rahul@example.com"
-                    className="w-full px-3 py-2 text-sm rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                   />
-                </div>
+                </FormField>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1">
-                    Phone / WhatsApp *
-                  </label>
-                  <input
+                <FormField id="apply-phone" label="Phone / WhatsApp" required>
+                  <TextInput
+                    id="apply-phone"
                     type="tel"
                     required
+                    icon={Phone}
+                    variant="primary"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="+91 98765 43210"
-                    className="w-full px-3 py-2 text-sm rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                   />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1">
-                    Total Experience
-                  </label>
-                  <input
+                </FormField>
+
+                <FormField id="apply-exp" label="Total Experience" badge="Optional">
+                  <TextInput
+                    id="apply-exp"
                     type="text"
+                    icon={Clock}
+                    variant="primary"
                     value={formData.experienceYears}
                     onChange={(e) => setFormData({ ...formData, experienceYears: e.target.value })}
                     placeholder="e.g. 7.5 Years"
-                    className="w-full px-3 py-2 text-sm rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                   />
-                </div>
+                </FormField>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1">
-                    Current Organization
-                  </label>
-                  <input
+                <FormField id="apply-company" label="Current Organization" badge="Optional">
+                  <TextInput
+                    id="apply-company"
                     type="text"
+                    icon={Building2}
+                    variant="primary"
                     value={formData.currentCompany}
                     onChange={(e) => setFormData({ ...formData, currentCompany: e.target.value })}
                     placeholder="Current employer or 'Confidential'"
-                    className="w-full px-3 py-2 text-sm rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                   />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1">
-                    Notice Period
-                  </label>
-                  <select
+                </FormField>
+
+                <FormField id="apply-notice" label="Notice Period">
+                  <SelectInput
+                    id="apply-notice"
+                    icon={Calendar}
+                    variant="primary"
                     value={formData.noticePeriod}
                     onChange={(e) => setFormData({ ...formData, noticePeriod: e.target.value })}
-                    className="w-full px-3 py-2 text-sm rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent bg-white"
                   >
                     <option value="Immediate">Immediate</option>
                     <option value="15 Days">15 Days</option>
                     <option value="30 Days">30 Days</option>
                     <option value="60 Days">60 Days</option>
                     <option value="90 Days">90 Days</option>
-                  </select>
-                </div>
+                  </SelectInput>
+                </FormField>
               </div>
 
               {/* Resume Upload Simulation */}
-              <div>
-                <label className="block text-xs font-semibold text-navy mb-1">
-                  Resume / CV (PDF or DOCX) *
-                </label>
-                <div className="border-2 border-dashed border-border rounded-xl p-3.5 text-center hover:border-primary/50 transition-colors bg-background">
+              <FormField id="resume-upload" label="Resume / CV (PDF or DOCX)" required hint="Standard PDF or DOCX format under 5 MB.">
+                <div className="border-2 border-dashed border-border rounded-xl p-4 text-center hover:border-primary/50 transition-colors bg-surface-secondary">
                   <input
                     type="file"
                     id="resume-upload"
@@ -211,9 +219,9 @@ const ApplyModal = ({ job, isOpen, onClose }) => {
                     className="hidden"
                   />
                   <label htmlFor="resume-upload" className="cursor-pointer block">
-                    <Upload className="w-5 h-5 mx-auto text-primary mb-1" />
+                    <Upload className="w-5 h-5 mx-auto text-primary mb-1.5" />
                     {formData.resumeName ? (
-                      <span className="text-xs font-semibold text-navy flex items-center justify-center gap-1">
+                      <span className="text-xs font-semibold text-navy flex items-center justify-center gap-1.5">
                         <FileText className="w-3.5 h-3.5 text-teal" />
                         {formData.resumeName}
                       </span>
@@ -224,20 +232,19 @@ const ApplyModal = ({ job, isOpen, onClose }) => {
                     )}
                   </label>
                 </div>
-              </div>
+              </FormField>
 
-              <div>
-                <label className="block text-xs font-semibold text-navy mb-1">
-                  Quick Note to Consultant (Optional)
-                </label>
-                <textarea
-                  rows="2"
+              <FormField id="apply-notes" label="Quick Note to Consultant" badge="Optional">
+                <TextArea
+                  id="apply-notes"
+                  rows={2}
+                  icon={FileText}
+                  variant="primary"
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                  placeholder="Key accomplishments or preferred interview slots..."
-                  className="w-full px-3 py-2 text-sm rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Key accomplishments, notice flexibility, or preferred interview slots..."
                 />
-              </div>
+              </FormField>
 
               <div className="pt-2">
                 <button

@@ -5,10 +5,24 @@ import {
   CheckCircle2, 
   Briefcase,
   ShieldCheck,
-  ArrowRight
+  ArrowRight,
+  Building2,
+  User,
+  Mail,
+  Phone,
+  FileText,
+  Users,
+  MapPin,
+  Laptop,
+  Clock,
+  IndianRupee,
+  Sparkles,
+  Layers,
+  Calendar
 } from 'lucide-react';
 import requirementsData from '../data/requirements.json';
 import domainsData from '../data/domains.json';
+import { FormField, TextInput, SelectInput, TextArea } from '../components/common/FormFields';
 
 const Employers = () => {
   const location = useLocation();
@@ -321,254 +335,238 @@ const Employers = () => {
               
               {/* Row 1: Company & Industry */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Company / Organization Name *
-                  </label>
-                  <input
+                <FormField id="emp-company" label="Company / Organization Name" required>
+                  <TextInput
+                    id="emp-company"
                     type="text"
                     required
+                    icon={Building2}
+                    variant="teal"
                     value={formData.companyName}
                     onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
                     placeholder="e.g. Acme Global Technologies"
-                    className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
                   />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Industry Sector *
-                  </label>
-                  <select
+                </FormField>
+                <FormField id="emp-industry" label="Industry Sector" required>
+                  <SelectInput
+                    id="emp-industry"
+                    icon={Briefcase}
+                    variant="teal"
                     value={formData.industry}
                     onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
                   >
                     {domainsData.map((d) => (
                       <option key={d.id} value={d.name}>{d.name}</option>
                     ))}
-                  </select>
-                </div>
+                  </SelectInput>
+                </FormField>
               </div>
 
               {/* Row 2: Contact Person, Email, Phone */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Contact Person Name *
-                  </label>
-                  <input
+                <FormField id="emp-contact" label="Contact Person Name" required>
+                  <TextInput
+                    id="emp-contact"
                     type="text"
                     required
+                    icon={User}
+                    variant="teal"
                     value={formData.contactPerson}
                     onChange={(e) => setFormData({ ...formData, contactPerson: e.target.value })}
                     placeholder="e.g. Priya Sharma"
-                    className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
                   />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Official Work Email *
-                  </label>
-                  <input
+                </FormField>
+                <FormField id="emp-email" label="Official Work Email" required>
+                  <TextInput
+                    id="emp-email"
                     type="email"
                     required
+                    icon={Mail}
+                    variant="teal"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="priya@acmeglobal.com"
-                    className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
                   />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Phone / Direct Line *
-                  </label>
-                  <input
+                </FormField>
+                <FormField id="emp-phone" label="Phone / Direct Line" required>
+                  <TextInput
+                    id="emp-phone"
                     type="tel"
                     required
+                    icon={Phone}
+                    variant="teal"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="+91 98765 43210"
-                    className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
                   />
-                </div>
+                </FormField>
               </div>
 
               {/* Row 3: Role Title & Openings */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-                <div className="sm:col-span-2">
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Role Title(s) *
-                  </label>
-                  <input
+                <FormField id="emp-role" label="Role Title(s)" required className="sm:col-span-2">
+                  <TextInput
+                    id="emp-role"
                     type="text"
                     required
+                    icon={FileText}
+                    variant="teal"
                     value={formData.roleTitle}
                     onChange={(e) => setFormData({ ...formData, roleTitle: e.target.value })}
                     placeholder="e.g. Lead Cloud Architect or 5x Senior Java Developers"
-                    className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
                   />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Number of Openings
-                  </label>
-                  <input
+                </FormField>
+                <FormField id="emp-openings" label="Number of Openings">
+                  <TextInput
+                    id="emp-openings"
                     type="number"
                     min="1"
                     max="100"
+                    icon={Users}
+                    variant="teal"
                     value={formData.openings}
                     onChange={(e) => setFormData({ ...formData, openings: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
                   />
-                </div>
+                </FormField>
               </div>
 
               {/* Row 4: Location & Work Mode */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Target Location(s) *
-                  </label>
-                  <input
+                <FormField id="emp-location" label="Target Location(s)" required>
+                  <TextInput
+                    id="emp-location"
                     type="text"
                     required
+                    icon={MapPin}
+                    variant="teal"
                     value={formData.location}
                     onChange={(e) => setFormData({ ...formData, location: e.target.value })}
                     placeholder="e.g. Bengaluru, Whitefield or Mumbai BKC"
-                    className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
                   />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Work Mode
-                  </label>
-                  <select
+                </FormField>
+                <FormField id="emp-workmode" label="Work Mode">
+                  <SelectInput
+                    id="emp-workmode"
+                    icon={Laptop}
+                    variant="teal"
                     value={formData.workMode}
                     onChange={(e) => setFormData({ ...formData, workMode: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
                   >
                     <option value="Hybrid">Hybrid (2-3 days office)</option>
                     <option value="Onsite">100% Onsite</option>
                     <option value="Remote">100% Remote / Distributed</option>
-                  </select>
-                </div>
+                  </SelectInput>
+                </FormField>
               </div>
 
               {/* Row 5: Experience & Budget */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Experience Range
-                  </label>
-                  <select
+                <FormField id="emp-exp" label="Experience Range">
+                  <SelectInput
+                    id="emp-exp"
+                    icon={Clock}
+                    variant="teal"
                     value={formData.experienceRange}
                     onChange={(e) => setFormData({ ...formData, experienceRange: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
                   >
                     <option value="3 - 6 years">3 - 6 years (Mid-Level)</option>
                     <option value="6 - 10 years">6 - 10 years (Senior Specialist)</option>
                     <option value="10 - 15 years">10 - 15 years (Principal / Lead)</option>
                     <option value="15+ years">15+ years (Director / VP / C-Suite)</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Target Budget (CTC or Rate)
-                  </label>
-                  <input
+                  </SelectInput>
+                </FormField>
+                <FormField id="emp-budget" label="Target Budget (CTC or Rate)" badge="Optional">
+                  <TextInput
+                    id="emp-budget"
                     type="text"
+                    icon={IndianRupee}
+                    variant="teal"
                     value={formData.budgetCTC}
                     onChange={(e) => setFormData({ ...formData, budgetCTC: e.target.value })}
                     placeholder="e.g. ₹28 - ₹35 LPA or $150k USD"
-                    className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
                   />
-                </div>
+                </FormField>
               </div>
 
               {/* Row 6: Skills */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Must-Have Skills / Core Requirements *
-                  </label>
-                  <textarea
-                    rows="2"
+                <FormField id="emp-must-skills" label="Must-Have Skills / Core Requirements" required>
+                  <TextArea
+                    id="emp-must-skills"
+                    rows={2}
                     required
+                    icon={CheckCircle2}
+                    variant="teal"
                     value={formData.mustHaveSkills}
                     onChange={(e) => setFormData({ ...formData, mustHaveSkills: e.target.value })}
                     placeholder="e.g. Kubernetes, Terraform, AWS, Golang, distributed architecture..."
-                    className="w-full px-4 py-2 text-sm rounded-xl border border-border text-navy focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
                   />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Nice-to-Haves / Certifications
-                  </label>
-                  <textarea
-                    rows="2"
+                </FormField>
+                <FormField id="emp-nice-skills" label="Nice-to-Haves / Certifications" badge="Optional">
+                  <TextArea
+                    id="emp-nice-skills"
+                    rows={2}
+                    icon={Sparkles}
+                    variant="teal"
                     value={formData.niceToHaveSkills}
                     onChange={(e) => setFormData({ ...formData, niceToHaveSkills: e.target.value })}
                     placeholder="e.g. FinOps certification, prior Tier-1 banking experience..."
-                    className="w-full px-4 py-2 text-sm rounded-xl border border-border text-navy focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
                   />
-                </div>
+                </FormField>
               </div>
 
               {/* Row 7: Engagement Type & Verification Level */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Engagement Type *
-                  </label>
-                  <select
+                <FormField id="emp-engagement" label="Engagement Type" required>
+                  <SelectInput
+                    id="emp-engagement"
+                    icon={Layers}
+                    variant="teal"
                     value={formData.engagementType}
                     onChange={(e) => setFormData({ ...formData, engagementType: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
                   >
                     <option value="Permanent">Permanent (Contingency / Executive Search)</option>
                     <option value="Contract">Contract / Staffing Deployment</option>
                     <option value="RPO">Recruitment Process Outsourcing (RPO)</option>
                     <option value="GIC Build-out">GIC / Captive Center Build-out</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Verification Level Needed *
-                  </label>
-                  <select
+                  </SelectInput>
+                </FormField>
+                <FormField id="emp-verification" label="Verification Level Needed" required>
+                  <SelectInput
+                    id="emp-verification"
+                    icon={ShieldCheck}
+                    variant="teal"
                     value={formData.verificationLevel}
                     onChange={(e) => setFormData({ ...formData, verificationLevel: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
                   >
                     <option value="Standard">Standard (Identity, Education, Employment & 2 References)</option>
                     <option value="Standard + Background Check">Standard + Background Check (Criminal & Address BGV)</option>
                     <option value="Custom">Custom Enterprise Verification Protocol</option>
-                  </select>
-                </div>
+                  </SelectInput>
+                </FormField>
               </div>
 
               {/* Row 8: Target Hiring Timeline */}
-              <div>
-                <label className="block text-xs font-semibold text-navy mb-1.5">
-                  Target Hiring Timeline
-                </label>
-                <select
+              <FormField id="emp-timeline" label="Target Hiring Timeline">
+                <SelectInput
+                  id="emp-timeline"
+                  icon={Calendar}
+                  variant="teal"
                   value={formData.targetTimeline}
                   onChange={(e) => setFormData({ ...formData, targetTimeline: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal focus:border-transparent"
                 >
                   <option value="Immediate">Immediate (Within 15 days)</option>
                   <option value="15 - 30 days">15 - 30 days (Standard)</option>
                   <option value="30 - 60 days">30 - 60 days (Leadership search)</option>
                   <option value="Flexible">Flexible / Pipeline building</option>
-                </select>
+                </SelectInput>
                 <p className="text-[11px] text-grey mt-1.5">
                   Need an ongoing enterprise collaboration instead of a single mandate?{' '}
                   <Link to="/partner-with-us" className="text-teal font-semibold hover:underline">
                     Explore Partner With Us →
                   </Link>
                 </p>
-              </div>
+              </FormField>
 
               {/* Submit CTA */}
               <div className="pt-4 border-t border-border">

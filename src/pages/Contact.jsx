@@ -7,9 +7,13 @@ import {
   Send, 
   CheckCircle2, 
   Users, 
-  Clock 
+  Clock,
+  User,
+  FileText,
+  MessageSquare
 } from 'lucide-react';
 import statsData from '../data/stats.json';
+import { FormField, TextInput, TextArea } from '../components/common/FormFields';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -302,76 +306,73 @@ const Contact = () => {
 
                   {/* Name & Email */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-semibold text-navy mb-1.5">
-                        Your Full Name *
-                      </label>
-                      <input
+                    <FormField id="contact-name" label="Your Full Name" required>
+                      <TextInput
+                        id="contact-name"
                         type="text"
                         required
+                        icon={User}
+                        variant={formData.userType === 'Client' ? 'teal' : 'primary'}
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="e.g. Vikram Mehta"
-                        className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                       />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-semibold text-navy mb-1.5">
-                        Email Address *
-                      </label>
-                      <input
+                    </FormField>
+
+                    <FormField id="contact-email" label="Email Address" required>
+                      <TextInput
+                        id="contact-email"
                         type="email"
                         required
+                        icon={Mail}
+                        variant={formData.userType === 'Client' ? 'teal' : 'primary'}
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="vikram@example.com"
-                        className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                       />
-                    </div>
+                    </FormField>
                   </div>
 
                   {/* Phone & Subject */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-semibold text-navy mb-1.5">
-                        Phone Number
-                      </label>
-                      <input
+                    <FormField id="contact-phone" label="Phone Number" badge="Optional">
+                      <TextInput
+                        id="contact-phone"
                         type="tel"
+                        icon={Phone}
+                        variant={formData.userType === 'Client' ? 'teal' : 'primary'}
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="+91 98765 43210"
-                        className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                       />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-semibold text-navy mb-1.5">
-                        Subject / Practice Area
-                      </label>
-                      <input
+                    </FormField>
+
+                    <FormField id="contact-subject" label="Subject / Practice Area" badge="Optional">
+                      <TextInput
+                        id="contact-subject"
                         type="text"
+                        icon={FileText}
+                        variant={formData.userType === 'Client' ? 'teal' : 'primary'}
                         value={formData.subject}
                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                         placeholder="e.g. Leadership Mandate in Bengaluru"
-                        className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                       />
-                    </div>
+                    </FormField>
                   </div>
 
                   {/* Message */}
-                  <div>
-                    <label className="block text-xs font-semibold text-navy mb-1.5">
-                      Your Message *
-                    </label>
-                    <textarea
-                      rows="4"
+                  <FormField id="contact-message" label="Your Message" required hint="Provide context on your mandate, team scale, or career inquiry.">
+                    <TextArea
+                      id="contact-message"
+                      rows={4}
                       required
+                      icon={MessageSquare}
+                      variant={formData.userType === 'Client' ? 'teal' : 'primary'}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Tell us about your requirement or career inquiry..."
-                      className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                     />
-                  </div>
+                  </FormField>
 
                   {/* Submit Button */}
                   <div className="pt-2">

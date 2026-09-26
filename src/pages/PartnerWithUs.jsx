@@ -9,9 +9,19 @@ import {
   CheckCircle2, 
   ArrowRight, 
   Send, 
-  Award
+  Award,
+  Briefcase,
+  TrendingUp,
+  MapPin,
+  Handshake,
+  FileText,
+  User,
+  Mail,
+  Phone,
+  Calendar
 } from 'lucide-react';
 import domainsData from '../data/domains.json';
+import { FormField, TextInput, SelectInput, TextArea } from '../components/common/FormFields';
 
 const PartnerWithUs = () => {
   const [formData, setFormData] = useState({
@@ -480,184 +490,172 @@ const PartnerWithUs = () => {
               
               {/* Company Name & Industry */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Enterprise / Company Name *
-                  </label>
-                  <input
+                <FormField id="pwu-company" label="Enterprise / Company Name" required>
+                  <TextInput
+                    id="pwu-company"
                     type="text"
                     required
+                    icon={Building2}
+                    variant="teal"
                     value={formData.companyName}
                     onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
                     placeholder="e.g. Novartis Global Business Services"
-                    className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy focus:outline-none focus:ring-2 focus:ring-teal"
                   />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Industry Sector *
-                  </label>
-                  <select
+                </FormField>
+                <FormField id="pwu-industry" label="Industry Sector" required>
+                  <SelectInput
+                    id="pwu-industry"
+                    icon={Briefcase}
+                    variant="teal"
                     value={formData.industry}
                     onChange={(e) => setFormData({ ...formData, industry: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal"
                   >
                     {domainsData.map((d) => (
                       <option key={d.id} value={d.name}>{d.name}</option>
                     ))}
-                  </select>
-                </div>
+                  </SelectInput>
+                </FormField>
               </div>
 
               {/* Company Size & Annual Hiring Volume */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Company Size (Employees)
-                  </label>
-                  <select
+                <FormField id="pwu-size" label="Company Size (Employees)">
+                  <SelectInput
+                    id="pwu-size"
+                    icon={Users}
+                    variant="teal"
                     value={formData.companySize}
                     onChange={(e) => setFormData({ ...formData, companySize: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal"
                   >
                     <option value="500 - 1,000 employees">500 - 1,000 employees</option>
                     <option value="1,000 - 5,000 employees">1,000 - 5,000 employees</option>
                     <option value="5,000 - 10,000 employees">5,000 - 10,000 employees</option>
                     <option value="10,000+ employees">10,000+ employees</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Estimated Annual Hiring Volume
-                  </label>
-                  <select
+                  </SelectInput>
+                </FormField>
+                <FormField id="pwu-volume" label="Estimated Annual Hiring Volume">
+                  <SelectInput
+                    id="pwu-volume"
+                    icon={TrendingUp}
+                    variant="teal"
                     value={formData.annualHiringVolume}
                     onChange={(e) => setFormData({ ...formData, annualHiringVolume: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal"
                   >
                     <option value="25 - 50 hires/year">25 - 50 hires/year</option>
                     <option value="50 - 150 hires/year">50 - 150 hires/year</option>
                     <option value="150 - 300 hires/year">150 - 300 hires/year</option>
                     <option value="300+ hires/year">300+ hires/year</option>
-                  </select>
-                </div>
+                  </SelectInput>
+                </FormField>
               </div>
 
               {/* Locations of Operation & Preferred Model */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Locations of Operation (Current & Planned) *
-                  </label>
-                  <input
+                <FormField id="pwu-locations" label="Locations of Operation (Current & Planned)" required>
+                  <TextInput
+                    id="pwu-locations"
                     type="text"
                     required
+                    icon={MapPin}
+                    variant="teal"
                     value={formData.locations}
                     onChange={(e) => setFormData({ ...formData, locations: e.target.value })}
                     placeholder="e.g. Bengaluru, Hyderabad & Singapore"
-                    className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy focus:outline-none focus:ring-2 focus:ring-teal"
                   />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1.5">
-                    Preferred Partnership Model
-                  </label>
-                  <select
+                </FormField>
+                <FormField id="pwu-model" label="Preferred Partnership Model">
+                  <SelectInput
+                    id="pwu-model"
+                    icon={Handshake}
+                    variant="teal"
                     value={formData.preferredModel}
                     onChange={(e) => setFormData({ ...formData, preferredModel: e.target.value })}
-                    className="w-full px-4 py-2.5 rounded-xl border border-border text-sm text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal"
                   >
                     <option value="RPO (full pipeline)">RPO (Full Pipeline Ownership)</option>
                     <option value="Embedded Staffing Team">Embedded Staffing Team</option>
                     <option value="Contingency / Volume Hiring">Contingency / Volume Hiring</option>
                     <option value="GIC / Captive Build-Out">GIC Build-out</option>
                     <option value="Not sure yet">Not sure yet / Needs consultation</option>
-                  </select>
-                </div>
+                  </SelectInput>
+                </FormField>
               </div>
 
               {/* Current Hiring Challenges */}
-              <div>
-                <label className="block text-xs font-semibold text-navy mb-1.5">
-                  Current Hiring Challenges & Objectives
-                </label>
-                <textarea
-                  rows="3"
+              <FormField id="pwu-challenges" label="Current Hiring Challenges & Objectives" hint="Describe talent gaps, hiring bottlenecks, or capability expansion goals.">
+                <TextArea
+                  id="pwu-challenges"
+                  rows={3}
+                  icon={FileText}
+                  variant="teal"
                   value={formData.currentChallenges}
                   onChange={(e) => setFormData({ ...formData, currentChallenges: e.target.value })}
                   placeholder="e.g. Sourcing verified niche AI/cloud talent, reducing candidate ghosting, or establishing an India capability hub..."
-                  className="w-full px-4 py-2 text-sm rounded-xl border border-border text-navy focus:outline-none focus:ring-2 focus:ring-teal"
                 />
-              </div>
+              </FormField>
 
               {/* Decision-Maker Contact: Name, Designation, Email, Phone */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-2 border-t border-border">
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1">
-                    Your Name *
-                  </label>
-                  <input
+                <FormField id="pwu-contact" label="Your Name" required>
+                  <TextInput
+                    id="pwu-contact"
                     type="text"
                     required
+                    icon={User}
+                    variant="teal"
                     value={formData.contactName}
                     onChange={(e) => setFormData({ ...formData, contactName: e.target.value })}
                     placeholder="e.g. Marcus Vance"
-                    className="w-full px-3 py-2 text-sm rounded-xl border border-border text-navy focus:outline-none focus:ring-2 focus:ring-teal"
                   />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1">
-                    Designation *
-                  </label>
-                  <input
+                </FormField>
+                <FormField id="pwu-desig" label="Designation" required>
+                  <TextInput
+                    id="pwu-desig"
                     type="text"
                     required
+                    icon={Award}
+                    variant="teal"
                     value={formData.designation}
                     onChange={(e) => setFormData({ ...formData, designation: e.target.value })}
                     placeholder="e.g. VP Talent Acquisition"
-                    className="w-full px-3 py-2 text-sm rounded-xl border border-border text-navy focus:outline-none focus:ring-2 focus:ring-teal"
                   />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1">
-                    Corporate Email *
-                  </label>
-                  <input
+                </FormField>
+                <FormField id="pwu-email" label="Corporate Email" required>
+                  <TextInput
+                    id="pwu-email"
                     type="email"
                     required
+                    icon={Mail}
+                    variant="teal"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="marcus@company.com"
-                    className="w-full px-3 py-2 text-sm rounded-xl border border-border text-navy focus:outline-none focus:ring-2 focus:ring-teal"
                   />
-                </div>
-                <div>
-                  <label className="block text-xs font-semibold text-navy mb-1">
-                    Direct Phone *
-                  </label>
-                  <input
+                </FormField>
+                <FormField id="pwu-phone" label="Direct Phone" required>
+                  <TextInput
+                    id="pwu-phone"
                     type="tel"
                     required
+                    icon={Phone}
+                    variant="teal"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="+91 98765 43210"
-                    className="w-full px-3 py-2 text-sm rounded-xl border border-border text-navy focus:outline-none focus:ring-2 focus:ring-teal"
                   />
-                </div>
+                </FormField>
               </div>
 
               {/* Preferred Discovery Call Slot */}
-              <div>
-                <label className="block text-xs font-semibold text-navy mb-1">
-                  Preferred Discovery Call Slot (Date & Time)
-                </label>
-                <input
+              <FormField id="pwu-slot" label="Preferred Discovery Call Slot" badge="Optional">
+                <TextInput
+                  id="pwu-slot"
                   type="datetime-local"
+                  icon={Calendar}
+                  variant="teal"
                   value={formData.preferredCallSlot}
                   onChange={(e) => setFormData({ ...formData, preferredCallSlot: e.target.value })}
-                  className="w-full sm:w-auto px-4 py-2 text-sm rounded-xl border border-border text-navy bg-white focus:outline-none focus:ring-2 focus:ring-teal"
                 />
-              </div>
+              </FormField>
 
               {/* Submit CTA */}
               <div className="pt-2">
