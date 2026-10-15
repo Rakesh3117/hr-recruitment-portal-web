@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, MapPin, Briefcase, Filter } from 'lucide-react';
-import statsData from '../../data/stats.json';
-import domainsData from '../../data/domains.json';
+import statsData from '../../data/stats.mocks.js';
+import domainsData from '../../data/domains.mocks.js';
 import { FormField, TextInput, SelectInput } from './FormFields';
 
 const JobSearchWidget = ({ initialValues = {}, onSearch = null, isEmbedded = false }) => {

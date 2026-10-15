@@ -12,8 +12,8 @@ import {
   Users, 
   Share2
 } from 'lucide-react';
-import jobsData from '../data/jobs.json';
-import domainsData from '../data/domains.json';
+import jobsData from '../data/jobs.mocks.js';
+import domainsData from '../data/domains.mocks.js';
 import ApplyModal from '../components/common/ApplyModal';
 import VerifiedBadge from '../components/common/VerifiedBadge';
 

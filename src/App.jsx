@@ -5,15 +5,12 @@ import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import Company from './pages/Company';
 import Services from './pages/Services';
-import DomainSpecialities from './pages/DomainSpecialities';
+import Industries from './pages/Industries';
 import Employers from './pages/Employers';
-import PartnerWithUs from './pages/PartnerWithUs';
-import Verification from './pages/Verification';
-import Jobs from './pages/Jobs';
-import JobDetails from './pages/JobDetails';
-import SuccessStories from './pages/SuccessStories';
-import DiversityInclusion from './pages/DiversityInclusion';
+import JobSeekers from './pages/JobSeekers';
+import Careers from './pages/Careers';
 import Contact from './pages/Contact';
+import JobDetails from './pages/JobDetails';
 
 // Scroll to top automatically when route changes
 const ScrollToTop = () => {
@@ -38,18 +35,36 @@ const App = () => {
         {/* Dynamic Route Content */}
         <main className="flex-1">
           <Routes>
+            {/* 1. Home */}
             <Route path="/" element={<Home />} />
+
+            {/* 2. About Us */}
+            <Route path="/about" element={<Company />} />
             <Route path="/company" element={<Company />} />
+
+            {/* 3. Our Services */}
             <Route path="/services" element={<Services />} />
-            <Route path="/verification" element={<Verification />} />
-            <Route path="/domain-specialities" element={<DomainSpecialities />} />
+
+            {/* 4. Industries We Serve */}
+            <Route path="/industries" element={<Industries />} />
+            <Route path="/domain-specialities" element={<Industries />} />
+
+            {/* 6. For Employers (Hire Talent) */}
             <Route path="/employers" element={<Employers />} />
-            <Route path="/partner-with-us" element={<PartnerWithUs />} />
-            <Route path="/jobs" element={<Jobs />} />
+            <Route path="/partner-with-us" element={<Employers />} />
+
+            {/* 7. For Job Seekers (Find a Job) */}
+            <Route path="/job-seekers" element={<JobSeekers />} />
+            <Route path="/jobs" element={<JobSeekers />} />
             <Route path="/jobs/:slug" element={<JobDetails />} />
-            <Route path="/success-stories" element={<SuccessStories />} />
-            <Route path="/diversity-inclusion" element={<DiversityInclusion />} />
+
+            {/* 9. Careers */}
+            <Route path="/careers" element={<Careers />} />
+
+            {/* 10. Contact Us */}
             <Route path="/contact" element={<Contact />} />
+
+            {/* Fallback to Home */}
             <Route path="*" element={<Home />} />
           </Routes>
         </main>

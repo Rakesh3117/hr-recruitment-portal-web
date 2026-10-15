@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Award, Users, Layers, MapPin, Sparkles } from 'lucide-react';
-import statsData from '../../data/stats.json';
+import statsData from '../../data/stats.mocks.js';
 
 const StatStrip = ({ variant = 'light' }) => {
   const [activeHighlightIndex, setActiveHighlightIndex] = useState(0);

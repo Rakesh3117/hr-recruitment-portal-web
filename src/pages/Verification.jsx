@@ -9,7 +9,7 @@ import {
   Lock
 } from 'lucide-react';
 import VerifiedBadge from '../components/common/VerifiedBadge';
-import candidatesData from '../data/candidates.json';
+import candidatesData from '../data/candidates.mocks.js';
 
 const Verification = () => {
   const [activeFaq, setActiveFaq] = useState(null);

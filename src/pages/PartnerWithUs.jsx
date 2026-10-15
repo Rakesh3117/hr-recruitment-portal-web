@@ -20,7 +20,7 @@ import {
   Phone,
   Calendar
 } from 'lucide-react';
-import domainsData from '../data/domains.json';
+import domainsData from '../data/domains.mocks.js';
 import { FormField, TextInput, SelectInput, TextArea } from '../components/common/FormFields';
 
 const PartnerWithUs = () => {

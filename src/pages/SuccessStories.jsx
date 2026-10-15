@@ -6,7 +6,7 @@ import {
   Award
 } from 'lucide-react';
 import VerifiedBadge from '../components/common/VerifiedBadge';
-import testimonialsData from '../data/testimonials.json';
+import testimonialsData from '../data/testimonials.mocks.js';
 
 const SuccessStories = () => {
   const clientBadges = [
