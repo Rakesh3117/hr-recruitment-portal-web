@@ -27,7 +27,7 @@ const Footer = () => {
           {/* Brand Column (5 cols) */}
           <div className="lg:col-span-5 space-y-4">
             <Link to="/" className="inline-block">
-              <BrandLogo variant="light" />
+              <BrandLogo variant="light" layout="horizontal" imgClassName="h-11 sm:h-12" />
             </Link>
 
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-sm">
