@@ -1,4 +1,4 @@
-export const statsData = {
+const statsData = {
   company: {
     legalName: "VM Human Resource Management Private Limited",
     brandName: "VM HR Management",

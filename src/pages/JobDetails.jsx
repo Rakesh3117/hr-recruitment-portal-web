@@ -289,10 +289,7 @@ const JobDetails = () => {
                 <div>
                   <h4 className="font-bold text-navy text-xs">Reusable Verified Profile</h4>
                   <p className="mt-0.5 leading-relaxed">
-                    Your profile is verified once and reused for future opportunities (faster process on your next application).{' '}
-                    <Link to="/verification" className="text-teal font-semibold hover:underline">
-                      Learn how →
-                    </Link>
+                    Your profile is verified once and reused for future opportunities (faster process on your next application).
                   </p>
                 </div>
               </div>

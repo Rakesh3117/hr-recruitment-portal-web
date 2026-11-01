@@ -1,4 +1,4 @@
-export const careersData = [
+const careersData = [
   {
     id: "senior-recruitment-consultant",
     title: "Senior Recruitment Consultant",

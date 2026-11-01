@@ -1,4 +1,4 @@
-export const industriesData = [
+const industriesData = [
   {
     id: "it-ites",
     name: "IT & ITES",

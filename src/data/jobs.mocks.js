@@ -1,4 +1,4 @@
-export const jobsData = [
+const jobsData = [
   {
     id: "devops-platform-engineer-pune",
     title: "DevOps Platform Engineer",
