@@ -1,47 +1,47 @@
 export const testimonialsData = [
   {
     id: "test-001",
-    clientCompany: "Amdocs Technology Solutions",
+    clientCompany: "Enterprise Technology Solutions",
     industry: "Information Technology",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80",
-    quote: "Every candidate HR ANAND sent us had already been through reference and background checks — it cut our internal screening time in half.",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+    quote: "Every candidate VM Human Resource Management sent us had already been through rigorous technical evaluation and background checks — cutting our internal screening time in half.",
     authorName: "Sunil Varma",
-    authorTitle: "Head of Global Talent Acquisition",
-    authorAvatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80",
+    authorTitle: "Head of Talent Acquisition",
+    authorAvatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&q=80",
     caseStudy: {
-      challenge: "Needed 40 verified cloud and DevOps engineers in 60 days for a newly commissioned Global Capability Center in Pune.",
-      solution: "Deployed a dedicated RPO squad and full verification pipeline with standardized hands-on Kubernetes and Terraform assessments.",
-      result: "45 verified engineers placed in 58 days, 100% background clearance, zero early attrition in first 90 days."
+      challenge: "Needed 40 verified software engineers and cloud specialists in 60 days for a fast-growing tech campus in Hyderabad.",
+      solution: "Deployed a dedicated VM HR recruitment squad with standardized technical assessments and multi-point background checks.",
+      result: "45 verified professionals placed in 52 days, 100% statutory clearance, and zero early attrition."
     }
   },
   {
     id: "test-002",
-    clientCompany: "Standard Chartered GBS",
+    clientCompany: "Apex Global Financial Services",
     industry: "Banking & Financial Services",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
-    quote: "The 90-day replacement guarantee and rigorous multi-stage candidate vetting gave us the confidence to move fast on critical front-office hires.",
+    image: "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=800&q=80",
+    quote: "The structured Recruit, Train, and Place methodology gave us immense confidence. VM Human Resource Management delivered top-caliber leaders within four weeks.",
     authorName: "Nalini Krishnan",
     authorTitle: "Managing Director — Human Resources",
-    authorAvatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80",
+    authorAvatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=200&q=80",
     caseStudy: {
-      challenge: "Mandate to replace three departing VP-level institutional desk directors under extreme confidentiality within four weeks.",
-      solution: "Executed discreet executive search mapping passive leaders across competitor banks with pre-verified regulatory compliance track records.",
-      result: "All three institutional directors onboarded within 26 calendar days; seamless book transition."
+      challenge: "Urgent mandate to recruit and onboard three senior compliance directors under strict statutory timelines.",
+      solution: "Executed discreet executive search mapping passive leaders across the sector with verified regulatory compliance track records.",
+      result: "All three positions closed seamlessly within 25 days with complete stakeholder satisfaction."
     }
   },
   {
     id: "test-003",
-    clientCompany: "BorgWarner Automotive",
-    industry: "Automotive, Engineering & Manufacturing",
-    image: "https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=800&q=80",
-    quote: "In high-voltage EV engineering, misrepresentation of ASIL-D or embedded experience is fatal. HR ANAND's technical SME panels eliminate all guesswork.",
+    clientCompany: "Precision Engineering & Manufacturing",
+    industry: "Engineering & Manufacturing",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
+    quote: "VM Human Resource Management's pre-deployment training and domain validation eliminated all guesswork in our technical engineering hiring.",
     authorName: "Markus Richter",
     authorTitle: "VP Engineering Operations",
-    authorAvatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
+    authorAvatar: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80",
     caseStudy: {
-      challenge: "Rapid scaling of an autonomous driving sensor fusion core team in Bengaluru requiring rare AUTOSAR and ISO 26262 qualifications.",
-      solution: "Leveraged Interview-as-a-Service with practicing automotive architects who administered verified coding assessments.",
-      result: "Shortlist to offer ratio improved from 7:1 to 2:1, saving over 120 senior engineering hours."
+      challenge: "Rapid scaling of a technical engineering core team requiring niche domain qualifications and hands-on readiness.",
+      solution: "Implemented customized role-readiness training modules coupled with targeted recruitment pipelines.",
+      result: "Shortlist to offer ratio improved dramatically, saving over 120 senior engineering hours."
     }
   }
 ];

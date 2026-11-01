@@ -1,21 +1,15 @@
 import { useState, useRef } from 'react';
 import { 
-  UserCheck, 
   Search, 
   MapPin, 
   Briefcase, 
   Upload, 
-  FileText, 
   CheckCircle2, 
   Send, 
   User, 
   Mail, 
   Phone, 
-  GraduationCap, 
-  Sparkles,
-  ArrowRight,
-  Filter,
-  X
+  GraduationCap
 } from 'lucide-react';
 import jobsData from '../data/jobs.mocks.js';
 import ApplyModal from '../components/common/ApplyModal';

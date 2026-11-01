@@ -8,56 +8,64 @@ export default {
          COLORS
          ================================ */
       colors: {
-        /* Brand */
+        /* Brand - Derived from Official Logo */
         primary: {
-          DEFAULT: "#4338CA",
-          hover: "#3730A3",
-          light: "#EEF2FF",
+          DEFAULT: "#0D274A",
+          hover: "#081B34",
+          light: "#F0F6FC",
         },
-        secondary: "#6366F1",
-        tertiary: "#8B5CF6",
+        secondary: {
+          DEFAULT: "#159FB4",
+          hover: "#118496",
+          light: "#EBF7F9",
+        },
+        gold: {
+          DEFAULT: "#C59B4B",
+          hover: "#A88236",
+          light: "#FDF9F0",
+        },
         accent: {
-          DEFAULT: "#7C3AED",
-          hover: "#6D28D9",
-          light: "#F5F3FF",
+          DEFAULT: "#159FB4",
+          hover: "#118496",
+          light: "#EBF7F9",
         },
         teal: {
-          DEFAULT: "#0E7490",
-          hover: "#155E75",
-          light: "#ECFEFF",
-          subtle: "#F0FDFA",
-          dark: "#083344",
+          DEFAULT: "#159FB4",
+          hover: "#118496",
+          light: "#EBF7F9",
+          subtle: "#F2FAFB",
+          dark: "#0D6F7E",
         },
 
         /* Text & Base */
         navy: {
-          DEFAULT: "#1E1B4B",
-          dark: "#0F172A",
-          muted: "#312E81",
+          DEFAULT: "#0D274A",
+          dark: "#07172C",
+          muted: "#1B3B65",
         },
         white: "#FFFFFF",
         grey: {
-          DEFAULT: "#6B7280",
-          light: "#9CA3AF",
-          dark: "#4B5563",
-          50: "#F9FAFB",
-          100: "#F3F4F6",
-          200: "#E5E7EB",
+          DEFAULT: "#64748B",
+          light: "#94A3B8",
+          dark: "#334155",
+          50: "#F8FAFC",
+          100: "#F1F5F9",
+          200: "#E2E8F0",
         },
 
         /* Background */
-        background: "#F8FAFC",
-        "background-secondary": "#F1F5F9",
+        background: "#FFFFFF",
+        "background-secondary": "#F8FAFC",
 
         /* Surface */
         surface: "#FFFFFF",
         "surface-secondary": "#F8FAFC",
         "surface-hover": "#F1F5F9",
 
-        /* Lavender */
-        "lavender-light": "#F5F3FF",
-        "lavender-soft": "#EDE9FE",
-        "lavender-muted": "#EEF2FF",
+        /* Soft ice / accent light */
+        "lavender-light": "#F0F8FA",
+        "lavender-soft": "#E6F5F8",
+        "lavender-muted": "#EFF9FB",
 
         /* Status */
         success: "#16A34A",

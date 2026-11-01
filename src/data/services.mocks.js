@@ -1,93 +1,93 @@
 export const servicesData = [
   {
-    id: "permanent-recruitment",
-    title: "Permanent Recruitment",
-    tagline: "End-to-End Direct Hire Across Functions & Levels",
-    description: "We help organizations identify, evaluate and hire suitable candidates for permanent positions across different functions and experience levels.",
+    id: "recruitment-staffing",
+    title: "Recruitment & Staffing",
+    tagline: "Connecting Top Talent with Leading Organizations",
+    description: "Connect with top professionals through our recruitment and staffing services, tailored to meet your business needs and organizational culture.",
     deliverables: [
-      "Rigorous role calibration and talent profiling",
-      "Multi-channel active and passive talent sourcing",
-      "Competency, technical and cultural alignment screening",
-      "Offer negotiation and candidate onboarding support"
+      "Targeted candidate sourcing and talent mapping",
+      "Comprehensive profile screening and background checks",
+      "Executive search, professional hiring, and leadership mandates",
+      "End-to-end recruitment lifecycle management and offer closure"
     ],
-    idealFor: "Organizations seeking long-term, core team members who drive sustainable business growth.",
+    idealFor: "Organizations seeking dependable, pre-screened professionals for critical business functions.",
     icon: "UserCheck",
     badge: "Core Service"
   },
   {
-    id: "contract-staffing",
-    title: "Contract Staffing",
-    tagline: "Agile & Compliant Temporary Workforce Support",
-    description: "Flexible staffing solutions for organizations requiring temporary, project-based or contract workforce support.",
+    id: "training-skill-development",
+    title: "Training & Skill Development",
+    tagline: "Industry-Aligned Corporate & Technical Upskilling",
+    description: "Empower candidates and corporate teams with tailored training programs designed to bridge the gap between academic knowledge and real-world execution.",
     deliverables: [
-      "Rapid talent deployment for fixed-term initiatives",
-      "100% statutory, labor law and payroll compliance",
-      "Flexibility to convert high performers (Contract-to-Hire)",
-      "Zero administrative burden on client HR teams"
+      "Custom corporate training modules and skill workshops",
+      "Role-specific technical training and domain readiness",
+      "Campus-to-corporate transitional training programs",
+      "Hands-on project experience and professional certification support"
     ],
-    idealFor: "Project-based scale-ups, seasonal surges, and specialized interim requirements.",
-    icon: "Users",
-    badge: "Flexible"
+    idealFor: "Companies seeking job-ready talent and professionals wanting to upgrade their industry capabilities.",
+    icon: "GraduationCap",
+    badge: "Skill Development"
   },
   {
-    id: "bulk-hiring",
-    title: "Bulk Hiring",
-    tagline: "High-Volume Recruitment with Strict Quality Controls",
-    description: "Efficient recruitment support for organizations with large-volume hiring requirements and tight timelines.",
+    id: "it-services-tech-staffing",
+    title: "IT Services & Consulting",
+    tagline: "Specialized Software Development & Tech Talent",
+    description: "Delivering expert IT consulting and software development services, we help businesses optimize their technology strategy, infrastructure, and engineering teams.",
     deliverables: [
-      "Dedicated recruitment task force and rapid batch screening",
-      "Standardized assessment rubrics and aptitude filtering",
-      "Mass campus & walk-in hiring drive orchestration",
-      "High offer-to-joining conversion tracking"
+      "Full-stack developers, cloud architects, and software engineers",
+      "IT infrastructure, enterprise application, and data specialists",
+      "Contract-to-hire (C2H) and specialized technical consulting teams",
+      "Dedicated offshore and on-premise development support"
     ],
-    idealFor: "Rapid facility expansions, branch rollouts, new project kick-offs, and annual hiring drives.",
-    icon: "Layers",
-    badge: "Volume Scale"
-  },
-  {
-    id: "it-technical-recruitment",
-    title: "IT & Technical Recruitment",
-    tagline: "Specialized Talent for Modern Engineering & Technology",
-    description: "Recruitment support for technology and specialized positions, including developers, engineers, IT professionals and other technical roles.",
-    deliverables: [
-      "Full-stack developers, frontend, backend and mobile specialists",
-      "Cloud, DevOps, SRE, and cybersecurity engineers",
-      "Data scientists, AI/ML engineers, and analytics professionals",
-      "Hands-on technical background verification"
-    ],
-    idealFor: "Product companies, SaaS startups, IT service firms, and enterprise digital transformation teams.",
+    idealFor: "Technology firms, SaaS companies, and enterprises undergoing digital transformation.",
     icon: "Code2",
     badge: "Tech Practice"
   },
   {
-    id: "executive-professional-hiring",
-    title: "Executive & Professional Hiring",
-    tagline: "Leadership Search for Mid-to-Senior Management",
-    description: "Focused recruitment for experienced professionals, managers and leadership-level positions.",
+    id: "talent-placement-growth",
+    title: "Talent Placement & Growth",
+    tagline: "Empowering Careers, Accelerating Enterprise Growth",
+    description: "We bridge the gap between ambitious candidates and high-growth employers, ensuring seamless onboarding, high retention, and mutual long-term success.",
     deliverables: [
-      "Confidential market mapping and peer benchmarking",
-      "Leadership capability and strategic vision assessment",
-      "Discreet candidate outreach and stakeholder alignment",
-      "Smooth transition management and retention advisory"
+      "Direct interview scheduling and client-candidate calibration",
+      "Joining coordination, background verification, and compliance",
+      "Post-placement follow-up and performance alignment",
+      "Workforce scaling strategies to support business expansion"
     ],
-    idealFor: "Enterprises hiring department heads, functional leaders, VPs, and critical domain specialists.",
-    icon: "Briefcase",
-    badge: "Leadership"
+    idealFor: "Businesses requiring sustainable workforce expansion and job-seekers seeking career milestones.",
+    icon: "TrendingUp",
+    badge: "Career Growth"
   },
   {
-    id: "workforce-solutions",
-    title: "Workforce Solutions",
-    tagline: "Tailored Manpower & Staffing Infrastructure",
-    description: "Customized manpower and staffing support based on your organization's workforce requirements.",
+    id: "permanent-recruitment",
+    title: "Permanent Recruitment",
+    tagline: "End-to-End Direct Hire Across Functions & Levels",
+    description: "We help organizations identify, evaluate, and hire long-term permanent talent across diverse functions and seniority levels.",
     deliverables: [
-      "Custom workforce planning and organizational structuring",
-      "On-premise / hybrid talent acquisition assistance",
-      "Turnkey recruitment process support",
-      "Market salary insights and talent availability advisory"
+      "In-depth role calibration and competency profiling",
+      "Rigorous technical and cultural fit assessment",
+      "Transparent candidate representation and salary negotiation",
+      "Standard replacement guarantee support"
     ],
-    idealFor: "Growing businesses needing customized talent acquisition structures without the overhead of expanding internal HR.",
-    icon: "Building2",
-    badge: "Custom"
+    idealFor: "Enterprises building core teams and long-term organizational leadership.",
+    icon: "Briefcase",
+    badge: "Permanent Hire"
+  },
+  {
+    id: "contract-staffing",
+    title: "Contract & C2H Staffing",
+    tagline: "Agile, Scalable, and Fully Compliant Workforce Support",
+    description: "Flexible staffing solutions for organizations requiring temporary, project-based, or contract-to-hire workforce support without administrative burden.",
+    deliverables: [
+      "Rapid talent deployment for fixed-term initiatives and spikes",
+      "100% statutory, labor law, and payroll compliance",
+      "Seamless option to convert high performers to full-time",
+      "Dedicated account management and contractor care"
+    ],
+    idealFor: "Project-based scale-ups, seasonal surges, and specialized interim requirements.",
+    icon: "Users",
+    badge: "Flexible Staffing"
   }
 ];
 

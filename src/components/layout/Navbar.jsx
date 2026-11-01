@@ -1,17 +1,20 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronRight, Briefcase } from 'lucide-react';
-import logoImg from '../../assets/logo.jpg';
+import { Menu, X, ChevronRight, Phone, Mail, MapPin } from 'lucide-react';
+import statsData from '../../data/stats.mocks.js';
+import BrandLogo from '../common/BrandLogo.jsx';
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
+  const { contactInfo } = statsData;
 
-  // Close mobile drawer on route change
-  useEffect(() => {
+  const [prevPath, setPrevPath] = useState(location.pathname);
+  if (prevPath !== location.pathname) {
+    setPrevPath(location.pathname);
     setMobileMenuOpen(false);
-  }, [location.pathname]);
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,146 +24,161 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Focused, important navigation links exactly like edurungroup.in
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
-    { name: 'Services', path: '/services' },
-    { name: 'Industries', path: '/industries' },
-    { name: 'Employers', path: '/employers' },
-    { name: 'Job Seekers', path: '/job-seekers' },
+    { name: 'Our Services', path: '/services' },
     { name: 'Careers', path: '/careers' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Contact Us', path: '/contact' },
   ];
 
   const isActive = (path) => {
     if (path === '/') return location.pathname === '/';
     if (path === '/about') return location.pathname === '/about' || location.pathname === '/company';
-    if (path === '/industries') return location.pathname === '/industries' || location.pathname === '/domain-specialities';
-    if (path === '/job-seekers') return location.pathname === '/job-seekers' || location.pathname === '/jobs';
+    if (path === '/services') return location.pathname === '/services';
     return location.pathname.startsWith(path);
   };
 
   return (
-    <header 
-      className={`sticky top-0 z-header transition-all duration-normal ${
-        scrolled 
-          ? 'bg-surface/95 backdrop-blur-md shadow-sm border-b border-border' 
-          : 'bg-surface/85 backdrop-blur-sm border-b border-border/70'
-      }`}
-    >
-      <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 gap-3">
+    <header className="sticky top-0 z-header w-full shadow-xs">
+      {/* 1. TOP CONTACT STRIP (Clean & Minimal like EduRun) */}
+      <div className="bg-[#0D274A] text-white/80 text-xs py-2 px-4 sm:px-6 lg:px-8 border-b border-white/10 hidden md:block">
+        <div className="max-w-content mx-auto flex items-center justify-between gap-4">
           
-          {/* Logo & Brand Identity */}
-          <Link to="/" className="flex items-center gap-3 group shrink-0">
-            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-surface border border-border p-0.5 flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform duration-fast shrink-0 overflow-hidden">
-              <img src={logoImg} alt="HR ANAND Logo" className="w-full h-full object-contain" />
-            </div>
-            <div className="flex flex-col">
-              <div className="flex items-center gap-1.5">
-                <span className="text-base sm:text-lg font-bold tracking-tight text-navy">
-                  HR ANAND
-                </span>
-                <span className="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-lavender-soft text-primary">
-                  SOLUTIONS
-                </span>
-              </div>
-              <span className="text-[10px] sm:text-[11px] font-medium text-grey uppercase tracking-wider">
-                Recruitment & Staffing
-              </span>
-            </div>
-          </Link>
-
-          {/* Desktop Nav Links (Home | About Us | Services | Industries | Employers | Job Seekers | Careers | Contact) */}
-          <nav className="hidden xl:flex items-center gap-1 lg:gap-2 2xl:gap-3.5 shrink-0">
-            {navLinks.map((link) => {
-              const active = isActive(link.path);
-              return (
-                <Link
-                  key={link.name}
-                  to={link.path}
-                  className={`text-xs 2xl:text-sm font-medium transition-colors duration-fast relative py-1.5 px-2.5 rounded-md whitespace-nowrap ${
-                    active 
-                      ? 'text-primary font-semibold bg-lavender-light' 
-                      : 'text-navy hover:text-primary hover:bg-background-secondary'
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              );
-            })}
-          </nav>
-
-          {/* Right Highlighted CTA: Hire Talent */}
-          <div className="hidden sm:flex items-center gap-3 shrink-0">
-            <Link
-              to="/employers"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-xs 2xl:text-sm font-semibold text-white bg-primary hover:bg-primary-hover transition-all duration-fast shadow-sm hover:shadow-md hover:-translate-y-0.5 whitespace-nowrap cursor-pointer"
+          <div className="flex items-center gap-6">
+            <a 
+              href={`tel:${contactInfo.phones[0]}`} 
+              className="flex items-center gap-1.5 hover:text-[#159FB4] transition-colors"
             >
-              <Briefcase className="w-4 h-4 text-primary-light shrink-0" />
-              <span>Hire Talent</span>
-            </Link>
+              <Phone className="w-3.5 h-3.5 text-[#159FB4]" />
+              <span>{contactInfo.displayPhone}</span>
+            </a>
+
+            <a 
+              href={`mailto:${contactInfo.email}`} 
+              className="flex items-center gap-1.5 hover:text-[#159FB4] transition-colors"
+            >
+              <Mail className="w-3.5 h-3.5 text-[#C59B4B]" />
+              <span>{contactInfo.email}</span>
+            </a>
+
+            <div className="flex items-center gap-1.5 text-white/70">
+              <MapPin className="w-3.5 h-3.5 text-[#159FB4]" />
+              <span>Bachupally, Hyderabad - 500090</span>
+            </div>
           </div>
 
-          {/* Mobile Menu Hamburger */}
-          <div className="flex items-center gap-2 xl:hidden">
-            <Link
-              to="/employers"
-              className="sm:hidden inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold text-white bg-primary hover:bg-primary-hover shadow-xs"
-            >
-              <span>Hire Talent</span>
-            </Link>
-            <button
-              type="button"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 rounded-lg text-navy hover:bg-background-secondary focus:outline-none focus:ring-2 focus:ring-primary cursor-pointer"
-              aria-label="Toggle navigation menu"
-            >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-            </button>
+          <div className="text-[11px] text-white/70 font-mono">
+            CIN: <span className="text-[#C59B4B] font-semibold">{contactInfo.cin}</span>
           </div>
 
         </div>
       </div>
 
+      {/* 2. MAIN NAVIGATION */}
+      <div 
+        className={`transition-all duration-200 ${
+          scrolled 
+            ? 'bg-white/98 backdrop-blur-md shadow-sm border-b border-slate-200/80 py-2.5' 
+            : 'bg-white border-b border-slate-100 py-3.5'
+        }`}
+      >
+        <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between gap-4">
+            
+            {/* Logo */}
+            <Link to="/" className="shrink-0">
+              <BrandLogo />
+            </Link>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
+              {navLinks.map((link) => {
+                const active = isActive(link.path);
+                return (
+                  <Link
+                    key={link.name}
+                    to={link.path}
+                    className={`text-sm font-semibold transition-colors py-2 px-3.5 rounded-lg ${
+                      active 
+                        ? 'text-[#159FB4] bg-[#EBF7F9]' 
+                        : 'text-[#0D274A] hover:text-[#159FB4] hover:bg-slate-50'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
+            </nav>
+
+            {/* Right Action Button: Contact Us */}
+            <div className="hidden sm:flex items-center gap-3 shrink-0">
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-sm font-bold text-white bg-[#159FB4] hover:bg-[#118496] shadow-sm hover:shadow transition-all"
+              >
+                Contact Us
+              </Link>
+            </div>
+
+            {/* Mobile Hamburger Button */}
+            <div className="flex items-center gap-2 lg:hidden">
+              <Link
+                to="/contact"
+                className="sm:hidden inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-[#159FB4]"
+              >
+                Contact
+              </Link>
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 rounded-lg text-[#0D274A] hover:bg-slate-100 focus:outline-none"
+                aria-label="Toggle navigation"
+              >
+                {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6 text-[#0D274A]" />}
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="xl:hidden border-t border-border bg-surface px-4 pt-3 pb-6 shadow-dropdown animate-fadeIn">
-          <div className="space-y-1 py-1">
+        <div className="lg:hidden border-t border-slate-200 bg-white px-5 py-4 shadow-xl animate-fadeIn space-y-3">
+          <div className="space-y-1">
             {navLinks.map((link) => {
               const active = isActive(link.path);
               return (
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`flex items-center justify-between px-3.5 py-2.5 rounded-lg text-sm font-medium transition-colors duration-fast ${
-                    active 
-                      ? 'bg-lavender-light text-primary font-semibold' 
-                      : 'text-navy hover:bg-background-secondary'
+                  className={`flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-semibold ${
+                    active ? 'bg-[#EBF7F9] text-[#159FB4]' : 'text-[#0D274A]'
                   }`}
                 >
                   <span>{link.name}</span>
-                  <ChevronRight className="w-4 h-4 text-grey-light" />
+                  <ChevronRight className="w-4 h-4 text-slate-400" />
                 </Link>
               );
             })}
           </div>
 
-          {/* Mobile Highlighted Hire Talent Button */}
-          <div className="pt-4 border-t border-border mt-3 space-y-2">
-            <Link
-              to="/employers"
-              className="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-bold text-white bg-primary hover:bg-primary-hover shadow-sm transition-colors duration-fast"
+          <div className="pt-3 border-t border-slate-100 space-y-2">
+            <a
+              href={`tel:${contactInfo.phones[0]}`}
+              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-xs font-bold text-[#0D274A] bg-slate-100"
             >
-              <Briefcase className="w-4 h-4 text-primary-light" />
-              <span>Hire Talent (Submit Requirement)</span>
-            </Link>
+              <Phone className="w-3.5 h-3.5 text-[#159FB4]" />
+              <span>Call: {contactInfo.displayPhone}</span>
+            </a>
 
             <Link
-              to="/job-seekers"
-              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-xl text-sm font-semibold text-primary bg-primary-light hover:bg-lavender-soft transition-colors duration-fast"
+              to="/contact"
+              className="flex items-center justify-center w-full py-2.5 rounded-lg text-sm font-bold text-white bg-[#159FB4]"
             >
-              <span>Find a Job / Submit Resume</span>
+              Contact Us
             </Link>
           </div>
         </div>
