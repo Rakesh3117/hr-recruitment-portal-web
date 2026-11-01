@@ -97,28 +97,28 @@ const PartnerWithUs = () => {
       bestFor: 'Ongoing, high-volume enterprise hiring across multiple verticals',
       whatYouGet: 'We own sourcing, screening, coordination, ATS administration, through onboarding end-to-end.',
       recommended: true,
-      image: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80'
+      image: 'https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&w=600&q=80'
     },
     {
       model: 'Embedded Staffing Team',
       bestFor: 'Steady but variable headcount needs without increasing internal HR payroll',
       whatYouGet: 'Dedicated recruitment specialists operating seamlessly as an extension of your talent team.',
       recommended: false,
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80'
+      image: 'https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?auto=format&fit=crop&w=600&q=80'
     },
     {
       model: 'Contingency / Volume Hiring',
       bestFor: 'Periodic bulk hiring drives and critical specialist leadership searches',
       whatYouGet: 'Pay-per-placement flexibility with volume-discounted fee matrices and SLA commitments.',
       recommended: false,
-      image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80'
+      image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80'
     },
     {
       model: 'GIC / Captive Build-Out',
       bestFor: 'Setting up a new India or regional global capability delivery center',
       whatYouGet: 'Turnkey incubation from leadership core setup to 1,000+ headcount cohort wave delivery.',
       recommended: false,
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80'
+      image: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=600&q=80'
     },
   ];
 
@@ -204,7 +204,7 @@ const PartnerWithUs = () => {
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-teal-light group">
                 <img
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1000&q=80"
+                  src="https://images.unsplash.com/photo-1497215842964-222b430dc094?auto=format&fit=crop&w=1000&q=80"
                   alt="Modern global enterprise corporate headquarters and partnership center"
                   loading="lazy"
                   className="w-full h-80 sm:h-96 object-cover transform group-hover:scale-105 transition-transform duration-500"

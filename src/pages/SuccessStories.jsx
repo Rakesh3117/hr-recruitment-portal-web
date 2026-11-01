@@ -60,7 +60,7 @@ const SuccessStories = () => {
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-lavender-soft group">
                 <img
-                  src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1000&q=80"
+                  src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?auto=format&fit=crop&w=1000&q=80"
                   alt="Enterprise Client Partnership Review & Talent Delivery Summit"
                   loading="lazy"
                   className="w-full h-80 sm:h-96 object-cover transform group-hover:scale-105 transition-transform duration-500"
@@ -199,7 +199,7 @@ const SuccessStories = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative bg-gradient-to-r from-navy via-navy-muted to-[#1E1B4B] rounded-3xl p-8 sm:p-14 text-white shadow-xl overflow-hidden">
           <img 
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80" 
+            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80" 
             alt="Corporate Innovation Hub" 
             className="absolute inset-0 w-full h-full object-cover opacity-10 mix-blend-overlay"
             loading="lazy" 
@@ -211,7 +211,7 @@ const SuccessStories = () => {
             </blockquote>
             <div className="flex items-center justify-center gap-3">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" 
+                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" 
                 alt="Sunil Varma" 
                 className="w-12 h-12 rounded-full object-cover border-2 border-teal"
                 loading="lazy" 

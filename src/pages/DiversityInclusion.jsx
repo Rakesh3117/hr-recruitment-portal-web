@@ -13,25 +13,25 @@ const DiversityInclusion = () => {
       title: 'Diversity-Focused Sourcing Channels & Communities',
       desc: 'Proactive engagement across specialized talent networks, women-in-STEM alliances, veteran reintegration programs, and LGBTQIA+ professional forums.',
       icon: <Users className="w-6 h-6 text-primary" />,
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80'
+      image: 'https://images.unsplash.com/photo-1573497019236-17f8177b81e8?auto=format&fit=crop&w=600&q=80'
     },
     {
       title: 'Structured, Bias-Aware Screening Criteria',
       desc: 'Blind resume initial evaluations, standardized interview scorecards, and objective skill rubrics that eliminate unconscious hiring biases.',
       icon: <ShieldCheck className="w-6 h-6 text-teal" />,
-      image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80'
+      image: 'https://images.unsplash.com/photo-1573497491768-6e1648087951?auto=format&fit=crop&w=600&q=80'
     },
     {
       title: 'Reporting on Pipeline Diversity for Hiring Teams',
       desc: 'Transparent representation analytics at every stage of the funnel — from initial talent mapping to final interview panel ratios.',
       icon: <BarChart3 className="w-6 h-6 text-accent" />,
-      image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80'
+      image: 'https://images.unsplash.com/photo-1522071823990-b89e7df80302?auto=format&fit=crop&w=600&q=80'
     },
     {
       title: 'Partnerships with Diversity-Focused Networks',
       desc: 'Formal alliances with return-to-work initiatives, affirmative action educational trusts, and accessible workplace advocacy organizations.',
       icon: <HeartHandshake className="w-6 h-6 text-primary" />,
-      image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80'
+      image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=600&q=80'
     },
   ];
 
@@ -61,7 +61,7 @@ const DiversityInclusion = () => {
 
           <div className="mt-10 max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-card border border-lavender-soft relative">
             <img 
-              src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1200&q=80" 
+              src="https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&w=1200&q=80" 
               alt="Diversity and Inclusive Leadership" 
               className="w-full h-64 sm:h-80 object-cover"
               loading="lazy"

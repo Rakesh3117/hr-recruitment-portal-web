@@ -23,7 +23,7 @@ const Verification = () => {
       step: '1',
       title: 'Identity Verification',
       desc: 'Government-issued ID (Passport, Aadhaar, National ID) cross-checked and photo confirmed against application biometric records to prevent proxy candidates.',
-      image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80'
+      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80'
     },
     {
       step: '2',
@@ -35,25 +35,25 @@ const Verification = () => {
       step: '3',
       title: 'Employment History Check',
       desc: 'Past employers, tenure dates, official designations, and exit clearances validated directly with HR records — never relying on unverified resume claims.',
-      image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80'
+      image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80'
     },
     {
       step: '4',
       title: 'Reference Checks',
       desc: 'A minimum of two independent managerial and peer references interviewed regarding work quality, reliability, ethics, and team collaboration.',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80'
+      image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80'
     },
     {
       step: '5',
       title: 'Skill & Technical Assessment',
       desc: 'Role-specific live coding tests, system architecture evaluations, or domain rubrics scored by our practicing subject matter expert panels.',
-      image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80'
+      image: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=600&q=80'
     },
     {
       step: '6',
       title: 'Final Quality Review',
       desc: 'A senior sector practice consultant conducts the final sanity check and signs off on the digital verification summary before client submission.',
-      image: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=600&q=80'
+      image: 'https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&w=600&q=80'
     }
   ];
 
@@ -141,7 +141,7 @@ const Verification = () => {
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-success/30 group">
                 <img
-                  src="https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1000&q=80"
+                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1000&q=80"
                   alt="Enterprise Credential Audit & Background Verification Session"
                   loading="lazy"
                   className="w-full h-80 sm:h-96 object-cover transform group-hover:scale-105 transition-transform duration-500"
@@ -501,7 +501,7 @@ const Verification = () => {
         <div className="rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
           {/* Open-source backdrop photo with gradient overlay */}
           <img
-            src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1200&q=80"
+            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80"
             alt="Corporate executive consultation and placement guarantee"
             loading="lazy"
             className="absolute inset-0 w-full h-full object-cover"

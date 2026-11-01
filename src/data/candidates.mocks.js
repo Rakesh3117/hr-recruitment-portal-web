@@ -2,7 +2,7 @@ export const candidatesData = [
   {
     id: "cand-001",
     name: "Arjun Sundaram",
-    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=250&q=80",
+    avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=250&q=80",
     roleAppliedFor: "DevOps Platform Engineer",
     currentCompany: "Global Cloud Services Ltd",
     experience: "8.5 Years",
@@ -29,7 +29,7 @@ export const candidatesData = [
   {
     id: "cand-002",
     name: "Meera Nambiar",
-    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=250&q=80",
+    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=250&q=80",
     roleAppliedFor: "VP — Institutional Equities",
     currentCompany: "Tier-1 Domestic Securities",
     experience: "11 Years",
@@ -56,7 +56,7 @@ export const candidatesData = [
   {
     id: "cand-003",
     name: "Karthik Venkatraman",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=250&q=80",
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=250&q=80",
     roleAppliedFor: "Principal Architect — ADAS",
     currentCompany: "Tier-1 Automotive R&D",
     experience: "13 Years",
