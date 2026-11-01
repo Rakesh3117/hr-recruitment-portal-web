@@ -26,15 +26,15 @@ const Home = () => {
       title: 'Recruitment & Staffing',
       desc: 'Connecting companies with vetted professionals through permanent, direct-hire, and volume workforce solutions.',
       icon: <Users className="w-5 h-5 text-[#159FB4]" />,
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80',
+      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=1200&q=80',
       badge: 'Talent Acquisition'
     },
     {
       id: 'executive-search',
       title: 'Executive Search & Leadership',
       desc: 'Confidential executive search mapping industry leaders and CXOs to steer enterprise transformation.',
-      icon: <UserCheck className="w-5 h-5 text-[#0D274A]" />,
-      image: 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=600&q=80',
+      icon: <UserCheck className="w-5 h-5 text-white" />,
+      image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80',
       badge: 'Leadership Mandates'
     },
     {
@@ -42,7 +42,7 @@ const Home = () => {
       title: 'Training & Skill Development',
       desc: 'Targeted corporate readiness and domain skill workshops that prepare candidates for day-one productivity.',
       icon: <GraduationCap className="w-5 h-5 text-[#C59B4B]" />,
-      image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80',
+      image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80',
       badge: 'Upskilling'
     },
     {
@@ -50,7 +50,7 @@ const Home = () => {
       title: 'Contract Staffing & Compliance',
       desc: 'Agile workforce deployment with 100% statutory, labor code, PF/ESIC, and payroll management.',
       icon: <Briefcase className="w-5 h-5 text-[#159FB4]" />,
-      image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80',
+      image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80',
       badge: 'Workforce Solutions'
     }
   ];
@@ -101,50 +101,50 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {coreServices.map((service) => (
             <div 
               key={service.id}
-              className="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-[#159FB4] shadow-xs hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between group"
+              className="relative rounded-3xl overflow-hidden min-h-[380px] sm:min-h-[420px] shadow-lg group border border-slate-200 hover:border-[#159FB4] hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-500 flex flex-col justify-between p-6 sm:p-8"
             >
-              {/* Service Preview Image */}
-              <div className="h-40 overflow-hidden relative">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-[#0D274A]/20 group-hover:bg-[#0D274A]/10 transition-colors" />
-                <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/95 text-[#0D274A] shadow-xs">
+              {/* Full-width and full-height backdrop image */}
+              <img
+                src={service.image}
+                alt={service.title}
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+
+              {/* Dark gradient scrim so the matter is 100% legible */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A] via-[#0D274A]/80 to-[#0D274A]/30 group-hover:via-[#0D274A]/85 transition-colors duration-500" />
+
+              {/* Service Category Badge & Icon Floating on top */}
+              <div className="relative z-10 flex items-center justify-between">
+                <span className="text-xs font-bold uppercase tracking-wider px-3.5 py-1.5 rounded-full bg-white/95 text-[#0D274A] shadow-md backdrop-blur-xs">
                   {service.badge}
                 </span>
+                <div className="w-10 h-10 rounded-xl bg-white/15 backdrop-blur-md border border-white/25 text-white flex items-center justify-center shadow-md">
+                  {service.icon}
+                </div>
               </div>
 
-              {/* Service Details */}
-              <div className="p-5 space-y-3 flex-1 flex flex-col justify-between">
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-lg bg-[#F0F8FA] flex items-center justify-center shrink-0">
-                      {service.icon}
-                    </div>
-                    <h3 className="text-base font-bold text-[#0D274A] group-hover:text-[#159FB4] transition-colors">
-                      {service.title}
-                    </h3>
-                  </div>
+              {/* Matter written directly upon the image */}
+              <div className="relative z-10 space-y-3 pt-12">
+                <h3 className="text-xl sm:text-2xl font-black text-white group-hover:text-[#159FB4] transition-colors">
+                  {service.title}
+                </h3>
 
-                  <p className="text-xs text-slate-600 leading-relaxed">
-                    {service.desc}
-                  </p>
-                </div>
+                <p className="text-xs sm:text-sm text-slate-200 leading-relaxed max-w-lg">
+                  {service.desc}
+                </p>
 
-                <div className="pt-3 border-t border-slate-100">
+                <div className="pt-2">
                   <Link
                     to="/services"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#159FB4] group-hover:text-[#0D274A] transition-colors"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#159FB4] hover:bg-[#118496] shadow-md transition-all group/btn"
                   >
-                    <Briefcase className="w-3.5 h-3.5" />
-                    <span>Learn More</span>
-                    <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                    <Briefcase className="w-3.5 h-3.5 text-white" />
+                    <span>Explore Service</span>
+                    <ChevronRight className="w-3.5 h-3.5 text-white group-hover/btn:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
