@@ -1,318 +1,445 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import {  
-  MapPin, 
+import { 
   Phone, 
   Mail, 
-  MessageSquare, 
-  Send, 
+  MapPin, 
+  Clock, 
   CheckCircle2, 
-  Clock,
+  Send, 
   Sparkles,
-  Building,
-  ShieldCheck
+  ShieldCheck,
+  ExternalLink
 } from 'lucide-react';
 import statsData from '../data/stats.mocks.js';
 
 const Contact = () => {
   const { contactInfo, company } = statsData;
 
+  const [inquiryType, setInquiryType] = useState('Talent Acquisition');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    service: 'Recruitment & Staffing',
-    message: '',
+    organization: '',
+    message: ''
   });
-
-  const [submitted, setSubmitted] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmitting(true);
+    setIsSubmitting(true);
 
     setTimeout(() => {
-      setSubmitting(false);
-      setSubmitted(true);
-    }, 500);
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+    }, 600);
   };
 
   const handleReset = () => {
+    setIsSubmitted(false);
     setFormData({
       name: '',
       email: '',
       phone: '',
-      service: 'Recruitment & Staffing',
-      message: '',
+      organization: '',
+      message: ''
     });
-    setSubmitted(false);
   };
 
+  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+    'Bachupally, Qutubullapur, Hyderabad, Telangana 500090'
+  )}`;
+
   return (
-    <div className="space-y-16 pb-16 overflow-hidden">
+    <div className="space-y-16 sm:space-y-24 pb-20 overflow-hidden bg-white">
       
-      {/* 1. DISTINCTIVE HERO HEADER WITH HYDERABAD OFFICE PHOTOGRAPHY */}
-      <section className="relative bg-[#0D274A] text-white py-16 sm:py-24 overflow-hidden">
-        
-        {/* Background Image with Dark Navy Gradient */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80"
-            alt="Corporate Location"
-            className="w-full h-full object-cover opacity-20"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0D274A] via-[#0D274A]/95 to-[#0D274A]/80" />
-        </div>
-
-        <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
-          <div className="flex items-center justify-center gap-3">
-            <span className="text-xs text-slate-400">
-              <Link to="/" className="hover:text-white transition-colors">Home</Link> / <span className="text-[#159FB4]">Contact Us</span>
-            </span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/10 text-[#C59B4B] border border-white/15">
+      {/* 1. DISTINCT OPERATIONS DESK HERO HEADER (CLEAN ARCHITECTURAL BANNER) */}
+      <section className="relative pt-10 sm:pt-14 pb-12 bg-gradient-to-b from-slate-50 via-white to-white border-b border-slate-100">
+        <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="flex flex-wrap items-center gap-2 mb-6">
+            <Link to="/" className="text-xs text-slate-500 hover:text-[#0D274A] transition-colors">Home</Link>
+            <span className="text-xs text-slate-300">/</span>
+            <span className="text-xs font-bold text-[#159FB4]">Contact Us</span>
+            <span className="ml-2 inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-[#159FB4]/10 text-[#0D274A] border border-[#159FB4]/20">
               <Sparkles className="w-3 h-3 text-[#C59B4B]" />
-              <span>Get in Touch</span>
+              <span>Hyderabad Corporate Office</span>
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
-            Let’s Connect & <span className="text-[#159FB4]">Build Together</span>
-          </h1>
-
-          <p className="text-base text-slate-300 max-w-xl mx-auto leading-relaxed">
-            Reach out directly to discuss talent requirements, IT software consulting, or customized corporate training programs.
-          </p>
-
-          <div className="pt-2 flex flex-wrap items-center justify-center gap-4 text-xs text-slate-300">
-            <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 border border-white/10">
-              <Building className="w-4 h-4 text-[#159FB4]" />
-              <span>Bachupally, Hyderabad, Telangana</span>
-            </div>
-            <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/5 border border-white/10">
-              <ShieldCheck className="w-4 h-4 text-[#C59B4B]" />
-              <span className="font-mono">CIN: {contactInfo.cin}</span>
-            </div>
+          <div className="max-w-3xl space-y-4">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#159FB4]">
+              Direct Engagement & Client Helpdesk
+            </span>
+            <h1 className="text-3xl sm:text-5xl font-black text-[#0D274A] tracking-tight leading-tight">
+              Let’s Connect & <span className="text-[#159FB4]">Accelerate</span> Your Workforce Strategy
+            </h1>
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
+              Connect directly with our recruitment consultants, technology staffing specialists, or corporate training team at <strong className="text-[#0D274A] font-bold">{company.legalName}</strong>.
+            </p>
           </div>
+
+          {/* Quick Direct Desk Action Bar */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-8">
+            
+            <a 
+              href={`tel:${contactInfo.phones[0]}`}
+              className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-[#159FB4] hover:shadow-md transition-all flex items-center gap-3.5 group"
+            >
+              <div className="w-10 h-10 rounded-xl bg-[#159FB4]/10 text-[#159FB4] flex items-center justify-center group-hover:bg-[#159FB4] group-hover:text-white transition-colors">
+                <Phone className="w-5 h-5" />
+              </div>
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Main Desk</span>
+                <strong className="text-xs sm:text-sm font-bold text-[#0D274A]">{contactInfo.phones[0]}</strong>
+              </div>
+            </a>
+
+            <a 
+              href={`tel:${contactInfo.phones[1]}`}
+              className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-[#159FB4] hover:shadow-md transition-all flex items-center gap-3.5 group"
+            >
+              <div className="w-10 h-10 rounded-xl bg-[#C59B4B]/10 text-[#C59B4B] flex items-center justify-center group-hover:bg-[#C59B4B] group-hover:text-white transition-colors">
+                <Phone className="w-5 h-5" />
+              </div>
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Operations Desk</span>
+                <strong className="text-xs sm:text-sm font-bold text-[#0D274A]">{contactInfo.phones[1]}</strong>
+              </div>
+            </a>
+
+            <a 
+              href={`mailto:${contactInfo.email}`}
+              className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-[#159FB4] hover:shadow-md transition-all flex items-center gap-3.5 group"
+            >
+              <div className="w-10 h-10 rounded-xl bg-[#0D274A]/10 text-[#0D274A] flex items-center justify-center group-hover:bg-[#0D274A] group-hover:text-white transition-colors">
+                <Mail className="w-5 h-5" />
+              </div>
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Corporate Email</span>
+                <strong className="text-xs sm:text-sm font-bold text-[#0D274A]">{contactInfo.email}</strong>
+              </div>
+            </a>
+
+            <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs flex items-center gap-3.5">
+              <div className="w-10 h-10 rounded-xl bg-slate-100 text-slate-600 flex items-center justify-center">
+                <Clock className="w-5 h-5" />
+              </div>
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Working Hours</span>
+                <strong className="text-xs sm:text-sm font-bold text-[#0D274A]">Mon - Sat: 9am - 6:30pm</strong>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </section>
 
-      {/* 2. CONTACT DETAILS & FORM GRID */}
+      {/* 2. DUAL-PANE OPERATIONS DESK: CORPORATE HQ PROFILE & INTERACTIVE INQUIRY FORM */}
       <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           
-          {/* Left Column: Reach out to us at & Find us at */}
+          {/* Left Column: Corporate Headquarters & Statutory Card */}
           <div className="lg:col-span-5 space-y-6">
             
-            <div className="bg-white rounded-2xl p-7 border border-slate-200 shadow-xs space-y-5">
-              <div>
-                <h3 className="text-lg font-bold text-[#0D274A]">
-                  Reach out to us at
-                </h3>
-                <div className="mt-3 space-y-3 text-xs sm:text-sm">
-                  <a 
-                    href={`mailto:${contactInfo.email}`}
-                    className="flex items-center gap-3 text-slate-700 hover:text-[#159FB4] transition-colors"
-                  >
-                    <Mail className="w-4 h-4 text-[#C59B4B] shrink-0" />
-                    <span className="font-semibold break-all">{contactInfo.email}</span>
-                  </a>
-
-                  <div className="flex items-center gap-3 text-slate-700">
-                    <Phone className="w-4 h-4 text-[#159FB4] shrink-0" />
-                    <div className="flex flex-col">
-                      <a href={`tel:${contactInfo.phones[0]}`} className="font-semibold hover:text-[#159FB4] transition-colors">
-                        {contactInfo.phones[0]}
-                      </a>
-                      <a href={`tel:${contactInfo.phones[1]}`} className="font-semibold hover:text-[#159FB4] transition-colors">
-                        {contactInfo.phones[1]}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="pt-4 border-t border-slate-100">
-                <h3 className="text-lg font-bold text-[#0D274A]">
-                  Find us at
-                </h3>
-                <div className="mt-2.5 flex items-start gap-3 text-xs sm:text-sm text-slate-600">
-                  <MapPin className="w-4 h-4 text-[#159FB4] shrink-0 mt-0.5" />
-                  <p className="leading-relaxed">
-                    {contactInfo.address.full}
+            {/* Headquarters Photo Card (Dedicated photo-1497215728101-856f4ea42174) */}
+            <div className="rounded-3xl overflow-hidden border border-slate-200 shadow-lg group relative">
+              <div className="h-64 sm:h-72 overflow-hidden relative">
+                <img
+                  src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=1200&q=80"
+                  alt="VM HRM Reception Lobby"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A]/90 via-[#0D274A]/30 to-transparent" />
+                
+                <div className="absolute bottom-5 left-5 right-5 text-white space-y-1">
+                  <span className="text-[10px] uppercase font-bold text-[#159FB4] tracking-wider block">
+                    Registered Headquarters
+                  </span>
+                  <h3 className="text-lg font-bold">
+                    {company.legalName}
+                  </h3>
+                  <p className="text-xs text-slate-300">
+                    Bachupally, Hyderabad, Telangana
                   </p>
                 </div>
               </div>
 
-              <div className="pt-4 border-t border-slate-100 flex items-start gap-3 text-xs text-slate-600">
-                <Clock className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
-                <div>
-                  <span className="font-bold text-[#0D274A] block">Business Hours:</span>
-                  <p>Monday – Friday: 9:00 AM – 6:30 PM</p>
-                  <p>Saturday: 9:30 AM – 2:00 PM</p>
+              {/* Address details */}
+              <div className="p-6 bg-white space-y-4">
+                <div className="space-y-1">
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-[#0D274A]">
+                    <MapPin className="w-4 h-4 text-[#159FB4]" />
+                    <span>Official Address:</span>
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-5">
+                    {contactInfo.address.full}
+                  </p>
+                </div>
+
+                {/* Direct Google Maps Navigation Link */}
+                <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
+                  <a
+                    href={googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#159FB4] hover:text-[#0D274A] transition-colors"
+                  >
+                    <span>View on Google Maps</span>
+                    <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                  <span className="text-[11px] font-mono text-slate-400">PIN: 500090</span>
                 </div>
               </div>
+            </div>
 
-              <div className="pt-2">
-                <a
-                  href={`https://wa.me/${contactInfo.whatsapp.replace('+', '')}?text=${encodeURIComponent(contactInfo.whatsappMessage)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-bold text-white bg-[#159FB4] hover:bg-[#118496] transition-colors shadow-sm"
-                >
-                  <MessageSquare className="w-4 h-4" />
-                  <span>Chat on WhatsApp</span>
+            {/* Official Statutory Plaque Mini-Card */}
+            <div className="bg-[#0D274A] text-white rounded-2xl p-6 shadow-md space-y-4">
+              <div className="flex items-center justify-between border-b border-white/10 pb-3">
+                <div className="flex items-center gap-2">
+                  <ShieldCheck className="w-4 h-4 text-[#C59B4B]" />
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#C59B4B]">
+                    Statutory Verification
+                  </span>
+                </div>
+                <span className="text-[10px] font-mono bg-white/10 px-2 py-0.5 rounded text-white">
+                  MCA Active
+                </span>
+              </div>
+
+              <div className="space-y-2 text-xs">
+                <div>
+                  <span className="text-[10px] text-slate-400 uppercase block">CIN</span>
+                  <strong className="font-mono text-[#159FB4] text-xs sm:text-sm">{contactInfo.cin}</strong>
+                </div>
+                <div className="grid grid-cols-2 gap-2 pt-1 font-mono">
+                  <div>
+                    <span className="text-[10px] text-slate-400 uppercase block">PAN</span>
+                    <strong className="text-white">{contactInfo.pan}</strong>
+                  </div>
+                  <div>
+                    <span className="text-[10px] text-slate-400 uppercase block">TAN</span>
+                    <strong className="text-white">{contactInfo.tan}</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Dedicated Helpdesk Specialist Callout with unique photo (photo-1516321497487-e288fb19713f) */}
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-center gap-4">
+              <img
+                src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=300&q=80"
+                alt="Talent Desk Support"
+                className="w-14 h-14 rounded-xl object-cover shrink-0 border border-slate-300"
+              />
+              <div className="space-y-0.5">
+                <h4 className="text-xs font-bold text-[#0D274A]">Immediate Assistance Required?</h4>
+                <p className="text-[11px] text-slate-500 leading-tight">
+                  Our recruitment support coordinators answer calls Monday through Saturday.
+                </p>
+                <a href={`tel:${contactInfo.phones[0]}`} className="text-xs font-bold text-[#159FB4] hover:underline inline-block mt-0.5">
+                  Call {contactInfo.phones[0]}
                 </a>
               </div>
             </div>
 
-            {/* Statutory Info Card */}
-            <div className="p-5 rounded-2xl bg-[#0D274A] text-white space-y-1.5 text-xs shadow-md">
-              <span className="text-[10px] uppercase font-bold text-[#159FB4] tracking-wider block">
-                Statutory Registration
-              </span>
-              <p className="font-bold text-sm">{company.legalName}</p>
-              <p className="font-mono text-[#C59B4B]">CIN: {contactInfo.cin}</p>
-              <p className="font-mono text-slate-300">PAN: {contactInfo.pan} | TAN: {contactInfo.tan}</p>
-            </div>
-
-            {/* Google Maps Embed */}
-            <div className="rounded-2xl overflow-hidden border border-slate-200 h-48 sm:h-56 shadow-xs">
-              <iframe
-                title="Office Location Map"
-                src={contactInfo.googleMapsEmbed}
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-
           </div>
 
-          {/* Right Column: Keep In Touch Form */}
-          <div className="lg:col-span-7 bg-white rounded-2xl p-7 sm:p-9 border border-slate-200 shadow-xs">
-            {submitted ? (
-              <div className="py-12 text-center space-y-4">
-                <div className="w-12 h-12 rounded-full bg-[#F0F8FA] text-[#159FB4] flex items-center justify-center mx-auto">
+          {/* Right Column: Interactive Consultation & Message Form */}
+          <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl space-y-6">
+            
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-[#159FB4] block">
+                Send a Communication
+              </span>
+              <h2 className="text-2xl font-black text-[#0D274A] mt-1">
+                Schedule a Consultation or Inquiry
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-600 mt-1">
+                Fill out the form below. An account manager or practice lead will respond within 24 hours.
+              </p>
+            </div>
+
+            {/* Category Selector Chips */}
+            <div className="space-y-2">
+              <label className="block text-xs font-bold text-slate-700">Select Purpose of Contact *</label>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  'Talent Acquisition',
+                  'IT Software Consulting',
+                  'Corporate Training',
+                  'Contract Staffing',
+                  'Statutory Verification',
+                  'Candidate Job Inquiry'
+                ].map((type) => (
+                  <button
+                    key={type}
+                    type="button"
+                    onClick={() => setInquiryType(type)}
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                      inquiryType === type
+                        ? 'bg-[#0D274A] text-white shadow-xs'
+                        : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                    }`}
+                  >
+                    {type}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            {isSubmitted ? (
+              <div className="p-8 rounded-2xl bg-emerald-50 border border-emerald-200 text-center space-y-4">
+                <div className="w-14 h-14 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold text-[#0D274A]">Thank You!</h3>
-                <p className="text-xs sm:text-sm text-slate-600 max-w-sm mx-auto">
-                  Your message has been sent to VM Human Resource Management Private Limited. We will get back to you shortly.
-                </p>
-                <div className="pt-2">
-                  <button
-                    type="button"
-                    onClick={handleReset}
-                    className="px-5 py-2 rounded-lg text-xs font-bold text-white bg-[#0D274A]"
-                  >
-                    Send Another Message
-                  </button>
+                <div className="space-y-1">
+                  <h3 className="text-lg font-bold text-emerald-900">Message Received!</h3>
+                  <p className="text-xs sm:text-sm text-emerald-800 max-w-md mx-auto">
+                    Thank you, <strong>{formData.name}</strong>. Your inquiry regarding <em>{inquiryType}</em> has been routed to our Bachupally desk. We will reach you at <strong>{formData.email}</strong> shortly.
+                  </p>
                 </div>
+                <button
+                  type="button"
+                  onClick={handleReset}
+                  className="px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-[#0D274A] hover:bg-[#081B34] transition-colors cursor-pointer"
+                >
+                  Send Another Message
+                </button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
-                <h2 className="text-xl sm:text-2xl font-extrabold text-[#0D274A]">
-                  Keep In Touch
-                </h2>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">Your Full Name *</label>
+                    <input
+                      type="text"
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData(p => ({ ...p, name: e.target.value }))}
+                      placeholder="e.g. Ramesh Kumar"
+                      className="w-full px-3.5 py-2.5 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">Organization / Enterprise (Optional)</label>
+                    <input
+                      type="text"
+                      value={formData.organization}
+                      onChange={(e) => setFormData(p => ({ ...p, organization: e.target.value }))}
+                      placeholder="e.g. Tech Innovations Ltd"
+                      className="w-full px-3.5 py-2.5 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden"
+                    />
+                  </div>
+                </div>
 
-                <div>
-                  <label className="block text-xs font-bold text-[#0D274A] mb-1">
-                    Select Service
-                  </label>
-                  <select
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-sm text-[#0D274A] focus:ring-2 focus:ring-[#159FB4] focus:outline-none bg-slate-50"
-                  >
-                    <option value="Recruitment & Staffing">Recruitment & Staffing</option>
-                    <option value="Training & Skill Development">Training & Skill Development</option>
-                    <option value="IT Services & Consulting">IT Services & Consulting</option>
-                    <option value="Software Development">Software Development</option>
-                  </select>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">Official Email Address *</label>
+                    <input
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData(p => ({ ...p, email: e.target.value }))}
+                      placeholder="ramesh@company.com"
+                      className="w-full px-3.5 py-2.5 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">Direct Phone Number *</label>
+                    <input
+                      type="tel"
+                      required
+                      value={formData.phone}
+                      onChange={(e) => setFormData(p => ({ ...p, phone: e.target.value }))}
+                      placeholder="+91 98765 43210"
+                      className="w-full px-3.5 py-2.5 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden"
+                    />
+                  </div>
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-[#0D274A] mb-1">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-sm focus:ring-2 focus:ring-[#159FB4] focus:outline-none bg-slate-50"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold text-[#0D274A] mb-1">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="name@example.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-sm focus:ring-2 focus:ring-[#159FB4] focus:outline-none bg-slate-50"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold text-[#0D274A] mb-1">
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Mobile Number"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-sm focus:ring-2 focus:ring-[#159FB4] focus:outline-none bg-slate-50"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold text-[#0D274A] mb-1">
-                    Text / Message
-                  </label>
+                  <label className="block text-xs font-bold text-slate-700 mb-1">Your Requirements / Message *</label>
                   <textarea
-                    name="message"
-                    rows="4"
-                    placeholder="Your message..."
-                    value={formData.message}
-                    onChange={handleChange}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-sm focus:ring-2 focus:ring-[#159FB4] focus:outline-none bg-slate-50"
+                    rows={4}
                     required
+                    value={formData.message}
+                    onChange={(e) => setFormData(p => ({ ...p, message: e.target.value }))}
+                    placeholder="Tell us about the roles you are looking to hire, training needs, or any specific mandate..."
+                    className="w-full px-3.5 py-2.5 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden resize-none"
                   />
                 </div>
 
-                <button
-                  type="submit"
-                  disabled={submitting}
-                  className="w-full py-3 rounded-lg text-sm font-bold text-white bg-[#0D274A] hover:bg-[#081B34] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm disabled:opacity-70"
-                >
-                  <span>Submit</span>
-                  <Send className="w-4 h-4 text-[#159FB4]" />
-                </button>
+                <div className="pt-2">
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#159FB4] hover:bg-[#118496] shadow-md hover:shadow-lg transition-all cursor-pointer flex items-center justify-center gap-2"
+                  >
+                    {isSubmitting ? (
+                      <span>Sending Your Inquiry...</span>
+                    ) : (
+                      <>
+                        <Send className="w-4 h-4" />
+                        <span>Send Message to VM HRM</span>
+                      </>
+                    )}
+                  </button>
+                </div>
+
+                <p className="text-[10px] text-slate-400 text-center pt-1">
+                  We respect your privacy. Client and candidate data is strictly protected under enterprise confidentiality agreements.
+                </p>
               </form>
             )}
+
           </div>
 
+        </div>
+      </section>
+
+      {/* 3. PHYSICAL OFFICE MAP & DIRECTIONS EMBED SHOWCASE */}
+      <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="rounded-3xl bg-slate-50 border border-slate-200 p-8 sm:p-10 space-y-6">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div>
+              <span className="text-xs font-bold uppercase tracking-wider text-[#159FB4] block">
+                Office Location
+              </span>
+              <h3 className="text-xl font-bold text-[#0D274A] mt-0.5">
+                Bachupally, Qutubullapur, Hyderabad
+              </h3>
+              <p className="text-xs text-slate-500 mt-1">
+                K.V.Rangareddy- 500090, Telangana
+              </p>
+            </div>
+
+            <a
+              href={googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#0D274A] hover:bg-[#081B34] transition-all shadow-xs"
+            >
+              <MapPin className="w-4 h-4 text-[#C59B4B]" />
+              <span>Get Driving Directions</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </a>
+          </div>
+
+          {/* Interactive Styled Map View Frame */}
+          <div className="h-64 sm:h-80 w-full rounded-2xl overflow-hidden border border-slate-200 bg-slate-200 relative shadow-inner">
+            <iframe
+              title="VM HRM Office Location"
+              src="https://maps.google.com/maps?q=Bachupally%2C%20Qutubullapur%2C%20Hyderabad%2C%20Telangana%20500090&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              className="w-full h-full border-0"
+              loading="lazy"
+              allowFullScreen
+            />
+          </div>
         </div>
       </section>
 

@@ -11,16 +11,20 @@ import {
   Heart, 
   Award,
   Sparkles,
-  Users,
   Send,
-  Upload
+  Upload,
+  Search,
+  DollarSign
 } from 'lucide-react';
 import careersData from '../data/careers.mocks.js';
 import statsData from '../data/stats.mocks.js';
 
 const Careers = () => {
   const positionsRef = useRef(null);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedDept, setSelectedDept] = useState('All');
   const [selectedRole, setSelectedRole] = useState(null);
+  
   const [applicationData, setApplicationData] = useState({
     name: '',
     email: '',
@@ -56,98 +60,105 @@ const Careers = () => {
     setTimeout(() => {
       setSubmitting(false);
       setSubmitted(true);
-    }, 500);
+    }, 600);
   };
 
+  // Filter jobs by search term and department
+  const filteredJobs = careersData.filter(job => {
+    const matchesSearch = job.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                          job.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                          job.location.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesDept = selectedDept === 'All' || job.department.includes(selectedDept);
+    return matchesSearch && matchesDept;
+  });
+
+  const perks = [
+    {
+      title: 'Accelerated Career Paths',
+      desc: 'Rapid progression based on performance metrics, with clear pathways to leadership roles.',
+      icon: TrendingUp
+    },
+    {
+      title: 'Uncapped Commissions',
+      desc: 'Industry-leading incentive plans with fast disbursement schedules.',
+      icon: DollarSign
+    },
+    {
+      title: 'Health & Wellness',
+      desc: 'Comprehensive medical protection and employee health assistance programs.',
+      icon: Heart
+    },
+    {
+      title: 'Continuous Upskilling',
+      desc: 'Sponsorship for professional certifications, recruitment workshops, and ATS tools.',
+      icon: Award
+    }
+  ];
+
+  const hiringSteps = [
+    { num: '01', title: 'Submit Profile', desc: 'Apply with your resume or connect with our talent team directly.' },
+    { num: '02', title: 'Discovery Chat', desc: 'A quick 20-minute discussion covering your goals, expectations, and role fit.' },
+    { num: '03', title: 'Skill Discussion', desc: 'Case evaluation or conversation with domain practice leaders.' },
+    { num: '04', title: 'Welcome to Team', desc: 'Offer release, transparent documentation, and structured onboarding.' }
+  ];
+
   return (
-    <div className="space-y-16 sm:space-y-20 pb-20 overflow-hidden">
+    <div className="space-y-16 sm:space-y-24 pb-20 overflow-hidden bg-white">
       
-      {/* 1. DISTINCTIVE HERO HEADER WITH TALENT & CULTURE IMAGERY */}
-      <section className="relative bg-[#0D274A] text-white py-16 sm:py-24 overflow-hidden">
+      {/* 1. DISTINCT CAREER HUB HERO BANNER WITH COLLABORATIVE WORKSPACE IMAGERY */}
+      <section className="relative bg-gradient-to-br from-[#0D274A] via-[#091D38] to-[#0D274A] text-white pt-14 pb-20 sm:pt-20 sm:pb-28 overflow-hidden">
         
-        {/* Background Image with Dark Navy Gradient */}
-        <div className="absolute inset-0 z-0">
+        {/* Background Visual (Dedicated photo-1542744173-8e7e53415bb0) */}
+        <div className="absolute inset-0 z-0 opacity-20">
           <img
-            src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80"
-            alt="Workplace Culture"
-            className="w-full h-full object-cover opacity-20"
+            src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1600&q=80"
+            alt="Collaborative Workspace"
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0D274A] via-[#0D274A]/95 to-[#0D274A]/80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A] via-[#0D274A]/80 to-transparent" />
         </div>
 
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="max-w-3xl mx-auto text-center space-y-5">
             
-            {/* Left Column: Headlines */}
-            <div className="lg:col-span-7 space-y-5 text-center lg:text-left">
-              <div className="flex items-center justify-center lg:justify-start gap-3">
-                <span className="text-xs text-slate-400">
-                  <Link to="/" className="hover:text-white transition-colors">Home</Link> / <span className="text-[#159FB4]">Careers</span>
-                </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/10 text-[#C59B4B] border border-white/15">
-                  <Sparkles className="w-3 h-3 text-[#C59B4B]" />
-                  <span>We are Hiring</span>
-                </span>
-              </div>
+            <div className="flex items-center justify-center gap-2">
+              <Link to="/" className="text-xs text-slate-400 hover:text-white transition-colors">Home</Link>
+              <span className="text-xs text-slate-500">/</span>
+              <span className="text-xs font-bold text-[#159FB4]">Careers</span>
+              <span className="ml-2 inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/10 text-[#C59B4B] border border-white/15">
+                <Sparkles className="w-3.5 h-3.5 text-[#C59B4B]" />
+                <span>We Are Expanding</span>
+              </span>
+            </div>
 
-              <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
-                Build Your Future at <span className="text-[#159FB4]">VM HRM Private Limited</span>
-              </h1>
+            <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+              Build an Extraordinary Career at <span className="text-[#159FB4]">VM HRM Private Limited</span>
+            </h1>
 
-              <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal max-w-xl mx-auto lg:mx-0">
-                Join our team of recruiters, talent consultants, and workforce specialists. We offer high-growth career pathways, transparent commissions, and a supportive culture.
-              </p>
+            <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+              We are assembling a high-caliber team of talent specialists, IT recruiters, and business development professionals at our Bachupally, Hyderabad headquarters.
+            </p>
 
-              <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3">
+            {/* In-Hero Search & Filter Bar */}
+            <div className="pt-4 max-w-xl mx-auto">
+              <div className="p-2 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-2xl flex flex-col sm:flex-row items-center gap-2">
+                <div className="flex items-center gap-2 px-3 py-2 w-full bg-white rounded-xl text-slate-800">
+                  <Search className="w-4 h-4 text-slate-400 shrink-0" />
+                  <input
+                    type="text"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    placeholder="Search roles (e.g. Recruiter, Sales, Operations)..."
+                    className="w-full text-xs font-medium focus:outline-hidden bg-transparent placeholder-slate-400"
+                  />
+                </div>
                 <button
                   type="button"
                   onClick={scrollToPositions}
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-[#159FB4] hover:bg-[#118496] shadow-md hover:shadow-lg transition-all cursor-pointer"
+                  className="w-full sm:w-auto px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-[#159FB4] hover:bg-[#118496] transition-colors whitespace-nowrap shadow-md cursor-pointer"
                 >
-                  <Briefcase className="w-4 h-4" />
-                  <span>View Open Positions</span>
-                  <ArrowRight className="w-4 h-4" />
+                  Find Roles
                 </button>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-white/10 hover:bg-white/15 border border-white/15 transition-all"
-                >
-                  <span>Connect With HR Desk</span>
-                </Link>
-              </div>
-            </div>
-
-            {/* Right Column: Hero Visual with Animated Badges */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative mx-auto max-w-md lg:max-w-none">
-                <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 bg-slate-900 group">
-                  <img
-                    src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-                    alt="Life at VM HRM"
-                    className="w-full h-72 sm:h-84 object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A]/80 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 p-3.5 rounded-2xl bg-white/95 backdrop-blur-md shadow-lg flex items-center justify-between">
-                    <div>
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#159FB4] block">Hyderabad HQ</span>
-                      <strong className="text-xs font-black text-[#0D274A]">{company.legalName}</strong>
-                    </div>
-                    <span className="text-[11px] font-bold px-2 py-0.5 rounded bg-[#159FB4]/15 text-[#0E7482]">
-                      Recruit. Train. Place. Grow.
-                    </span>
-                  </div>
-                </div>
-
-                {/* Floating Badge */}
-                <div className="absolute -top-3 -left-3 bg-white rounded-2xl p-3 shadow-xl border border-slate-100 animate-float flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-[#EBF7F9] text-[#159FB4] flex items-center justify-center font-bold">
-                    <Users className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <span className="text-xs font-black text-[#0D274A] block">Fast-Growing Team</span>
-                    <span className="text-[10px] text-slate-500 font-medium">Recruitment & Staffing</span>
-                  </div>
-                </div>
               </div>
             </div>
 
@@ -155,335 +166,415 @@ const Careers = () => {
         </div>
       </section>
 
-      {/* 2. LIFE AT VM HRM — CULTURE & WORKPLACE PHOTO GALLERY */}
+      {/* 2. "LIFE AT VM HRM" BENTO CULTURE GRID WITH DEDICATED DISTINCT IMAGERY */}
       <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-xl mx-auto space-y-2 mb-10">
+        <div className="text-center max-w-xl mx-auto space-y-2 mb-12">
           <span className="text-xs font-bold uppercase tracking-wider text-[#159FB4]">
-            Life At VM HRM
+            Why Join Us
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0D274A]">
-            A Workplace Built on Collaboration & Growth
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0D274A] tracking-tight">
+            A Culture of Energy, Recognition & Growth
           </h2>
           <p className="text-xs sm:text-sm text-slate-600">
-            Experience an environment where your expertise is celebrated and rewarded.
+            Work with purpose, achieve meaningful outcomes, and celebrate every milestone.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-xs group bg-white">
-            <div className="h-48 overflow-hidden relative">
-              <img
-                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80"
-                alt="Continuous Learning"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A]/70 via-transparent to-transparent" />
-              <span className="absolute bottom-3 left-4 text-sm font-bold text-white">
-                Skill Upskilling & Mentorship
+        {/* 3-Visual Bento Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          
+          {/* Bento Card 1: Modern Collaborative Hub (Dedicated photo-1516321318423-f06f85e504b3) */}
+          <div className="rounded-3xl overflow-hidden border border-slate-200 shadow-md group relative h-72">
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+              alt="Collaborative Hub"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A]/90 via-[#0D274A]/40 to-transparent" />
+            <div className="absolute bottom-5 left-5 right-5 text-white space-y-1">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-[#159FB4]">
+                Workplace Experience
               </span>
-            </div>
-            <div className="p-4">
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Regular training workshops on niche technical sourcing, modern ATS tooling, and client relationship management.
-              </p>
+              <h3 className="text-base font-bold">Collaborative Team Spaces</h3>
+              <p className="text-xs text-slate-300">Modern tech tools, open communication, and high-trust leadership.</p>
             </div>
           </div>
 
-          <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-xs group bg-white">
-            <div className="h-48 overflow-hidden relative">
-              <img
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80"
-                alt="Client Partnerships"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A]/70 via-transparent to-transparent" />
-              <span className="absolute bottom-3 left-4 text-sm font-bold text-white">
-                Enterprise Client Engagement
+          {/* Bento Card 2: Diversity & Team Energy (Dedicated photo-1529156069898-49953e39b3ac) */}
+          <div className="rounded-3xl overflow-hidden border border-slate-200 shadow-md group relative h-72">
+            <img
+              src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80"
+              alt="Team Unity"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A]/90 via-[#0D274A]/40 to-transparent" />
+            <div className="absolute bottom-5 left-5 right-5 text-white space-y-1">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-[#C59B4B]">
+                Team Spirit
               </span>
-            </div>
-            <div className="p-4">
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Direct collaboration with top corporate leaders, founders, and hiring directors across pan-India mandates.
-              </p>
+              <h3 className="text-base font-bold">Inclusion & Peer Camaraderie</h3>
+              <p className="text-xs text-slate-300">Celebrating diverse backgrounds and collective achievements.</p>
             </div>
           </div>
 
-          <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-xs group bg-white">
-            <div className="h-48 overflow-hidden relative">
-              <img
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80"
-                alt="Modern Workplace"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A]/70 via-transparent to-transparent" />
-              <span className="absolute bottom-3 left-4 text-sm font-bold text-white">
-                Modern Work Environment
+          {/* Bento Card 3: Executive Mentorship (Dedicated photo-1573497019940-1c28c88b4f3e) */}
+          <div className="rounded-3xl overflow-hidden border border-slate-200 shadow-md group relative h-72">
+            <img
+              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=80"
+              alt="Mentorship & Coaching"
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A]/90 via-[#0D274A]/40 to-transparent" />
+            <div className="absolute bottom-5 left-5 right-5 text-white space-y-1">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-[#159FB4]">
+                Growth & Learning
               </span>
-            </div>
-            <div className="p-4">
-              <p className="text-xs text-slate-600 leading-relaxed">
-                A transparent, merit-driven workplace with open communication, zero bureaucracy, and performance recognition.
-              </p>
+              <h3 className="text-base font-bold">1-on-1 Leadership Coaching</h3>
+              <p className="text-xs text-slate-300">Direct mentorship from experienced corporate HR directors.</p>
             </div>
           </div>
+
+        </div>
+
+        {/* 4 Perks Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {perks.map((perk, idx) => {
+            const IconComp = perk.icon;
+            return (
+              <div 
+                key={idx}
+                className="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-[#159FB4] transition-all space-y-2 hover:-translate-y-1"
+              >
+                <div className="w-10 h-10 rounded-xl bg-white text-[#159FB4] shadow-xs flex items-center justify-center">
+                  <IconComp className="w-5 h-5" />
+                </div>
+                <h4 className="text-sm font-bold text-[#0D274A]">{perk.title}</h4>
+                <p className="text-xs text-slate-500 leading-relaxed">{perk.desc}</p>
+              </div>
+            );
+          })}
         </div>
       </section>
 
-      {/* 3. CULTURE & PERKS */}
-      <section className="bg-slate-50 py-16 border-y border-slate-200">
-        <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-xl mx-auto space-y-2 mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#159FB4]">
-              Why Join Us
+      {/* 3. OPEN POSITIONS BOARD (SEARCHABLE & FILTERABLE) */}
+      <section ref={positionsRef} className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-5 mb-8">
+          <div>
+            <span className="text-xs font-bold uppercase tracking-wider text-[#159FB4] block">
+              Opportunities
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0D274A]">
-              Rewarding Your Ambition
+            <h2 className="text-2xl font-black text-[#0D274A] mt-0.5">
+              Current Openings ({filteredJobs.length})
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#EBF7F9] text-[#159FB4] flex items-center justify-center">
-                <TrendingUp className="w-5 h-5" />
-              </div>
-              <h3 className="text-base font-bold text-[#0D274A]">High Growth & Incentives</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Transparent commission structures, reward recognition, and rapid promotional pathways based on delivered closures.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#FDF9F0] text-[#C59B4B] flex items-center justify-center">
-                <Award className="w-5 h-5" />
-              </div>
-              <h3 className="text-base font-bold text-[#0D274A]">Continuous Learning</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                Hands-on training across niche sector recruitment, modern ATS tooling, candidate mapping, and corporate client pitching.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-6 border border-slate-200 shadow-xs space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-[#F0F8FA] text-[#0D274A] flex items-center justify-center">
-                <Heart className="w-5 h-5 text-[#159FB4]" />
-              </div>
-              <h3 className="text-base font-bold text-[#0D274A]">Collaborative Team Spirit</h3>
-              <p className="text-xs text-slate-600 leading-relaxed">
-                A supportive peer network with open leadership communication, team celebrations, and flexible working arrangements.
-              </p>
-            </div>
+          {/* Department Filter Tabs */}
+          <div className="flex flex-wrap items-center gap-1.5">
+            {['All', 'Talent Acquisition', 'Sourcing', 'Sales', 'Compliance'].map(dept => (
+              <button
+                key={dept}
+                type="button"
+                onClick={() => setSelectedDept(dept)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                  selectedDept === dept
+                    ? 'bg-[#0D274A] text-white shadow-xs'
+                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                }`}
+              >
+                {dept}
+              </button>
+            ))}
           </div>
         </div>
-      </section>
 
-      {/* 4. CURRENT OPENINGS WITH RELEVANT ROLE IMAGERY */}
-      <section ref={positionsRef} className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-xl mx-auto space-y-2 mb-10">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#159FB4]">
-            Current Openings
-          </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0D274A]">
-            Explore Opportunities in Our Team
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-600">
-            Find your next role in recruitment, talent acquisition, account management, or HR operations.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-          {careersData.map((pos) => (
+        {/* Job Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {filteredJobs.map((role) => (
             <div
-              key={pos.id}
-              className="bg-white rounded-2xl overflow-hidden border border-slate-200 hover:border-[#159FB4] shadow-xs hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between group"
+              key={role.id}
+              className="bg-white rounded-2xl p-6 border border-slate-200 hover:border-[#159FB4] shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
             >
-              {/* Role Photo Header */}
-              {pos.image && (
-                <div className="h-40 overflow-hidden relative">
-                  <img
-                    src={pos.image}
-                    alt={pos.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A]/80 via-[#0D274A]/30 to-transparent" />
-                  <span className="absolute top-3 left-3 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/95 text-[#0D274A]">
-                    {pos.department}
-                  </span>
-                  <span className="absolute top-3 right-3 text-[10px] font-semibold px-2 py-0.5 rounded bg-black/40 text-white backdrop-blur-xs">
-                    {pos.type}
-                  </span>
-                  <h3 className="absolute bottom-3 left-4 text-base sm:text-lg font-bold text-white">
-                    {pos.title}
-                  </h3>
-                </div>
-              )}
-
-              <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
-                <div className="space-y-3">
-                  <div className="flex flex-wrap items-center gap-4 text-xs text-slate-500">
-                    <span className="flex items-center gap-1">
-                      <MapPin className="w-3.5 h-3.5 text-[#159FB4]" />
-                      {pos.location}
-                    </span>
-                    <span className="flex items-center gap-1">
-                      <Clock className="w-3.5 h-3.5 text-[#159FB4]" />
-                      Exp: {pos.experience}
-                    </span>
+              <div className="space-y-4">
+                
+                {/* Header row with avatar and tags */}
+                <div className="flex items-start justify-between gap-4">
+                  <div className="flex items-center gap-3">
+                    <img
+                      src={role.image}
+                      alt={role.title}
+                      className="w-12 h-12 rounded-xl object-cover border border-slate-200"
+                    />
+                    <div>
+                      <h3 className="text-base font-bold text-[#0D274A] group-hover:text-[#159FB4] transition-colors">
+                        {role.title}
+                      </h3>
+                      <span className="text-xs text-slate-500 font-medium">
+                        {role.department}
+                      </span>
+                    </div>
                   </div>
 
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    {pos.description}
-                  </p>
+                  <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#159FB4]/10 text-[#0D274A] shrink-0">
+                    {role.type}
+                  </span>
+                </div>
 
-                  {pos.requirements && (
-                    <div className="pt-2 border-t border-slate-100 space-y-1">
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-[#0D274A] block">
-                        Requirements:
-                      </span>
-                      <ul className="space-y-1 text-xs text-slate-600">
-                        {pos.requirements.slice(0, 3).map((req, rIdx) => (
-                          <li key={rIdx} className="flex items-start gap-2">
-                            <CheckCircle2 className="w-3.5 h-3.5 text-[#159FB4] shrink-0 mt-0.5" />
-                            <span>{req}</span>
-                          </li>
-                        ))}
-                      </ul>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  {role.description}
+                </p>
+
+                {/* Key specs */}
+                <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 pt-1">
+                  <div className="flex items-center gap-1">
+                    <MapPin className="w-3.5 h-3.5 text-[#159FB4]" />
+                    <span>{role.location}</span>
+                  </div>
+                  <div className="flex items-center gap-1">
+                    <Clock className="w-3.5 h-3.5 text-[#C59B4B]" />
+                    <span>{role.experience}</span>
+                  </div>
+                </div>
+
+                {/* Requirements snippets */}
+                <div className="space-y-1.5 pt-2 border-t border-slate-100">
+                  <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Key Requirements</span>
+                  {role.requirements.slice(0, 2).map((req, i) => (
+                    <div key={i} className="flex items-start gap-1.5 text-xs text-slate-600">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#159FB4] shrink-0 mt-0.5" />
+                      <span className="line-clamp-1">{req}</span>
                     </div>
-                  )}
+                  ))}
                 </div>
 
-                <div className="pt-4 mt-2 border-t border-slate-100">
-                  <button
-                    type="button"
-                    onClick={() => handleApplyClick(pos)}
-                    className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#0D274A] hover:bg-[#081B34] shadow-xs transition-colors cursor-pointer"
-                  >
-                    <span>Apply for this Position</span>
-                    <ArrowRight className="w-4 h-4 text-[#159FB4]" />
-                  </button>
-                </div>
+              </div>
+
+              {/* Action row */}
+              <div className="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
+                <span className="text-[11px] font-bold text-[#C59B4B]">
+                  Immediate Requirement
+                </span>
+                <button
+                  type="button"
+                  onClick={() => handleApplyClick(role)}
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#159FB4] hover:bg-[#118496] shadow-xs hover:shadow-md transition-all cursor-pointer"
+                >
+                  <span>Apply Now</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
               </div>
 
             </div>
           ))}
         </div>
+
+        {filteredJobs.length === 0 && (
+          <div className="text-center py-12 bg-slate-50 rounded-2xl border border-slate-200">
+            <Briefcase className="w-8 h-8 text-slate-400 mx-auto mb-2" />
+            <h4 className="text-sm font-bold text-slate-700">No positions found matching your criteria</h4>
+            <p className="text-xs text-slate-500 mt-1">Try resetting your search or department filter.</p>
+          </div>
+        )}
       </section>
 
-      {/* 5. INLINE APPLICATION MODAL */}
+      {/* 4. "HOW WE HIRE" 4-STEP CANDIDATE JOURNEY */}
+      <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-200">
+          <div className="text-center max-w-xl mx-auto space-y-2 mb-10">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#159FB4]">
+              Transparency First
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0D274A]">
+              Our 4-Stage Interview Process
+            </h2>
+            <p className="text-xs sm:text-sm text-slate-600">
+              Clear timelines, respectful feedback, and zero unnecessary hurdles.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {hiringSteps.map((step) => (
+              <div 
+                key={step.num}
+                className="bg-white rounded-2xl p-5 border border-slate-200 shadow-xs space-y-2"
+              >
+                <span className="text-2xl font-black text-[#159FB4]">{step.num}</span>
+                <h3 className="text-sm font-bold text-[#0D274A]">{step.title}</h3>
+                <p className="text-xs text-slate-500 leading-relaxed">{step.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. GENERAL TALENT POOL INVITATION BANNER */}
+      <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="rounded-3xl bg-gradient-to-r from-[#0D274A] via-[#091D38] to-[#0D274A] text-white p-8 sm:p-10 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="space-y-2 text-center md:text-left">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#C59B4B] block">
+              Spontaneous Application
+            </span>
+            <h3 className="text-xl sm:text-2xl font-extrabold text-white">
+              Don’t See Your Exact Role?
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-300 max-w-xl">
+              We are constantly seeking brilliant minds in talent acquisition, technology staffing, and business development. Send your CV to our talent desk.
+            </p>
+          </div>
+
+          <div className="shrink-0">
+            <a
+              href="mailto:VMHRMPL@GMAIL.COM?subject=Spontaneous%20Application%20-%20VM%20HRM"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-[#0D274A] bg-white hover:bg-slate-100 shadow-md transition-all"
+            >
+              <Send className="w-4 h-4 text-[#159FB4]" />
+              <span>Email Your Resume</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* APPLICATION MODAL / SLIDE-OVER */}
       {selectedRole && (
-        <div className="fixed inset-0 z-modal bg-[#0D274A]/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 border border-slate-200 shadow-2xl relative animate-fadeIn">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs">
+          <div className="bg-white rounded-3xl max-w-lg w-full p-6 sm:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
             
             <button
               type="button"
               onClick={() => setSelectedRole(null)}
-              className="absolute top-4 right-4 p-2 rounded-full text-slate-400 hover:bg-slate-100 cursor-pointer"
+              className="absolute top-5 right-5 p-2 rounded-full hover:bg-slate-100 text-slate-400 hover:text-slate-600 transition-colors cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
 
             {submitted ? (
-              <div className="py-8 text-center space-y-4">
-                <div className="w-14 h-14 rounded-full bg-[#F0F8FA] text-[#159FB4] flex items-center justify-center mx-auto">
+              <div className="text-center py-8 space-y-4">
+                <div className="w-14 h-14 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto">
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
-                <h3 className="text-xl font-bold text-[#0D274A]">Application Submitted!</h3>
-                <p className="text-xs sm:text-sm text-slate-600 max-w-sm mx-auto">
-                  Thank you, <span className="font-semibold text-[#0D274A]">{applicationData.name}</span>. We have received your application for <strong className="text-[#159FB4]">{selectedRole.title}</strong>. Our HR team will review and connect with you.
-                </p>
+                <div className="space-y-1">
+                  <h3 className="text-lg font-bold text-[#0D274A]">Application Submitted!</h3>
+                  <p className="text-xs text-slate-600 max-w-sm mx-auto">
+                    Thank you, <strong>{applicationData.name}</strong>. Our talent team for <em>{selectedRole.title}</em> will review your details and reach out within 48 hours.
+                  </p>
+                </div>
                 <button
                   type="button"
                   onClick={() => setSelectedRole(null)}
-                  className="px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-[#0D274A]"
+                  className="px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-[#0D274A] hover:bg-[#081B34] transition-colors cursor-pointer"
                 >
                   Close Window
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleFormSubmit} className="space-y-4">
+              <div className="space-y-5">
                 <div>
-                  <span className="text-[10px] uppercase font-bold text-[#159FB4] tracking-wider block">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#159FB4] block">
                     Direct Application
                   </span>
-                  <h3 className="text-lg sm:text-xl font-bold text-[#0D274A] mt-0.5">
-                    Apply: {selectedRole.title}
+                  <h3 className="text-lg sm:text-xl font-black text-[#0D274A]">
+                    {selectedRole.title}
                   </h3>
-                  <p className="text-xs text-slate-500">{selectedRole.location} • {selectedRole.type}</p>
+                  <p className="text-xs text-slate-500">
+                    {company.legalName} • {selectedRole.location}
+                  </p>
                 </div>
 
-                <div>
-                  <label className="block text-xs font-bold text-[#0D274A] mb-1">Full Name *</label>
-                  <input
-                    type="text"
-                    placeholder="Your Name"
-                    value={applicationData.name}
-                    onChange={(e) => setApplicationData({ ...applicationData, name: e.target.value })}
-                    className="w-full px-3.5 py-2 rounded-lg border border-slate-200 text-sm focus:ring-2 focus:ring-[#159FB4] focus:outline-none bg-slate-50"
-                    required
-                  />
-                </div>
-
-                <div className="grid grid-cols-2 gap-3">
+                <form onSubmit={handleFormSubmit} className="space-y-3.5">
                   <div>
-                    <label className="block text-xs font-bold text-[#0D274A] mb-1">Email *</label>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">Full Name *</label>
                     <input
-                      type="email"
-                      placeholder="name@email.com"
-                      value={applicationData.email}
-                      onChange={(e) => setApplicationData({ ...applicationData, email: e.target.value })}
-                      className="w-full px-3.5 py-2 rounded-lg border border-slate-200 text-sm focus:ring-2 focus:ring-[#159FB4] focus:outline-none bg-slate-50"
+                      type="text"
                       required
+                      value={applicationData.name}
+                      onChange={(e) => setApplicationData(p => ({ ...p, name: e.target.value }))}
+                      placeholder="e.g. Rahul Sharma"
+                      className="w-full px-3.5 py-2 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden"
+                    />
+                  </div>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 mb-1">Email Address *</label>
+                      <input
+                        type="email"
+                        required
+                        value={applicationData.email}
+                        onChange={(e) => setApplicationData(p => ({ ...p, email: e.target.value }))}
+                        placeholder="you@email.com"
+                        className="w-full px-3.5 py-2 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-bold text-slate-700 mb-1">Phone Number *</label>
+                      <input
+                        type="tel"
+                        required
+                        value={applicationData.phone}
+                        onChange={(e) => setApplicationData(p => ({ ...p, phone: e.target.value }))}
+                        placeholder="+91 98765 43210"
+                        className="w-full px-3.5 py-2 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">Total Experience (Years) *</label>
+                    <input
+                      type="text"
+                      required
+                      value={applicationData.experience}
+                      onChange={(e) => setApplicationData(p => ({ ...p, experience: e.target.value }))}
+                      placeholder="e.g. 3.5 Years"
+                      className="w-full px-3.5 py-2 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-xs font-bold text-[#0D274A] mb-1">Phone *</label>
-                    <input
-                      type="tel"
-                      placeholder="Mobile number"
-                      value={applicationData.phone}
-                      onChange={(e) => setApplicationData({ ...applicationData, phone: e.target.value })}
-                      className="w-full px-3.5 py-2 rounded-lg border border-slate-200 text-sm focus:ring-2 focus:ring-[#159FB4] focus:outline-none bg-slate-50"
-                      required
+                    <label className="block text-xs font-bold text-slate-700 mb-1">Upload Resume (PDF, DOCX) *</label>
+                    <div className="border border-dashed border-slate-300 rounded-xl p-3 text-center bg-slate-50 hover:bg-slate-100 transition-colors relative cursor-pointer">
+                      <input
+                        type="file"
+                        required
+                        accept=".pdf,.doc,.docx"
+                        onChange={handleFileChange}
+                        className="absolute inset-0 opacity-0 cursor-pointer w-full h-full"
+                      />
+                      <div className="flex items-center justify-center gap-2 text-xs text-slate-600">
+                        <Upload className="w-4 h-4 text-[#159FB4]" />
+                        <span>{applicationData.resumeName || 'Click to select resume file'}</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-bold text-slate-700 mb-1">Cover Note / LinkedIn Profile (Optional)</label>
+                    <textarea
+                      rows={2}
+                      value={applicationData.notes}
+                      onChange={(e) => setApplicationData(p => ({ ...p, notes: e.target.value }))}
+                      placeholder="Brief note on your background or LinkedIn URL..."
+                      className="w-full px-3.5 py-2 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden resize-none"
                     />
                   </div>
-                </div>
 
-                <div>
-                  <label className="block text-xs font-bold text-[#0D274A] mb-1">Experience Level *</label>
-                  <input
-                    type="text"
-                    placeholder="e.g. 3 years in recruitment"
-                    value={applicationData.experience}
-                    onChange={(e) => setApplicationData({ ...applicationData, experience: e.target.value })}
-                    className="w-full px-3.5 py-2 rounded-lg border border-slate-200 text-sm focus:ring-2 focus:ring-[#159FB4] focus:outline-none bg-slate-50"
-                    required
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold text-[#0D274A] mb-1">Resume / CV</label>
-                  <label className="border border-dashed border-slate-300 rounded-lg p-3 text-center flex flex-col items-center justify-center cursor-pointer hover:bg-slate-50 transition-colors">
-                    <Upload className="w-5 h-5 text-[#159FB4] mb-1" />
-                    <span className="text-xs font-semibold text-[#0D274A]">
-                      {applicationData.resumeName || 'Click to select PDF or Word document'}
-                    </span>
-                    <input
-                      type="file"
-                      accept=".pdf,.doc,.docx"
-                      onChange={handleFileChange}
-                      className="hidden"
-                    />
-                  </label>
-                </div>
-
-                <button
-                  type="submit"
-                  disabled={submitting}
-                  className="w-full py-3 rounded-lg text-sm font-bold text-white bg-[#0D274A] hover:bg-[#081B34] transition-all flex items-center justify-center gap-2 cursor-pointer shadow-sm"
-                >
-                  <span>Submit Application</span>
-                  <Send className="w-4 h-4 text-[#159FB4]" />
-                </button>
-              </form>
+                  <div className="pt-2">
+                    <button
+                      type="submit"
+                      disabled={submitting}
+                      className="w-full py-3 rounded-xl text-xs font-bold text-white bg-[#159FB4] hover:bg-[#118496] shadow-md transition-all cursor-pointer flex items-center justify-center gap-2"
+                    >
+                      {submitting ? (
+                        <span>Submitting Application...</span>
+                      ) : (
+                        <>
+                          <span>Submit Application</span>
+                          <ArrowRight className="w-3.5 h-3.5" />
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </form>
+              </div>
             )}
 
           </div>
