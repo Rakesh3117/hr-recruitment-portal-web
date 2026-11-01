@@ -1,32 +1,38 @@
-import logoImg from '../../assets/vm-hrm-logo.jpg';
+import justLogo from "../../assets/just-logo.png";
+import justName from "../../assets/just-name.png";
 
-const BrandLogo = ({ variant = 'default', className = '', imgClassName = 'h-11 sm:h-12' }) => {
-  const isLight = variant === 'light';
+const BrandLogo = ({
+  variant = "default",
+  className = "",
+  logoClassName = "h-11 sm:h-12 md:h-14",
+  nameClassName = "h-8 sm:h-10 md:h-11 w-auto",
+}) => {
+  const isLight = variant === "light";
 
   return (
-    <div className={`flex items-center gap-3 select-none ${className}`}>
-      {/* Official Company Logo Image */}
-      <div className="relative shrink-0 overflow-hidden rounded-xl bg-white p-1 shadow-xs border border-slate-100 flex items-center justify-center">
-        <img 
-          src={logoImg} 
-          alt="VM HRM Private Limited Logo" 
-          className={`${imgClassName} w-auto object-contain`} 
+    <div
+      className={`flex items-center gap-0.5 sm:gap-0.5 select-none ${className}`}
+    >
+      {/* 1. Square Shield Logo Emblem */}
+      <div
+        className={`relative shrink-0 flex items-center justify-center ${isLight ? "bg-white p-1 rounded-xl shadow-xs" : ""}`}
+      >
+        <img
+          src={justLogo}
+          alt="VM HRM Emblem"
+          className={`${logoClassName} w-auto object-contain transition-transform hover:scale-105`}
         />
       </div>
 
-      {/* Brand Text for accessibility / high resolution header */}
-      <div className="flex flex-col">
-        <div className="flex items-center gap-1.5 flex-wrap">
-          <span className={`text-base sm:text-lg font-black tracking-tight ${isLight ? 'text-white' : 'text-[#0D274A]'}`}>
-            VM HRM
-          </span>
-          <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded tracking-wider uppercase ${isLight ? 'bg-[#159FB4] text-white' : 'bg-[#0D274A] text-white'}`}>
-            PVT LTD
-          </span>
-        </div>
-        <span className={`text-[10px] sm:text-[11px] font-semibold tracking-wider uppercase ${isLight ? 'text-white/80' : 'text-[#64748B]'}`}>
-          Recruit. Train. Place. <span className="text-[#C59B4B] font-bold">Grow.</span>
-        </span>
+      {/* 2. Horizontal Company Name / Typography (Enlarged Width) */}
+      <div
+        className={`relative shrink-0 flex items-center justify-center ${isLight ? "bg-white px-2.5 py-1 rounded-xl shadow-xs" : ""}`}
+      >
+        <img
+          src={justName}
+          alt="VM HRM Private Limited - Recruit. Train. Place. Grow."
+          className={`${nameClassName} object-contain transition-transform hover:scale-[1.01]`}
+        />
       </div>
     </div>
   );
