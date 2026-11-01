@@ -107,7 +107,7 @@ const Services = () => {
     <div className="space-y-16 sm:space-y-24 pb-20 overflow-hidden bg-white">
       
       {/* 1. DISTINCT HEADER BANNER WITH SKYSCRAPER OVERLAY & INTERACTIVE JUMP BAR */}
-      <section className="relative bg-[#0D274A] text-white pt-16 pb-20 sm:pt-20 sm:pb-24 overflow-hidden">
+      <section className="relative bg-primary text-white pt-16 pb-20 sm:pt-20 sm:pb-24 overflow-hidden">
         
         {/* Background Architecture Image (Dedicated photo-1486406146926-c627a92ad1ab) */}
         <div className="absolute inset-0 z-0 opacity-20">
@@ -116,20 +116,20 @@ const Services = () => {
             alt="Corporate Skylines"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0D274A]/90 via-[#0D274A]/95 to-[#0D274A]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/90 via-primary/95 to-primary" />
         </div>
 
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
           
           <div className="flex items-center justify-center">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/10 text-[#C59B4B] border border-white/15">
-              <Sparkles className="w-3.5 h-3.5 text-[#C59B4B]" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/10 text-gold border border-white/15">
+              <Sparkles className="w-3.5 h-3.5 text-gold" />
               <span>Full-Stack Workforce Portfolio</span>
             </span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight max-w-3xl mx-auto">
-            Comprehensive <span className="text-[#159FB4]">Talent</span>, <span className="text-[#C59B4B]">Training</span> & Staffing Capabilities
+            Comprehensive <span className="text-secondary">Talent</span>, <span className="text-gold">Training</span> & Staffing Capabilities
           </h1>
 
           <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
@@ -153,7 +153,7 @@ const Services = () => {
                   onClick={() => setActiveCategory(tab.id)}
                   className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                     activeCategory === tab.id
-                      ? 'bg-[#159FB4] text-white shadow-md shadow-[#159FB4]/30'
+                      ? 'bg-secondary text-white shadow-md shadow-secondary/30'
                       : 'bg-white/10 text-slate-300 hover:bg-white/15 hover:text-white border border-white/10'
                   }`}
                 >
@@ -190,15 +190,15 @@ const Services = () => {
                       alt={service.title}
                       className="w-full h-72 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700 opacity-95"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A]/80 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" />
                     
                     {/* Floating Metric Badge */}
                     <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/95 backdrop-blur-md shadow-lg border border-white/50 flex items-center justify-between">
                       <div>
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-[#159FB4] block">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-secondary block">
                           Demonstrated Performance
                         </span>
-                        <strong className="text-base sm:text-lg font-black text-[#0D274A]">
+                        <strong className="text-base sm:text-lg font-black text-primary">
                           {service.metrics.metric}
                         </strong>
                       </div>
@@ -209,7 +209,7 @@ const Services = () => {
                   </div>
 
                   {/* Decorative Border Dot */}
-                  <div className="hidden sm:block absolute -top-3 -right-3 w-12 h-12 rounded-2xl bg-[#C59B4B]/15 -z-10 pointer-events-none" />
+                  <div className="hidden sm:block absolute -top-3 -right-3 w-12 h-12 rounded-2xl bg-gold/15 -z-10 pointer-events-none" />
                 </div>
               </div>
 
@@ -217,15 +217,15 @@ const Services = () => {
               <div className={`lg:col-span-6 space-y-5 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                 
                 <div className="space-y-2">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-slate-100 text-xs font-bold text-[#0D274A]">
-                    <ServiceIcon className="w-4 h-4 text-[#159FB4]" />
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-slate-100 text-xs font-bold text-primary">
+                    <ServiceIcon className="w-4 h-4 text-secondary" />
                     <span>{service.badge}</span>
                   </div>
 
-                  <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0D274A] tracking-tight">
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-primary tracking-tight">
                     {service.title}
                   </h2>
-                  <p className="text-sm font-semibold text-[#159FB4]">
+                  <p className="text-sm font-semibold text-secondary">
                     {service.tagline}
                   </p>
                 </div>
@@ -238,7 +238,7 @@ const Services = () => {
                 <div className="space-y-2.5 pt-1">
                   {service.highlights.map((item, idx) => (
                     <div key={idx} className="flex items-start gap-2.5 text-xs text-slate-700">
-                      <CheckCircle2 className="w-4 h-4 text-[#159FB4] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-secondary shrink-0 mt-0.5" />
                       <span className="leading-relaxed">{item}</span>
                     </div>
                   ))}
@@ -247,17 +247,17 @@ const Services = () => {
                 <div className="pt-3 flex flex-wrap items-center gap-4">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold text-white bg-[#0D274A] hover:bg-[#081B34] transition-all shadow-md group"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold text-white bg-primary hover:bg-primary-hover transition-all shadow-md group"
                   >
-                    <Send className="w-3.5 h-3.5 text-[#159FB4]" />
+                    <Send className="w-3.5 h-3.5 text-secondary" />
                     <span>Inquire for this Service</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-[#159FB4] group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-3.5 h-3.5 text-secondary group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link
                     to="/careers"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#159FB4] hover:text-[#0D274A] transition-colors group"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-secondary hover:text-primary transition-colors group"
                   >
-                    <Users className="w-3.5 h-3.5 text-[#159FB4]" />
+                    <Users className="w-3.5 h-3.5 text-secondary" />
                     <span>View Related Openings</span>
                     <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                   </Link>
@@ -274,10 +274,10 @@ const Services = () => {
       <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-200">
           <div className="text-center max-w-xl mx-auto space-y-2 mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#159FB4]">
+            <span className="text-xs font-bold uppercase tracking-wider text-secondary">
               Structured Execution SLA
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0D274A]">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-primary">
               How We Fulfill Client Mandates
             </h2>
             <p className="text-xs sm:text-sm text-slate-600">
@@ -289,13 +289,13 @@ const Services = () => {
             {deliverySteps.map((step) => (
               <div 
                 key={step.num}
-                className="bg-white rounded-2xl p-5 border border-slate-200 shadow-xs hover:border-[#159FB4] transition-all space-y-3 flex flex-col justify-between"
+                className="bg-white rounded-2xl p-5 border border-slate-200 shadow-xs hover:border-secondary transition-all space-y-3 flex flex-col justify-between"
               >
                 <div className="space-y-2">
-                  <span className="text-2xl font-black text-[#159FB4]">
+                  <span className="text-2xl font-black text-secondary">
                     {step.num}
                   </span>
-                  <h3 className="text-sm font-bold text-[#0D274A]">
+                  <h3 className="text-sm font-bold text-primary">
                     {step.title}
                   </h3>
                   <p className="text-xs text-slate-500 leading-relaxed">
@@ -304,7 +304,7 @@ const Services = () => {
                 </div>
                 <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[10px] text-slate-400 font-bold uppercase">
                   <span>Step {step.num}</span>
-                  <Clock className="w-3 h-3 text-[#C59B4B]" />
+                  <Clock className="w-3 h-3 text-gold" />
                 </div>
               </div>
             ))}
@@ -314,9 +314,9 @@ const Services = () => {
 
       {/* 4. ENTERPRISE ASSURANCE GUARANTEE BANNER */}
       <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-gradient-to-r from-[#0D274A] via-[#091D38] to-[#0D274A] text-white p-8 sm:p-10 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="rounded-3xl bg-gradient-to-r from-primary via-navy-deep to-primary text-white p-8 sm:p-10 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#C59B4B]">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gold">
               <ShieldCheck className="w-4 h-4" />
               <span>Service Level Commitment</span>
             </div>
@@ -331,7 +331,7 @@ const Services = () => {
           <div className="shrink-0 flex items-center gap-3">
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#159FB4] hover:bg-[#118496] shadow-lg transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-secondary hover:bg-secondary-hover shadow-lg transition-all"
             >
               <PhoneCall className="w-4 h-4 text-white" />
               <span>Schedule a Call</span>

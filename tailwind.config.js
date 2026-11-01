@@ -13,6 +13,8 @@ export default {
           DEFAULT: "#0D274A",
           hover: "#081B34",
           light: "#F0F6FC",
+          deep: "#091D38",
+          dark: "#07172C",
         },
         secondary: {
           DEFAULT: "#159FB4",
@@ -23,6 +25,7 @@ export default {
           DEFAULT: "#C59B4B",
           hover: "#A88236",
           light: "#FDF9F0",
+          subtle: "#E5BF70",
         },
         accent: {
           DEFAULT: "#159FB4",
@@ -41,7 +44,9 @@ export default {
         navy: {
           DEFAULT: "#0D274A",
           dark: "#07172C",
+          deep: "#091D38",
           muted: "#1B3B65",
+          midnight: "#1E1B4B",
         },
         white: "#FFFFFF",
         grey: {
@@ -51,6 +56,7 @@ export default {
           50: "#F8FAFC",
           100: "#F1F5F9",
           200: "#E2E8F0",
+          300: "#CBD5E1",
         },
 
         /* Background */
@@ -63,14 +69,15 @@ export default {
         "surface-hover": "#F1F5F9",
 
         /* Soft ice / accent light */
+        ice: "#F0F8FA",
         "lavender-light": "#F0F8FA",
         "lavender-soft": "#E6F5F8",
         "lavender-muted": "#EFF9FB",
 
         /* Status */
         success: "#16A34A",
-        warning: "#F59E0B",
-        info: "#0EA5E9",
+        warning: "#C59B4B",
+        info: "#159FB4",
         danger: "#EF4444",
 
         /* UI */

@@ -6,12 +6,22 @@
   --color-primary: #0D274A;
   --color-primary-hover: #081B34;
   --color-primary-light: #F0F6FC;
+  --color-primary-deep: #091D38;
+  --color-primary-dark: #07172C;
+
   --color-secondary: #159FB4;
+  --color-secondary-hover: #118496;
+  --color-secondary-light: #EBF7F9;
   --color-tertiary: #C59B4B;
 
-  --color-accent: #C59B4B;
-  --color-accent-hover: #A88236;
-  --color-accent-light: #FDF9F0;
+  --color-gold: #C59B4B;
+  --color-gold-hover: #A88236;
+  --color-gold-light: #FDF9F0;
+  --color-gold-subtle: #E5BF70;
+
+  --color-accent: #159FB4;
+  --color-accent-hover: #118496;
+  --color-accent-light: #EBF7F9;
 
   --color-teal: #159FB4;
   --color-teal-hover: #118496;
@@ -21,7 +31,9 @@
 
   --color-navy: #0D274A;
   --color-navy-dark: #07172C;
+  --color-navy-deep: #091D38;
   --color-navy-muted: #1B3B65;
+  --color-navy-midnight: #1E1B4B;
 
   --color-grey: #64748B;
   --color-grey-light: #94A3B8;
@@ -29,6 +41,7 @@
   --color-grey-50: #F8FAFC;
   --color-grey-100: #F1F5F9;
   --color-grey-200: #E2E8F0;
+  --color-grey-300: #CBD5E1;
 
   --color-background: #FFFFFF;
   --color-background-secondary: #F8FAFC;
@@ -36,6 +49,7 @@
   --color-surface-secondary: #F8FAFC;
   --color-surface-hover: #F1F5F9;
 
+  --color-ice: #F0F8FA;
   --color-lavender-light: #F0F8FA;
   --color-lavender-soft: #E6F5F8;
   --color-lavender-muted: #EFF9FB;

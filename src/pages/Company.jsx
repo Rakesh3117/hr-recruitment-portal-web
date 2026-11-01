@@ -81,8 +81,8 @@ const Company = () => {
           
           {/* Registered Corporate Entity Pill */}
           <div className="mb-6">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-[#159FB4]/10 text-[#0D274A] border border-[#159FB4]/20">
-              <Sparkles className="w-3.5 h-3.5 text-[#C59B4B]" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-secondary/10 text-primary border border-secondary/20">
+              <Sparkles className="w-3.5 h-3.5 text-gold" />
               <span>Incorporated Corporate Entity</span>
             </span>
           </div>
@@ -92,28 +92,28 @@ const Company = () => {
             {/* Left Column: Authoritative Editorial Story */}
             <div className="lg:col-span-7 space-y-6">
               <div className="space-y-2">
-                <span className="text-xs font-bold uppercase tracking-widest text-[#159FB4]">
+                <span className="text-xs font-bold uppercase tracking-widest text-secondary">
                   About Our Enterprise
                 </span>
-                <h1 className="text-3xl sm:text-5xl font-black text-[#0D274A] tracking-tight leading-[1.15]">
-                  Strategic Workforce Partners Built on <span className="text-[#159FB4]">Precision</span> & <span className="text-[#C59B4B]">Integrity</span>
+                <h1 className="text-3xl sm:text-5xl font-black text-primary tracking-tight leading-[1.15]">
+                  Strategic Workforce Partners Built on <span className="text-secondary">Precision</span> & <span className="text-gold">Integrity</span>
                 </h1>
               </div>
 
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
-                <strong className="text-[#0D274A] font-bold">{company.legalName}</strong> is a dedicated recruitment, workforce training, and executive staffing firm incorporated in Telangana. Guided by our motto <span className="font-semibold text-[#0D274A] italic">“Recruit. Train. Place. Grow.”</span>, we bridge talent gaps for high-growth enterprises and provide ambitious professionals with transformative career pathways.
+                <strong className="text-primary font-bold">{company.legalName}</strong> is a dedicated recruitment, workforce training, and executive staffing firm incorporated in Telangana. Guided by our motto <span className="font-semibold text-primary italic">“Recruit. Train. Place. Grow.”</span>, we bridge talent gaps for high-growth enterprises and provide ambitious professionals with transformative career pathways.
               </p>
 
               {/* Fast Facts Tags */}
               <div className="pt-2 flex flex-wrap items-center gap-3 text-xs">
                 <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-slate-200 shadow-xs">
-                  <ShieldCheck className="w-4 h-4 text-[#159FB4]" />
-                  <span className="font-bold text-[#0D274A]">CIN:</span>
+                  <ShieldCheck className="w-4 h-4 text-secondary" />
+                  <span className="font-bold text-primary">CIN:</span>
                   <span className="font-mono text-slate-600 font-medium">{contactInfo.cin}</span>
                 </div>
                 <div className="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-white border border-slate-200 shadow-xs">
-                  <Building className="w-4 h-4 text-[#C59B4B]" />
-                  <span className="font-bold text-[#0D274A]">Registered at:</span>
+                  <Building className="w-4 h-4 text-gold" />
+                  <span className="font-bold text-primary">Registered at:</span>
                   <span className="text-slate-600">Bachupally, Hyderabad</span>
                 </div>
               </div>
@@ -121,17 +121,17 @@ const Company = () => {
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Link
                   to="/services"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-white bg-[#0D274A] hover:bg-[#081B34] transition-all shadow-md hover:shadow-lg group"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-white bg-primary hover:bg-primary-hover transition-all shadow-md hover:shadow-lg group"
                 >
-                  <Briefcase className="w-4 h-4 text-[#159FB4]" />
+                  <Briefcase className="w-4 h-4 text-secondary" />
                   <span>Our Service Lines</span>
-                  <ArrowRight className="w-4 h-4 text-[#159FB4] group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 text-secondary group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-[#0D274A] bg-slate-100 hover:bg-slate-200 transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-primary bg-slate-100 hover:bg-slate-200 transition-colors"
                 >
-                  <PhoneCall className="w-4 h-4 text-[#159FB4]" />
+                  <PhoneCall className="w-4 h-4 text-secondary" />
                   <span>Get In Touch</span>
                 </Link>
               </div>
@@ -148,19 +148,19 @@ const Company = () => {
                     alt="Corporate Headquarters Architecture"
                     className="w-full h-80 sm:h-96 object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A]/80 via-[#0D274A]/10 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/10 to-transparent" />
                   
                   {/* Floating Live Badge inside Image */}
                   <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/95 backdrop-blur-md shadow-lg border border-white/50 flex items-center justify-between">
                     <div>
-                      <span className="text-[10px] uppercase font-bold text-[#159FB4] tracking-wider block">
+                      <span className="text-[10px] uppercase font-bold text-secondary tracking-wider block">
                         Government Registered
                       </span>
-                      <strong className="text-xs sm:text-sm text-[#0D274A] block">
+                      <strong className="text-xs sm:text-sm text-primary block">
                         VM Human Resource Management
                       </strong>
                     </div>
-                    <div className="w-10 h-10 rounded-xl bg-[#0D274A] flex items-center justify-center text-[#C59B4B] shadow-xs">
+                    <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-gold shadow-xs">
                       <Award className="w-5 h-5" />
                     </div>
                   </div>
@@ -168,11 +168,11 @@ const Company = () => {
 
                 {/* Overlapping Small Accent Card (Bottom-Left) */}
                 <div className="hidden sm:flex absolute -bottom-6 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-slate-200 items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#159FB4]/15 flex items-center justify-center text-[#159FB4]">
+                  <div className="w-10 h-10 rounded-xl bg-secondary/15 flex items-center justify-center text-secondary">
                     <TrendingUp className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-sm font-black text-[#0D274A] block">2000+ Deployed Candidates</span>
+                    <span className="text-sm font-black text-primary block">2000+ Deployed Candidates</span>
                     <span className="text-[11px] text-slate-500 font-medium">Empowering Careers Pan-India</span>
                   </div>
                 </div>
@@ -185,30 +185,30 @@ const Company = () => {
 
       {/* 2. THE OFFICIAL PHYSICAL "COMPANY NAME BOARD" (BRASS & NAVY PLAQUE DESIGN) */}
       <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-gradient-to-br from-[#0D274A] via-[#081B34] to-[#0D274A] text-white p-6 sm:p-10 shadow-2xl border-2 border-[#C59B4B]/30 relative overflow-hidden">
+        <div className="rounded-3xl bg-gradient-to-br from-primary via-primary-hover to-primary text-white p-6 sm:p-10 shadow-2xl border-2 border-gold/30 relative overflow-hidden">
           
           {/* Subtle Brass Corner Accents */}
-          <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#C59B4B] m-3 pointer-events-none" />
-          <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-[#C59B4B] m-3 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-[#C59B4B] m-3 pointer-events-none" />
-          <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#C59B4B] m-3 pointer-events-none" />
+          <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-gold m-3 pointer-events-none" />
+          <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-gold m-3 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-gold m-3 pointer-events-none" />
+          <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-gold m-3 pointer-events-none" />
 
           {/* Header Row */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-white/15 pb-6 mb-8">
             <div className="space-y-1">
-              <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#C59B4B]">
-                <ShieldCheck className="w-4 h-4 text-[#C59B4B]" />
+              <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-gold">
+                <ShieldCheck className="w-4 h-4 text-gold" />
                 <span>Statutory Name Board & Corporate Disclosures</span>
               </div>
               <h2 className="text-xl sm:text-2xl font-black text-white">
                 {company.legalName}
               </h2>
-              <p className="text-xs sm:text-sm text-[#159FB4] font-semibold tracking-wide">
+              <p className="text-xs sm:text-sm text-secondary font-semibold tracking-wide">
                 Recruit. Train. Place. Grow.
               </p>
             </div>
 
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-xs font-mono text-[#C59B4B] border border-white/15 shrink-0">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 text-xs font-mono text-gold border border-white/15 shrink-0">
               <Award className="w-4 h-4" />
               <span>ROC Telangana Incorporated</span>
             </div>
@@ -222,7 +222,7 @@ const Company = () => {
               <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">
                 Corporate Identity Number (CIN)
               </span>
-              <p className="font-mono text-sm sm:text-base font-bold text-[#159FB4] tracking-wider">
+              <p className="font-mono text-sm sm:text-base font-bold text-secondary tracking-wider">
                 {contactInfo.cin}
               </p>
               <p className="text-[11px] text-slate-300">
@@ -253,18 +253,18 @@ const Company = () => {
                 Official Contact Desks
               </span>
               <p className="text-xs text-slate-200 flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-[#159FB4] shrink-0" />
+                <Phone className="w-3.5 h-3.5 text-secondary shrink-0" />
                 <a href={`tel:${contactInfo.phones[0]}`} className="hover:text-white transition-colors">{contactInfo.displayPhone}</a>
               </p>
               <p className="text-xs text-slate-200 flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-[#C59B4B] shrink-0" />
+                <Mail className="w-3.5 h-3.5 text-gold shrink-0" />
                 <a href={`mailto:${contactInfo.email}`} className="hover:text-white transition-colors break-all">{contactInfo.email}</a>
               </p>
             </div>
 
             {/* Box 4: Registered Office Address (Full Span) */}
             <div className="md:col-span-2 lg:col-span-3 p-4 rounded-xl bg-white/5 border border-white/10 space-y-1.5 backdrop-blur-xs">
-              <div className="flex items-center gap-1.5 text-[10px] uppercase font-bold text-[#C59B4B] tracking-wider">
+              <div className="flex items-center gap-1.5 text-[10px] uppercase font-bold text-gold tracking-wider">
                 <MapPin className="w-3.5 h-3.5" />
                 <span>Registered Office Address</span>
               </div>
@@ -281,10 +281,10 @@ const Company = () => {
       {/* 3. FOUR-PILLAR METHODOLOGY: RECRUIT, TRAIN, PLACE, GROW */}
       <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-xl mx-auto space-y-2 mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#159FB4]">
+          <span className="text-xs font-bold uppercase tracking-wider text-secondary">
             Our Operating Model
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0D274A] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-primary tracking-tight">
             The 4-Stage Growth Pipeline
           </h2>
           <p className="text-xs sm:text-sm text-slate-600">
@@ -298,23 +298,23 @@ const Company = () => {
             return (
               <div
                 key={pillar.step}
-                className="bg-white rounded-2xl p-6 border border-slate-200 hover:border-[#159FB4] shadow-xs hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group"
+                className="bg-white rounded-2xl p-6 border border-slate-200 hover:border-secondary shadow-xs hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between group"
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-black text-slate-200 group-hover:text-[#159FB4] transition-colors">
+                    <span className="text-2xl font-black text-slate-200 group-hover:text-secondary transition-colors">
                       {pillar.step}
                     </span>
-                    <div className="w-10 h-10 rounded-xl bg-slate-50 group-hover:bg-[#159FB4]/10 flex items-center justify-center transition-colors">
-                      <IconComponent className="w-5 h-5 text-[#0D274A] group-hover:text-[#159FB4] transition-colors" />
+                    <div className="w-10 h-10 rounded-xl bg-slate-50 group-hover:bg-secondary/10 flex items-center justify-center transition-colors">
+                      <IconComponent className="w-5 h-5 text-primary group-hover:text-secondary transition-colors" />
                     </div>
                   </div>
 
                   <div className="space-y-1">
-                    <h3 className="text-lg font-bold text-[#0D274A]">
+                    <h3 className="text-lg font-bold text-primary">
                       {pillar.title}
                     </h3>
-                    <p className="text-xs font-semibold text-[#159FB4]">
+                    <p className="text-xs font-semibold text-secondary">
                       {pillar.subtitle}
                     </p>
                   </div>
@@ -324,9 +324,9 @@ const Company = () => {
                   </p>
                 </div>
 
-                <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-slate-400 group-hover:text-[#0D274A]">
+                <div className="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-slate-400 group-hover:text-primary">
                   <span>Phase {pillar.step}</span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#159FB4]" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-secondary" />
                 </div>
               </div>
             );
@@ -346,9 +346,9 @@ const Company = () => {
                 alt="Our Purpose & Mission"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A]/80 via-[#0D274A]/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
               <div className="absolute bottom-4 left-5 flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-xl bg-white text-[#159FB4] flex items-center justify-center shadow-md">
+                <div className="w-9 h-9 rounded-xl bg-white text-secondary flex items-center justify-center shadow-md">
                   <Target className="w-5 h-5" />
                 </div>
                 <h3 className="text-xl font-bold text-white">Our Mission</h3>
@@ -362,11 +362,11 @@ const Company = () => {
               
               <ul className="space-y-2 text-xs text-slate-600 pt-2 border-t border-slate-100">
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#159FB4] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-secondary shrink-0 mt-0.5" />
                   <span>Connecting enterprises with thoroughly evaluated, high-integrity candidates.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#159FB4] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-secondary shrink-0 mt-0.5" />
                   <span>Bridging industry competency gaps through modern corporate upskilling.</span>
                 </li>
               </ul>
@@ -381,9 +381,9 @@ const Company = () => {
                 alt="Our Future Vision"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A]/80 via-[#0D274A]/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/20 to-transparent" />
               <div className="absolute bottom-4 left-5 flex items-center gap-2.5">
-                <div className="w-9 h-9 rounded-xl bg-white text-[#C59B4B] flex items-center justify-center shadow-md">
+                <div className="w-9 h-9 rounded-xl bg-white text-gold flex items-center justify-center shadow-md">
                   <Eye className="w-5 h-5" />
                 </div>
                 <h3 className="text-xl font-bold text-white">Our Vision</h3>
@@ -397,11 +397,11 @@ const Company = () => {
 
               <ul className="space-y-2 text-xs text-slate-600 pt-2 border-t border-slate-100">
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#C59B4B] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-gold shrink-0 mt-0.5" />
                   <span>Establishing exemplary benchmarks for corporate talent retention and growth.</span>
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#C59B4B] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-4 h-4 text-gold shrink-0 mt-0.5" />
                   <span>Building lasting stakeholder relationships grounded in transparency and mutual success.</span>
                 </li>
               </ul>
@@ -417,10 +417,10 @@ const Company = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
             <div className="lg:col-span-5 space-y-4">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#159FB4]">
+              <span className="text-xs font-bold uppercase tracking-wider text-secondary">
                 Enterprise Governance
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0D274A]">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-primary">
                 Commitment to Ethical Compliance
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
@@ -430,9 +430,9 @@ const Company = () => {
               <div className="pt-2">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-[#159FB4] hover:text-[#0D274A] transition-colors group"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-secondary hover:text-primary transition-colors group"
                 >
-                  <ShieldCheck className="w-4 h-4 text-[#159FB4]" />
+                  <ShieldCheck className="w-4 h-4 text-secondary" />
                   <span>Request Corporate Verification Deck</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -442,9 +442,9 @@ const Company = () => {
             <div className="lg:col-span-7 space-y-3.5">
               {governanceStandards.map((item, idx) => (
                 <div key={idx} className="p-4 rounded-xl bg-white border border-slate-200 shadow-xs flex items-start gap-3">
-                  <ShieldCheck className="w-5 h-5 text-[#159FB4] shrink-0 mt-0.5" />
+                  <ShieldCheck className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
                   <div>
-                    <h4 className="text-xs sm:text-sm font-bold text-[#0D274A]">{item.title}</h4>
+                    <h4 className="text-xs sm:text-sm font-bold text-primary">{item.title}</h4>
                     <p className="text-xs text-slate-500 mt-0.5">{item.desc}</p>
                   </div>
                 </div>
@@ -459,8 +459,8 @@ const Company = () => {
       <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-center">
           {milestones.slice(0, 4).map((item, idx) => (
-            <div key={idx} className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-[#159FB4] transition-all hover:-translate-y-0.5">
-              <div className="text-2xl sm:text-3xl font-black text-[#0D274A]">{item.number}</div>
+            <div key={idx} className="p-6 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-secondary transition-all hover:-translate-y-0.5">
+              <div className="text-2xl sm:text-3xl font-black text-primary">{item.number}</div>
               <div className="text-xs font-bold text-slate-600 mt-1">{item.label}</div>
             </div>
           ))}

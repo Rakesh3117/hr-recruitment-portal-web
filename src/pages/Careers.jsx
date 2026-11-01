@@ -110,7 +110,7 @@ const Careers = () => {
     <div className="space-y-16 sm:space-y-24 pb-20 overflow-hidden bg-white">
       
       {/* 1. DISTINCT CAREER HUB HERO BANNER WITH COLLABORATIVE WORKSPACE IMAGERY */}
-      <section className="relative bg-gradient-to-br from-[#0D274A] via-[#091D38] to-[#0D274A] text-white pt-14 pb-20 sm:pt-20 sm:pb-28 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-primary via-navy-deep to-primary text-white pt-14 pb-20 sm:pt-20 sm:pb-28 overflow-hidden">
         
         {/* Background Visual (Dedicated photo-1542744173-8e7e53415bb0) */}
         <div className="absolute inset-0 z-0 opacity-20">
@@ -119,21 +119,21 @@ const Careers = () => {
             alt="Collaborative Workspace"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A] via-[#0D274A]/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/80 to-transparent" />
         </div>
 
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-5">
             
             <div className="flex items-center justify-center">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/10 text-[#C59B4B] border border-white/15">
-                <Sparkles className="w-3.5 h-3.5 text-[#C59B4B]" />
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/10 text-gold border border-white/15">
+                <Sparkles className="w-3.5 h-3.5 text-gold" />
                 <span>We Are Expanding</span>
               </span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
-              Build an Extraordinary Career at <span className="text-[#159FB4]">VM HRM Private Limited</span>
+              Build an Extraordinary Career at <span className="text-secondary">VM HRM Private Limited</span>
             </h1>
 
             <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
@@ -156,7 +156,7 @@ const Careers = () => {
                 <button
                   type="button"
                   onClick={scrollToPositions}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-[#159FB4] hover:bg-[#118496] transition-colors whitespace-nowrap shadow-md cursor-pointer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-secondary hover:bg-secondary-hover transition-colors whitespace-nowrap shadow-md cursor-pointer"
                 >
                   <Search className="w-3.5 h-3.5 text-white" />
                   <span>Find Roles</span>
@@ -171,10 +171,10 @@ const Careers = () => {
       {/* 2. "LIFE AT VM HRM" BENTO CULTURE GRID WITH DEDICATED DISTINCT IMAGERY */}
       <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-xl mx-auto space-y-2 mb-12">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#159FB4]">
+          <span className="text-xs font-bold uppercase tracking-wider text-secondary">
             Why Join Us
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0D274A] tracking-tight">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-primary tracking-tight">
             A Culture of Energy, Recognition & Growth
           </h2>
           <p className="text-xs sm:text-sm text-slate-600">
@@ -192,9 +192,9 @@ const Careers = () => {
               alt="Collaborative Hub"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A]/90 via-[#0D274A]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent" />
             <div className="absolute bottom-5 left-5 right-5 text-white space-y-1">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-[#159FB4]">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-secondary">
                 Workplace Experience
               </span>
               <h3 className="text-base font-bold">Collaborative Team Spaces</h3>
@@ -209,9 +209,9 @@ const Careers = () => {
               alt="Team Unity"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A]/90 via-[#0D274A]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent" />
             <div className="absolute bottom-5 left-5 right-5 text-white space-y-1">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-[#C59B4B]">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-gold">
                 Team Spirit
               </span>
               <h3 className="text-base font-bold">Inclusion & Peer Camaraderie</h3>
@@ -226,9 +226,9 @@ const Careers = () => {
               alt="Mentorship & Coaching"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A]/90 via-[#0D274A]/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent" />
             <div className="absolute bottom-5 left-5 right-5 text-white space-y-1">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-[#159FB4]">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-secondary">
                 Growth & Learning
               </span>
               <h3 className="text-base font-bold">1-on-1 Leadership Coaching</h3>
@@ -245,12 +245,12 @@ const Careers = () => {
             return (
               <div 
                 key={idx}
-                className="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-[#159FB4] transition-all space-y-2 hover:-translate-y-1"
+                className="p-5 rounded-2xl bg-slate-50 border border-slate-200 hover:border-secondary transition-all space-y-2 hover:-translate-y-1"
               >
-                <div className="w-10 h-10 rounded-xl bg-white text-[#159FB4] shadow-xs flex items-center justify-center">
+                <div className="w-10 h-10 rounded-xl bg-white text-secondary shadow-xs flex items-center justify-center">
                   <IconComp className="w-5 h-5" />
                 </div>
-                <h4 className="text-sm font-bold text-[#0D274A]">{perk.title}</h4>
+                <h4 className="text-sm font-bold text-primary">{perk.title}</h4>
                 <p className="text-xs text-slate-500 leading-relaxed">{perk.desc}</p>
               </div>
             );
@@ -262,10 +262,10 @@ const Careers = () => {
       <section ref={positionsRef} className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-200 pb-5 mb-8">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-[#159FB4] block">
+            <span className="text-xs font-bold uppercase tracking-wider text-secondary block">
               Opportunities
             </span>
-            <h2 className="text-2xl font-black text-[#0D274A] mt-0.5">
+            <h2 className="text-2xl font-black text-primary mt-0.5">
               Current Openings ({filteredJobs.length})
             </h2>
           </div>
@@ -287,7 +287,7 @@ const Careers = () => {
                   onClick={() => setSelectedDept(dept.id)}
                   className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                     selectedDept === dept.id
-                      ? 'bg-[#0D274A] text-white shadow-xs'
+                      ? 'bg-primary text-white shadow-xs'
                       : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                   }`}
                 >
@@ -304,7 +304,7 @@ const Careers = () => {
           {filteredJobs.map((role) => (
             <div
               key={role.id}
-              className="bg-white rounded-2xl p-6 border border-slate-200 hover:border-[#159FB4] shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
+              className="bg-white rounded-2xl p-6 border border-slate-200 hover:border-secondary shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
             >
               <div className="space-y-4">
                 
@@ -317,7 +317,7 @@ const Careers = () => {
                       className="w-12 h-12 rounded-xl object-cover border border-slate-200"
                     />
                     <div>
-                      <h3 className="text-base font-bold text-[#0D274A] group-hover:text-[#159FB4] transition-colors">
+                      <h3 className="text-base font-bold text-primary group-hover:text-secondary transition-colors">
                         {role.title}
                       </h3>
                       <span className="text-xs text-slate-500 font-medium">
@@ -326,7 +326,7 @@ const Careers = () => {
                     </div>
                   </div>
 
-                  <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#159FB4]/10 text-[#0D274A] shrink-0">
+                  <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-secondary/10 text-primary shrink-0">
                     {role.type}
                   </span>
                 </div>
@@ -338,11 +338,11 @@ const Careers = () => {
                 {/* Key specs */}
                 <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 pt-1">
                   <div className="flex items-center gap-1">
-                    <MapPin className="w-3.5 h-3.5 text-[#159FB4]" />
+                    <MapPin className="w-3.5 h-3.5 text-secondary" />
                     <span>{role.location}</span>
                   </div>
                   <div className="flex items-center gap-1">
-                    <Clock className="w-3.5 h-3.5 text-[#C59B4B]" />
+                    <Clock className="w-3.5 h-3.5 text-gold" />
                     <span>{role.experience}</span>
                   </div>
                 </div>
@@ -352,7 +352,7 @@ const Careers = () => {
                   <span className="text-[10px] uppercase font-bold text-slate-400 block tracking-wider">Key Requirements</span>
                   {role.requirements.slice(0, 2).map((req, i) => (
                     <div key={i} className="flex items-start gap-1.5 text-xs text-slate-600">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#159FB4] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-secondary shrink-0 mt-0.5" />
                       <span className="line-clamp-1">{req}</span>
                     </div>
                   ))}
@@ -362,13 +362,13 @@ const Careers = () => {
 
               {/* Action row */}
               <div className="pt-5 mt-5 border-t border-slate-100 flex items-center justify-between">
-                <span className="text-[11px] font-bold text-[#C59B4B]">
+                <span className="text-[11px] font-bold text-gold">
                   Immediate Requirement
                 </span>
                 <button
                   type="button"
                   onClick={() => handleApplyClick(role)}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#159FB4] hover:bg-[#118496] shadow-xs hover:shadow-md transition-all cursor-pointer group"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-secondary hover:bg-secondary-hover shadow-xs hover:shadow-md transition-all cursor-pointer group"
                 >
                   <Send className="w-3.5 h-3.5 text-white" />
                   <span>Apply Now</span>
@@ -393,10 +393,10 @@ const Careers = () => {
       <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-200">
           <div className="text-center max-w-xl mx-auto space-y-2 mb-10">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#159FB4]">
+            <span className="text-xs font-bold uppercase tracking-wider text-secondary">
               Transparency First
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0D274A]">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-primary">
               Our 4-Stage Interview Process
             </h2>
             <p className="text-xs sm:text-sm text-slate-600">
@@ -410,8 +410,8 @@ const Careers = () => {
                 key={step.num}
                 className="bg-white rounded-2xl p-5 border border-slate-200 shadow-xs space-y-2"
               >
-                <span className="text-2xl font-black text-[#159FB4]">{step.num}</span>
-                <h3 className="text-sm font-bold text-[#0D274A]">{step.title}</h3>
+                <span className="text-2xl font-black text-secondary">{step.num}</span>
+                <h3 className="text-sm font-bold text-primary">{step.title}</h3>
                 <p className="text-xs text-slate-500 leading-relaxed">{step.desc}</p>
               </div>
             ))}
@@ -421,9 +421,9 @@ const Careers = () => {
 
       {/* 5. GENERAL TALENT POOL INVITATION BANNER */}
       <section className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-3xl bg-gradient-to-r from-[#0D274A] via-[#091D38] to-[#0D274A] text-white p-8 sm:p-10 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="rounded-3xl bg-gradient-to-r from-primary via-navy-deep to-primary text-white p-8 sm:p-10 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="space-y-2 text-center md:text-left">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#C59B4B] block">
+            <span className="text-xs font-bold uppercase tracking-wider text-gold block">
               Spontaneous Application
             </span>
             <h3 className="text-xl sm:text-2xl font-extrabold text-white">
@@ -437,9 +437,9 @@ const Careers = () => {
           <div className="shrink-0">
             <a
               href="mailto:VMHRMPL@GMAIL.COM?subject=Spontaneous%20Application%20-%20VM%20HRM"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-[#0D274A] bg-white hover:bg-slate-100 shadow-md transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-primary bg-white hover:bg-slate-100 shadow-md transition-all"
             >
-              <Mail className="w-4 h-4 text-[#159FB4]" />
+              <Mail className="w-4 h-4 text-secondary" />
               <span>Email Your Resume</span>
             </a>
           </div>
@@ -465,7 +465,7 @@ const Careers = () => {
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
                 <div className="space-y-1">
-                  <h3 className="text-lg font-bold text-[#0D274A]">Application Submitted!</h3>
+                  <h3 className="text-lg font-bold text-primary">Application Submitted!</h3>
                   <p className="text-xs text-slate-600 max-w-sm mx-auto">
                     Thank you, <strong>{applicationData.name}</strong>. Our talent team for <em>{selectedRole.title}</em> will review your details and reach out within 48 hours.
                   </p>
@@ -473,7 +473,7 @@ const Careers = () => {
                 <button
                   type="button"
                   onClick={() => setSelectedRole(null)}
-                  className="inline-flex items-center gap-1.5 px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-[#0D274A] hover:bg-[#081B34] transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-primary hover:bg-primary-hover transition-colors cursor-pointer"
                 >
                   <CheckCircle2 className="w-3.5 h-3.5" />
                   <span>Close Window</span>
@@ -482,10 +482,10 @@ const Careers = () => {
             ) : (
               <div className="space-y-5">
                 <div>
-                  <span className="text-[10px] font-bold uppercase tracking-wider text-[#159FB4] block">
+                  <span className="text-[10px] font-bold uppercase tracking-wider text-secondary block">
                     Direct Application
                   </span>
-                  <h3 className="text-lg sm:text-xl font-black text-[#0D274A]">
+                  <h3 className="text-lg sm:text-xl font-black text-primary">
                     {selectedRole.title}
                   </h3>
                   <p className="text-xs text-slate-500">
@@ -502,7 +502,7 @@ const Careers = () => {
                       value={applicationData.name}
                       onChange={(e) => setApplicationData(p => ({ ...p, name: e.target.value }))}
                       placeholder="e.g. Rahul Sharma"
-                      className="w-full px-3.5 py-2 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden"
+                      className="w-full px-3.5 py-2 rounded-xl text-xs border border-slate-200 focus:border-secondary focus:outline-hidden"
                     />
                   </div>
 
@@ -515,7 +515,7 @@ const Careers = () => {
                         value={applicationData.email}
                         onChange={(e) => setApplicationData(p => ({ ...p, email: e.target.value }))}
                         placeholder="you@email.com"
-                        className="w-full px-3.5 py-2 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden"
+                        className="w-full px-3.5 py-2 rounded-xl text-xs border border-slate-200 focus:border-secondary focus:outline-hidden"
                       />
                     </div>
                     <div>
@@ -526,7 +526,7 @@ const Careers = () => {
                         value={applicationData.phone}
                         onChange={(e) => setApplicationData(p => ({ ...p, phone: e.target.value }))}
                         placeholder="+91 98765 43210"
-                        className="w-full px-3.5 py-2 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden"
+                        className="w-full px-3.5 py-2 rounded-xl text-xs border border-slate-200 focus:border-secondary focus:outline-hidden"
                       />
                     </div>
                   </div>
@@ -539,7 +539,7 @@ const Careers = () => {
                       value={applicationData.experience}
                       onChange={(e) => setApplicationData(p => ({ ...p, experience: e.target.value }))}
                       placeholder="e.g. 3.5 Years"
-                      className="w-full px-3.5 py-2 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden"
+                      className="w-full px-3.5 py-2 rounded-xl text-xs border border-slate-200 focus:border-secondary focus:outline-hidden"
                     />
                   </div>
 
@@ -554,7 +554,7 @@ const Careers = () => {
                         className="absolute inset-0 opacity-0 cursor-pointer w-full h-full"
                       />
                       <div className="flex items-center justify-center gap-2 text-xs text-slate-600">
-                        <Upload className="w-4 h-4 text-[#159FB4]" />
+                        <Upload className="w-4 h-4 text-secondary" />
                         <span>{applicationData.resumeName || 'Click to select resume file'}</span>
                       </div>
                     </div>
@@ -567,7 +567,7 @@ const Careers = () => {
                       value={applicationData.notes}
                       onChange={(e) => setApplicationData(p => ({ ...p, notes: e.target.value }))}
                       placeholder="Brief note on your background or LinkedIn URL..."
-                      className="w-full px-3.5 py-2 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden resize-none"
+                      className="w-full px-3.5 py-2 rounded-xl text-xs border border-slate-200 focus:border-secondary focus:outline-hidden resize-none"
                     />
                   </div>
 
@@ -575,7 +575,7 @@ const Careers = () => {
                     <button
                       type="submit"
                       disabled={submitting}
-                      className="w-full py-3 rounded-xl text-xs font-bold text-white bg-[#159FB4] hover:bg-[#118496] shadow-md transition-all cursor-pointer flex items-center justify-center gap-2"
+                      className="w-full py-3 rounded-xl text-xs font-bold text-white bg-secondary hover:bg-secondary-hover shadow-md transition-all cursor-pointer flex items-center justify-center gap-2"
                     >
                       {submitting ? (
                         <>

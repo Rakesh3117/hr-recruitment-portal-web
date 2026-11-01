@@ -66,21 +66,21 @@ const Contact = () => {
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="mb-6">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-[#159FB4]/10 text-[#0D274A] border border-[#159FB4]/20">
-              <Sparkles className="w-3.5 h-3.5 text-[#C59B4B]" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-secondary/10 text-primary border border-secondary/20">
+              <Sparkles className="w-3.5 h-3.5 text-gold" />
               <span>Hyderabad Corporate Office</span>
             </span>
           </div>
 
           <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#159FB4]">
+            <span className="text-xs font-bold uppercase tracking-widest text-secondary">
               Direct Engagement & Client Helpdesk
             </span>
-            <h1 className="text-3xl sm:text-5xl font-black text-[#0D274A] tracking-tight leading-tight">
-              Let’s Connect & <span className="text-[#159FB4]">Accelerate</span> Your Workforce Strategy
+            <h1 className="text-3xl sm:text-5xl font-black text-primary tracking-tight leading-tight">
+              Let’s Connect & <span className="text-secondary">Accelerate</span> Your Workforce Strategy
             </h1>
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
-              Connect directly with our recruitment consultants, technology staffing specialists, or corporate training team at <strong className="text-[#0D274A] font-bold">{company.legalName}</strong>.
+              Connect directly with our recruitment consultants, technology staffing specialists, or corporate training team at <strong className="text-primary font-bold">{company.legalName}</strong>.
             </p>
           </div>
 
@@ -89,40 +89,40 @@ const Contact = () => {
             
             <a 
               href={`tel:${contactInfo.phones[0]}`}
-              className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-[#159FB4] hover:shadow-md transition-all flex items-center gap-3.5 group"
+              className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-secondary hover:shadow-md transition-all flex items-center gap-3.5 group"
             >
-              <div className="w-10 h-10 rounded-xl bg-[#159FB4]/10 text-[#159FB4] flex items-center justify-center group-hover:bg-[#159FB4] group-hover:text-white transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center group-hover:bg-secondary group-hover:text-white transition-colors">
                 <Phone className="w-5 h-5" />
               </div>
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Main Desk</span>
-                <strong className="text-xs sm:text-sm font-bold text-[#0D274A]">{contactInfo.phones[0]}</strong>
+                <strong className="text-xs sm:text-sm font-bold text-primary">{contactInfo.phones[0]}</strong>
               </div>
             </a>
 
             <a 
               href={`tel:${contactInfo.phones[1]}`}
-              className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-[#159FB4] hover:shadow-md transition-all flex items-center gap-3.5 group"
+              className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-secondary hover:shadow-md transition-all flex items-center gap-3.5 group"
             >
-              <div className="w-10 h-10 rounded-xl bg-[#C59B4B]/10 text-[#C59B4B] flex items-center justify-center group-hover:bg-[#C59B4B] group-hover:text-white transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-gold/10 text-gold flex items-center justify-center group-hover:bg-gold group-hover:text-white transition-colors">
                 <Phone className="w-5 h-5" />
               </div>
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Operations Desk</span>
-                <strong className="text-xs sm:text-sm font-bold text-[#0D274A]">{contactInfo.phones[1]}</strong>
+                <strong className="text-xs sm:text-sm font-bold text-primary">{contactInfo.phones[1]}</strong>
               </div>
             </a>
 
             <a 
               href={`mailto:${contactInfo.email}`}
-              className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-[#159FB4] hover:shadow-md transition-all flex items-center gap-3.5 group"
+              className="p-4 rounded-2xl bg-white border border-slate-200 shadow-xs hover:border-secondary hover:shadow-md transition-all flex items-center gap-3.5 group"
             >
-              <div className="w-10 h-10 rounded-xl bg-[#0D274A]/10 text-[#0D274A] flex items-center justify-center group-hover:bg-[#0D274A] group-hover:text-white transition-colors">
+              <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
                 <Mail className="w-5 h-5" />
               </div>
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Corporate Email</span>
-                <strong className="text-xs sm:text-sm font-bold text-[#0D274A]">{contactInfo.email}</strong>
+                <strong className="text-xs sm:text-sm font-bold text-primary">{contactInfo.email}</strong>
               </div>
             </a>
 
@@ -132,7 +132,7 @@ const Contact = () => {
               </div>
               <div>
                 <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">Working Hours</span>
-                <strong className="text-xs sm:text-sm font-bold text-[#0D274A]">Mon - Sat: 9am - 6:30pm</strong>
+                <strong className="text-xs sm:text-sm font-bold text-primary">Mon - Sat: 9am - 6:30pm</strong>
               </div>
             </div>
 
@@ -156,10 +156,10 @@ const Contact = () => {
                   alt="VM HRM Reception Lobby"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0D274A]/90 via-[#0D274A]/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/30 to-transparent" />
                 
                 <div className="absolute bottom-5 left-5 right-5 text-white space-y-1">
-                  <span className="text-[10px] uppercase font-bold text-[#159FB4] tracking-wider block">
+                  <span className="text-[10px] uppercase font-bold text-secondary tracking-wider block">
                     Registered Headquarters
                   </span>
                   <h3 className="text-lg font-bold">
@@ -174,8 +174,8 @@ const Contact = () => {
               {/* Address details */}
               <div className="p-6 bg-white space-y-4">
                 <div className="space-y-1">
-                  <div className="flex items-center gap-1.5 text-xs font-bold text-[#0D274A]">
-                    <MapPin className="w-4 h-4 text-[#159FB4]" />
+                  <div className="flex items-center gap-1.5 text-xs font-bold text-primary">
+                    <MapPin className="w-4 h-4 text-secondary" />
                     <span>Official Address:</span>
                   </div>
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-5">
@@ -189,7 +189,7 @@ const Contact = () => {
                     href={googleMapsUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#159FB4] hover:text-[#0D274A] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-secondary hover:text-primary transition-colors"
                   >
                     <span>View on Google Maps</span>
                     <ExternalLink className="w-3.5 h-3.5" />
@@ -200,11 +200,11 @@ const Contact = () => {
             </div>
 
             {/* Official Statutory Plaque Mini-Card */}
-            <div className="bg-[#0D274A] text-white rounded-2xl p-6 shadow-md space-y-4">
+            <div className="bg-primary text-white rounded-2xl p-6 shadow-md space-y-4">
               <div className="flex items-center justify-between border-b border-white/10 pb-3">
                 <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#C59B4B]" />
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#C59B4B]">
+                  <ShieldCheck className="w-4 h-4 text-gold" />
+                  <span className="text-xs font-bold uppercase tracking-wider text-gold">
                     Statutory Verification
                   </span>
                 </div>
@@ -216,7 +216,7 @@ const Contact = () => {
               <div className="space-y-2 text-xs">
                 <div>
                   <span className="text-[10px] text-slate-400 uppercase block">CIN</span>
-                  <strong className="font-mono text-[#159FB4] text-xs sm:text-sm">{contactInfo.cin}</strong>
+                  <strong className="font-mono text-secondary text-xs sm:text-sm">{contactInfo.cin}</strong>
                 </div>
                 <div className="grid grid-cols-2 gap-2 pt-1 font-mono">
                   <div>
@@ -239,11 +239,11 @@ const Contact = () => {
                 className="w-14 h-14 rounded-xl object-cover shrink-0 border border-slate-300"
               />
               <div className="space-y-0.5">
-                <h4 className="text-xs font-bold text-[#0D274A]">Immediate Assistance Required?</h4>
+                <h4 className="text-xs font-bold text-primary">Immediate Assistance Required?</h4>
                 <p className="text-[11px] text-slate-500 leading-tight">
                   Our recruitment support coordinators answer calls Monday through Saturday.
                 </p>
-                <a href={`tel:${contactInfo.phones[0]}`} className="text-xs font-bold text-[#159FB4] hover:underline inline-block mt-0.5">
+                <a href={`tel:${contactInfo.phones[0]}`} className="text-xs font-bold text-secondary hover:underline inline-block mt-0.5">
                   Call {contactInfo.phones[0]}
                 </a>
               </div>
@@ -255,10 +255,10 @@ const Contact = () => {
           <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-xl space-y-6">
             
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#159FB4] block">
+              <span className="text-xs font-bold uppercase tracking-wider text-secondary block">
                 Send a Communication
               </span>
-              <h2 className="text-2xl font-black text-[#0D274A] mt-1">
+              <h2 className="text-2xl font-black text-primary mt-1">
                 Schedule a Consultation or Inquiry
               </h2>
               <p className="text-xs sm:text-sm text-slate-600 mt-1">
@@ -286,7 +286,7 @@ const Contact = () => {
                       onClick={() => setInquiryType(item.label)}
                       className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer ${
                         inquiryType === item.label
-                          ? 'bg-[#0D274A] text-white shadow-xs'
+                          ? 'bg-primary text-white shadow-xs'
                           : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
                       }`}
                     >
@@ -312,7 +312,7 @@ const Contact = () => {
                 <button
                   type="button"
                   onClick={handleReset}
-                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-[#0D274A] hover:bg-[#081B34] transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-primary hover:bg-primary-hover transition-colors cursor-pointer"
                 >
                   <RotateCcw className="w-3.5 h-3.5" />
                   <span>Send Another Message</span>
@@ -330,7 +330,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={(e) => setFormData(p => ({ ...p, name: e.target.value }))}
                       placeholder="e.g. Ramesh Kumar"
-                      className="w-full px-3.5 py-2.5 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden"
+                      className="w-full px-3.5 py-2.5 rounded-xl text-xs border border-slate-200 focus:border-secondary focus:outline-hidden"
                     />
                   </div>
                   <div>
@@ -340,7 +340,7 @@ const Contact = () => {
                       value={formData.organization}
                       onChange={(e) => setFormData(p => ({ ...p, organization: e.target.value }))}
                       placeholder="e.g. Tech Innovations Ltd"
-                      className="w-full px-3.5 py-2.5 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden"
+                      className="w-full px-3.5 py-2.5 rounded-xl text-xs border border-slate-200 focus:border-secondary focus:outline-hidden"
                     />
                   </div>
                 </div>
@@ -354,7 +354,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={(e) => setFormData(p => ({ ...p, email: e.target.value }))}
                       placeholder="ramesh@company.com"
-                      className="w-full px-3.5 py-2.5 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden"
+                      className="w-full px-3.5 py-2.5 rounded-xl text-xs border border-slate-200 focus:border-secondary focus:outline-hidden"
                     />
                   </div>
                   <div>
@@ -365,7 +365,7 @@ const Contact = () => {
                       value={formData.phone}
                       onChange={(e) => setFormData(p => ({ ...p, phone: e.target.value }))}
                       placeholder="+91 98765 43210"
-                      className="w-full px-3.5 py-2.5 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden"
+                      className="w-full px-3.5 py-2.5 rounded-xl text-xs border border-slate-200 focus:border-secondary focus:outline-hidden"
                     />
                   </div>
                 </div>
@@ -378,7 +378,7 @@ const Contact = () => {
                     value={formData.message}
                     onChange={(e) => setFormData(p => ({ ...p, message: e.target.value }))}
                     placeholder="Tell us about the roles you are looking to hire, training needs, or any specific mandate..."
-                    className="w-full px-3.5 py-2.5 rounded-xl text-xs border border-slate-200 focus:border-[#159FB4] focus:outline-hidden resize-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl text-xs border border-slate-200 focus:border-secondary focus:outline-hidden resize-none"
                   />
                 </div>
 
@@ -386,7 +386,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#159FB4] hover:bg-[#118496] shadow-md hover:shadow-lg transition-all cursor-pointer flex items-center justify-center gap-2"
+                    className="w-full py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-secondary hover:bg-secondary-hover shadow-md hover:shadow-lg transition-all cursor-pointer flex items-center justify-center gap-2"
                   >
                     {isSubmitting ? (
                       <span>Sending Your Inquiry...</span>
@@ -415,10 +415,10 @@ const Contact = () => {
         <div className="rounded-3xl bg-slate-50 border border-slate-200 p-8 sm:p-10 space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#159FB4] block">
+              <span className="text-xs font-bold uppercase tracking-wider text-secondary block">
                 Office Location
               </span>
-              <h3 className="text-xl font-bold text-[#0D274A] mt-0.5">
+              <h3 className="text-xl font-bold text-primary mt-0.5">
                 Bachupally, Qutubullapur, Hyderabad
               </h3>
               <p className="text-xs text-slate-500 mt-1">
@@ -430,9 +430,9 @@ const Contact = () => {
               href={googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#0D274A] hover:bg-[#081B34] transition-all shadow-xs"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-primary hover:bg-primary-hover transition-all shadow-xs"
             >
-              <Compass className="w-4 h-4 text-[#C59B4B]" />
+              <Compass className="w-4 h-4 text-gold" />
               <span>Get Driving Directions</span>
               <ExternalLink className="w-3.5 h-3.5" />
             </a>

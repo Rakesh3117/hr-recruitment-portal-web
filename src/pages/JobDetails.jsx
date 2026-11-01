@@ -204,7 +204,7 @@ const JobDetails = () => {
           )}
 
           {/* 3. CLOSING CTA (Spec Section 7) */}
-          <div className="bg-gradient-to-r from-navy to-[#1E1B4B] rounded-3xl p-8 text-white shadow-xl text-center space-y-4">
+          <div className="bg-gradient-to-r from-navy to-navy-midnight rounded-3xl p-8 text-white shadow-xl text-center space-y-4">
             <h3 className="text-2xl font-bold text-white">
               Ready to take the next step?
             </h3>
