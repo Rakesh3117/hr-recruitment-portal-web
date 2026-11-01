@@ -61,7 +61,7 @@ const DiversityInclusion = () => {
 
           <div className="mt-10 max-w-4xl mx-auto rounded-3xl overflow-hidden shadow-card border border-lavender-soft relative">
             <img 
-              src="https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&w=1200&q=80" 
+              src="https://images.unsplash.com/photo-1573497161161-c3e73707e25c?auto=format&fit=crop&w=1200&q=80" 
               alt="Diversity and Inclusive Leadership" 
               className="w-full h-64 sm:h-80 object-cover"
               loading="lazy"

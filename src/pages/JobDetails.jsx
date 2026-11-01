@@ -226,7 +226,7 @@ const JobDetails = () => {
           <div className="bg-white rounded-3xl p-5 border border-border shadow-card overflow-hidden space-y-3">
             <div className="relative rounded-2xl overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&w=600&q=80"
+                src="https://images.unsplash.com/photo-1590650516494-0c8e4a4dd67e?auto=format&fit=crop&w=600&q=80"
                 alt="Senior Executive Talent Partner"
                 loading="lazy"
                 className="w-full h-44 object-cover"

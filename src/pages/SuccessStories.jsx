@@ -211,7 +211,7 @@ const SuccessStories = () => {
             </blockquote>
             <div className="flex items-center justify-center gap-3">
               <img 
-                src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=120&q=80" 
+                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=120&q=80" 
                 alt="Sunil Varma" 
                 className="w-12 h-12 rounded-full object-cover border-2 border-teal"
                 loading="lazy" 

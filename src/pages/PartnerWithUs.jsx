@@ -97,7 +97,7 @@ const PartnerWithUs = () => {
       bestFor: 'Ongoing, high-volume enterprise hiring across multiple verticals',
       whatYouGet: 'We own sourcing, screening, coordination, ATS administration, through onboarding end-to-end.',
       recommended: true,
-      image: 'https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&w=600&q=80'
+      image: 'https://images.unsplash.com/photo-1573497019706-1a924409bb45?auto=format&fit=crop&w=600&q=80'
     },
     {
       model: 'Embedded Staffing Team',
@@ -111,7 +111,7 @@ const PartnerWithUs = () => {
       bestFor: 'Periodic bulk hiring drives and critical specialist leadership searches',
       whatYouGet: 'Pay-per-placement flexibility with volume-discounted fee matrices and SLA commitments.',
       recommended: false,
-      image: 'https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=600&q=80'
+      image: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=600&q=80'
     },
     {
       model: 'GIC / Captive Build-Out',

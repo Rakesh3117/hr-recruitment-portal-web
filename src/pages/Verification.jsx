@@ -23,7 +23,7 @@ const Verification = () => {
       step: '1',
       title: 'Identity Verification',
       desc: 'Government-issued ID (Passport, Aadhaar, National ID) cross-checked and photo confirmed against application biometric records to prevent proxy candidates.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80'
+      image: 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=600&q=80'
     },
     {
       step: '2',
@@ -53,7 +53,7 @@ const Verification = () => {
       step: '6',
       title: 'Final Quality Review',
       desc: 'A senior sector practice consultant conducts the final sanity check and signs off on the digital verification summary before client submission.',
-      image: 'https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&w=600&q=80'
+      image: 'https://images.unsplash.com/photo-1573497019418-b400bb3ab074?auto=format&fit=crop&w=600&q=80'
     }
   ];
 
@@ -501,7 +501,7 @@ const Verification = () => {
         <div className="rounded-3xl p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
           {/* Open-source backdrop photo with gradient overlay */}
           <img
-            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80"
+            src="https://images.unsplash.com/photo-1541888946425-d0fbb18086f6?auto=format&fit=crop&w=1200&q=80"
             alt="Corporate executive consultation and placement guarantee"
             loading="lazy"
             className="absolute inset-0 w-full h-full object-cover"
