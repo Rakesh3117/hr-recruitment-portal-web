@@ -13,7 +13,9 @@ import {
   TrendingUp, 
   Award,
   GraduationCap,
-  Users
+  Users,
+  Briefcase,
+  PhoneCall
 } from 'lucide-react';
 import statsData from '../data/stats.mocks.js';
 
@@ -77,13 +79,10 @@ const Company = () => {
       <section className="relative pt-8 sm:pt-14 pb-12 bg-gradient-to-b from-slate-50 via-white to-white border-b border-slate-100">
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Breadcrumb & Registered Pill */}
-          <div className="flex flex-wrap items-center gap-2 mb-6">
-            <Link to="/" className="text-xs text-slate-500 hover:text-[#0D274A] transition-colors">Home</Link>
-            <span className="text-xs text-slate-300">/</span>
-            <span className="text-xs font-bold text-[#159FB4]">About Us</span>
-            <span className="ml-2 inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-[#159FB4]/10 text-[#0D274A] border border-[#159FB4]/20">
-              <Sparkles className="w-3 h-3 text-[#C59B4B]" />
+          {/* Registered Corporate Entity Pill */}
+          <div className="mb-6">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-[#159FB4]/10 text-[#0D274A] border border-[#159FB4]/20">
+              <Sparkles className="w-3.5 h-3.5 text-[#C59B4B]" />
               <span>Incorporated Corporate Entity</span>
             </span>
           </div>
@@ -102,7 +101,7 @@ const Company = () => {
               </div>
 
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-2xl">
-                <strong className="text-[#0D274A] font-bold">{company.legalName}</strong> is a dedicated recruitment, workforce training, and software talent consulting firm incorporated in Telangana. Guided by our motto <span className="font-semibold text-[#0D274A] italic">“Recruit. Train. Place. Grow.”</span>, we bridge talent gaps for high-growth enterprises and provide ambitious professionals with transformative career pathways.
+                <strong className="text-[#0D274A] font-bold">{company.legalName}</strong> is a dedicated recruitment, workforce training, and executive staffing firm incorporated in Telangana. Guided by our motto <span className="font-semibold text-[#0D274A] italic">“Recruit. Train. Place. Grow.”</span>, we bridge talent gaps for high-growth enterprises and provide ambitious professionals with transformative career pathways.
               </p>
 
               {/* Fast Facts Tags */}
@@ -122,15 +121,17 @@ const Company = () => {
               <div className="pt-2 flex flex-wrap items-center gap-4">
                 <Link
                   to="/services"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-white bg-[#0D274A] hover:bg-[#081B34] transition-all shadow-md hover:shadow-lg"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-white bg-[#0D274A] hover:bg-[#081B34] transition-all shadow-md hover:shadow-lg group"
                 >
+                  <Briefcase className="w-4 h-4 text-[#159FB4]" />
                   <span>Our Service Lines</span>
-                  <ArrowRight className="w-4 h-4 text-[#159FB4]" />
+                  <ArrowRight className="w-4 h-4 text-[#159FB4] group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   to="/contact"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-[#0D274A] bg-slate-100 hover:bg-slate-200 transition-colors"
                 >
+                  <PhoneCall className="w-4 h-4 text-[#159FB4]" />
                   <span>Get In Touch</span>
                 </Link>
               </div>
@@ -171,16 +172,14 @@ const Company = () => {
                     <TrendingUp className="w-5 h-5" />
                   </div>
                   <div>
-                    <span className="text-sm font-black text-[#0D274A] block">10,000+ Placements</span>
+                    <span className="text-sm font-black text-[#0D274A] block">2000+ Deployed Candidates</span>
                     <span className="text-[11px] text-slate-500 font-medium">Empowering Careers Pan-India</span>
                   </div>
                 </div>
 
               </div>
             </div>
-
           </div>
-
         </div>
       </section>
 
@@ -431,10 +430,11 @@ const Company = () => {
               <div className="pt-2">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 text-xs font-bold text-[#159FB4] hover:text-[#0D274A] transition-colors"
+                  className="inline-flex items-center gap-2 text-xs font-bold text-[#159FB4] hover:text-[#0D274A] transition-colors group"
                 >
+                  <ShieldCheck className="w-4 h-4 text-[#159FB4]" />
                   <span>Request Corporate Verification Deck</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>

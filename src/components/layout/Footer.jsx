@@ -3,7 +3,12 @@ import {
   MapPin, 
   Phone, 
   Mail, 
-  MessageSquare
+  MessageSquare,
+  Home,
+  Building2,
+  Briefcase,
+  Users,
+  PhoneCall
 } from 'lucide-react';
 import statsData from '../../data/stats.mocks.js';
 import BrandLogo from '../common/BrandLogo.jsx';
@@ -26,7 +31,7 @@ const Footer = () => {
             </Link>
 
             <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-sm">
-              {company.legalName} is dedicated to empowering business growth through innovation, IT consulting, and expert recruitment and staffing solutions.
+              {company.legalName} is dedicated to empowering business growth through expert recruitment, corporate training, and comprehensive workforce staffing solutions.
             </p>
 
             <div className="pt-1 flex items-center gap-3">
@@ -57,19 +62,34 @@ const Footer = () => {
             </h4>
             <ul className="space-y-2 text-xs sm:text-sm text-slate-300">
               <li>
-                <Link to="/" className="hover:text-white transition-colors">Home</Link>
+                <Link to="/" className="inline-flex items-center gap-2 hover:text-white transition-colors">
+                  <Home className="w-3.5 h-3.5 text-[#159FB4]" />
+                  <span>Home</span>
+                </Link>
               </li>
               <li>
-                <Link to="/about" className="hover:text-white transition-colors">About Us</Link>
+                <Link to="/about" className="inline-flex items-center gap-2 hover:text-white transition-colors">
+                  <Building2 className="w-3.5 h-3.5 text-[#159FB4]" />
+                  <span>About Us</span>
+                </Link>
               </li>
               <li>
-                <Link to="/services" className="hover:text-white transition-colors">Our Services</Link>
+                <Link to="/services" className="inline-flex items-center gap-2 hover:text-white transition-colors">
+                  <Briefcase className="w-3.5 h-3.5 text-[#159FB4]" />
+                  <span>Our Services</span>
+                </Link>
               </li>
               <li>
-                <Link to="/careers" className="hover:text-white transition-colors">Careers</Link>
+                <Link to="/careers" className="inline-flex items-center gap-2 hover:text-white transition-colors">
+                  <Users className="w-3.5 h-3.5 text-[#159FB4]" />
+                  <span>Careers</span>
+                </Link>
               </li>
               <li>
-                <Link to="/contact" className="hover:text-white transition-colors">Contact Us</Link>
+                <Link to="/contact" className="inline-flex items-center gap-2 hover:text-white transition-colors">
+                  <PhoneCall className="w-3.5 h-3.5 text-[#159FB4]" />
+                  <span>Contact Us</span>
+                </Link>
               </li>
             </ul>
           </div>

@@ -6,7 +6,8 @@ import {
   Download, 
   ChevronDown, 
   PhoneCall, 
-  Lock
+  Lock,
+  UserCheck
 } from 'lucide-react';
 import VerifiedBadge from '../components/common/VerifiedBadge';
 import candidatesData from '../data/candidates.mocks.js';
@@ -405,9 +406,10 @@ const Verification = () => {
               <div className="flex items-center gap-2">
                 <Link
                   to="/employers"
-                  className="px-4 py-2 text-xs font-bold rounded-xl bg-teal hover:bg-teal-hover text-white transition-colors"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold rounded-xl bg-teal hover:bg-teal-hover text-white transition-colors"
                 >
-                  Request Similar Profile
+                  <UserCheck className="w-3.5 h-3.5 text-white" />
+                  <span>Request Similar Profile</span>
                 </Link>
                 <button
                   type="button"

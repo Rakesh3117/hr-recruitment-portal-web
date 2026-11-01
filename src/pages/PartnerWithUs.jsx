@@ -18,7 +18,8 @@ import {
   User,
   Mail,
   Phone,
-  Calendar
+  Calendar,
+  RotateCcw
 } from 'lucide-react';
 import domainsData from '../data/domains.mocks.js';
 import { FormField, TextInput, SelectInput, TextArea } from '../components/common/FormFields';
@@ -480,9 +481,10 @@ const PartnerWithUs = () => {
               <button
                 type="button"
                 onClick={() => setSubmitted(false)}
-                className="mt-4 px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-teal hover:bg-teal-hover transition-colors"
+                className="mt-4 inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-teal hover:bg-teal-hover transition-colors"
               >
-                Submit Additional Information
+                <RotateCcw className="w-4 h-4" />
+                <span>Submit Additional Information</span>
               </button>
             </div>
           ) : (

@@ -4,14 +4,17 @@ import {
   ArrowRight, 
   Briefcase, 
   UserCheck, 
-  Code2, 
   GraduationCap, 
   ShieldCheck, 
   CheckCircle2, 
   Sparkles,
   Clock,
   ChevronRight,
-  FileCheck
+  FileCheck,
+  Layers,
+  Send,
+  PhoneCall,
+  Users
 } from 'lucide-react';
 
 const Services = () => {
@@ -34,23 +37,6 @@ const Services = () => {
       ],
       metrics: { metric: '21 Days', label: 'Avg. CXO Shortlist Time' },
       icon: UserCheck
-    },
-    {
-      id: 'it-tech-staffing',
-      category: 'tech',
-      badge: 'Technical & Engineering',
-      title: 'IT Services & Tech Talent Solutions',
-      tagline: 'Full-stack developers, cloud architects, and QA engineers',
-      image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=900&q=80',
-      description: 'From niche full-stack engineers to devops and data specialists, we deliver pre-assessed technical professionals who can immediately push production code and integrate into agile sprints.',
-      highlights: [
-        'Pre-evaluated on modern stacks (React, Node, Java, Python, AWS, Azure)',
-        'Live technical problem solving and code quality audits',
-        'Rapid 24-48 hour turnaround on qualified engineering resumes',
-        'Flexible engagement: contract-to-hire, direct hire, or dedicated pods'
-      ],
-      metrics: { metric: '94%', label: 'First-Round Interview Acceptance' },
-      icon: Code2
     },
     {
       id: 'training-development',
@@ -135,12 +121,9 @@ const Services = () => {
 
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4">
           
-          <div className="flex items-center justify-center gap-2">
-            <Link to="/" className="text-xs text-slate-400 hover:text-white transition-colors">Home</Link>
-            <span className="text-xs text-slate-500">/</span>
-            <span className="text-xs font-bold text-[#159FB4]">Our Services</span>
-            <span className="ml-2 inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/10 text-[#C59B4B] border border-white/15">
-              <Sparkles className="w-3 h-3 text-[#C59B4B]" />
+          <div className="flex items-center justify-center">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/10 text-[#C59B4B] border border-white/15">
+              <Sparkles className="w-3.5 h-3.5 text-[#C59B4B]" />
               <span>Full-Stack Workforce Portfolio</span>
             </span>
           </div>
@@ -150,32 +133,35 @@ const Services = () => {
           </h1>
 
           <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            From specialized IT engineering and executive search to scalable contract staffing and domain training — built for dependable business execution.
+            From executive search and permanent hiring to scalable contract staffing, payroll compliance, and corporate upskilling — built for dependable business execution.
           </p>
 
           {/* Interactive Category Filter Pills */}
           <div className="pt-6 flex flex-wrap items-center justify-center gap-2 max-w-3xl mx-auto">
             {[
-              { id: 'all', label: 'All Services' },
-              { id: 'recruitment', label: 'Executive Search' },
-              { id: 'tech', label: 'IT & Tech Staffing' },
-              { id: 'training', label: 'Training & Upskilling' },
-              { id: 'staffing', label: 'Contract Staffing' },
-              { id: 'compliance', label: 'HR Compliance & Payroll' }
-            ].map(tab => (
-              <button
-                key={tab.id}
-                type="button"
-                onClick={() => setActiveCategory(tab.id)}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                  activeCategory === tab.id
-                    ? 'bg-[#159FB4] text-white shadow-md shadow-[#159FB4]/30'
-                    : 'bg-white/10 text-slate-300 hover:bg-white/15 hover:text-white border border-white/10'
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
+              { id: 'all', label: 'All Services', icon: Layers },
+              { id: 'recruitment', label: 'Executive Search', icon: UserCheck },
+              { id: 'training', label: 'Training & Upskilling', icon: GraduationCap },
+              { id: 'staffing', label: 'Contract Staffing', icon: Briefcase },
+              { id: 'compliance', label: 'HR Compliance & Payroll', icon: FileCheck }
+            ].map(tab => {
+              const TabIcon = tab.icon;
+              return (
+                <button
+                  key={tab.id}
+                  type="button"
+                  onClick={() => setActiveCategory(tab.id)}
+                  className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${
+                    activeCategory === tab.id
+                      ? 'bg-[#159FB4] text-white shadow-md shadow-[#159FB4]/30'
+                      : 'bg-white/10 text-slate-300 hover:bg-white/15 hover:text-white border border-white/10'
+                  }`}
+                >
+                  <TabIcon className="w-3.5 h-3.5" />
+                  <span>{tab.label}</span>
+                </button>
+              );
+            })}
           </div>
 
         </div>
@@ -261,17 +247,19 @@ const Services = () => {
                 <div className="pt-3 flex flex-wrap items-center gap-4">
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold text-white bg-[#0D274A] hover:bg-[#081B34] transition-all shadow-md"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs font-bold text-white bg-[#0D274A] hover:bg-[#081B34] transition-all shadow-md group"
                   >
+                    <Send className="w-3.5 h-3.5 text-[#159FB4]" />
                     <span>Inquire for this Service</span>
-                    <ArrowRight className="w-3.5 h-3.5 text-[#159FB4]" />
+                    <ArrowRight className="w-3.5 h-3.5 text-[#159FB4] group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link
                     to="/careers"
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#159FB4] hover:text-[#0D274A] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#159FB4] hover:text-[#0D274A] transition-colors group"
                   >
+                    <Users className="w-3.5 h-3.5 text-[#159FB4]" />
                     <span>View Related Openings</span>
-                    <ChevronRight className="w-3.5 h-3.5" />
+                    <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                   </Link>
                 </div>
 
@@ -343,8 +331,9 @@ const Services = () => {
           <div className="shrink-0 flex items-center gap-3">
             <Link
               to="/contact"
-              className="px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#159FB4] hover:bg-[#118496] shadow-lg transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#159FB4] hover:bg-[#118496] shadow-lg transition-all"
             >
+              <PhoneCall className="w-4 h-4 text-white" />
               <span>Schedule a Call</span>
             </Link>
           </div>

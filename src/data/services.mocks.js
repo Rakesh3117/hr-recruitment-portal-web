@@ -30,21 +30,6 @@ export const servicesData = [
     badge: "Skill Development"
   },
   {
-    id: "it-services-tech-staffing",
-    title: "IT Services & Consulting",
-    tagline: "Specialized Software Development & Tech Talent",
-    description: "Delivering expert IT consulting and software development services, we help businesses optimize their technology strategy, infrastructure, and engineering teams.",
-    deliverables: [
-      "Full-stack developers, cloud architects, and software engineers",
-      "IT infrastructure, enterprise application, and data specialists",
-      "Contract-to-hire (C2H) and specialized technical consulting teams",
-      "Dedicated offshore and on-premise development support"
-    ],
-    idealFor: "Technology firms, SaaS companies, and enterprises undergoing digital transformation.",
-    icon: "Code2",
-    badge: "Tech Practice"
-  },
-  {
     id: "talent-placement-growth",
     title: "Talent Placement & Growth",
     tagline: "Empowering Careers, Accelerating Enterprise Growth",

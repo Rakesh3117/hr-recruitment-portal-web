@@ -53,9 +53,10 @@ const DiversityInclusion = () => {
           <div className="mt-8 flex justify-center gap-3">
             <Link
               to="/employers"
-              className="px-6 py-3 rounded-xl text-sm font-bold text-white bg-teal hover:bg-teal-hover shadow-md transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-bold text-white bg-teal hover:bg-teal-hover shadow-md transition-colors"
             >
-              Consult Our D&I Practice Leads
+              <Users className="w-4 h-4 text-white" />
+              <span>Consult Our D&I Practice Leads</span>
             </Link>
           </div>
 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, MapPin, Briefcase, Filter } from 'lucide-react';
+import { Search, MapPin, Briefcase, Filter, RotateCcw } from 'lucide-react';
 import statsData from '../../data/stats.mocks.js';
 import domainsData from '../../data/domains.mocks.js';
 import { FormField, TextInput, SelectInput } from './FormFields';
@@ -170,9 +170,10 @@ const JobSearchWidget = ({ initialValues = {}, onSearch = null, isEmbedded = fal
               <button
                 type="button"
                 onClick={handleClear}
-                className="px-4 py-2.5 rounded-xl text-xs font-semibold text-grey hover:text-navy transition-colors"
+                className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl text-xs font-semibold text-grey hover:text-navy transition-colors cursor-pointer"
               >
-                Clear
+                <RotateCcw className="w-3.5 h-3.5" />
+                <span>Clear</span>
               </button>
             )}
             <button

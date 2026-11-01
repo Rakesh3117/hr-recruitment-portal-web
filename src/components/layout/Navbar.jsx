@@ -1,6 +1,18 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronRight, Phone, Mail, MapPin } from 'lucide-react';
+import { 
+  Menu, 
+  X, 
+  ChevronRight, 
+  Phone, 
+  Mail, 
+  MapPin, 
+  Home, 
+  Building2, 
+  Briefcase, 
+  Users, 
+  PhoneCall 
+} from 'lucide-react';
 import statsData from '../../data/stats.mocks.js';
 import BrandLogo from '../common/BrandLogo.jsx';
 
@@ -24,13 +36,13 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Focused, important navigation links exactly like edurungroup.in
+  // Focused, important navigation links with relevant Lucide icons
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Our Services', path: '/services' },
-    { name: 'Careers', path: '/careers' },
-    { name: 'Contact Us', path: '/contact' },
+    { name: 'Home', path: '/', icon: Home },
+    { name: 'About Us', path: '/about', icon: Building2 },
+    { name: 'Our Services', path: '/services', icon: Briefcase },
+    { name: 'Careers', path: '/careers', icon: Users },
+    { name: 'Contact Us', path: '/contact', icon: PhoneCall },
   ];
 
   const isActive = (path) => {
@@ -42,7 +54,7 @@ const Navbar = () => {
 
   return (
     <header className="sticky top-0 z-header w-full shadow-xs">
-      {/* 1. TOP CONTACT STRIP (Clean & Minimal like EduRun) */}
+      {/* 1. TOP CONTACT STRIP */}
       <div className="bg-[#0D274A] text-white/80 text-xs py-2 px-4 sm:px-6 lg:px-8 border-b border-white/10 hidden md:block">
         <div className="max-w-content mx-auto flex items-center justify-between gap-4">
           
@@ -92,33 +104,36 @@ const Navbar = () => {
               <BrandLogo />
             </Link>
 
-            {/* Desktop Navigation */}
+            {/* Desktop Navigation with Icons */}
             <nav className="hidden lg:flex items-center gap-1 xl:gap-2">
               {navLinks.map((link) => {
                 const active = isActive(link.path);
+                const IconComponent = link.icon;
                 return (
                   <Link
                     key={link.name}
                     to={link.path}
-                    className={`text-sm font-semibold transition-colors py-2 px-3.5 rounded-lg ${
+                    className={`group inline-flex items-center gap-2 text-sm font-semibold transition-colors py-2 px-3.5 rounded-lg ${
                       active 
                         ? 'text-[#159FB4] bg-[#EBF7F9]' 
                         : 'text-[#0D274A] hover:text-[#159FB4] hover:bg-slate-50'
                     }`}
                   >
-                    {link.name}
+                    <IconComponent className={`w-4 h-4 transition-transform group-hover:scale-110 ${active ? 'text-[#159FB4]' : 'text-[#159FB4]/80 group-hover:text-[#159FB4]'}`} />
+                    <span>{link.name}</span>
                   </Link>
                 );
               })}
             </nav>
 
-            {/* Right Action Button: Contact Us */}
+            {/* Right Action Button: Contact Us with Icon */}
             <div className="hidden sm:flex items-center gap-3 shrink-0">
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-5 py-2.5 rounded-lg text-sm font-bold text-white bg-[#159FB4] hover:bg-[#118496] shadow-sm hover:shadow transition-all"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold text-white bg-[#159FB4] hover:bg-[#118496] shadow-sm hover:shadow transition-all group"
               >
-                Contact Us
+                <PhoneCall className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
+                <span>Contact Us</span>
               </Link>
             </div>
 
@@ -126,9 +141,10 @@ const Navbar = () => {
             <div className="flex items-center gap-2 lg:hidden">
               <Link
                 to="/contact"
-                className="sm:hidden inline-flex items-center px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-[#159FB4]"
+                className="sm:hidden inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-[#159FB4]"
               >
-                Contact
+                <PhoneCall className="w-3.5 h-3.5" />
+                <span>Contact</span>
               </Link>
               <button
                 type="button"
@@ -150,15 +166,19 @@ const Navbar = () => {
           <div className="space-y-1">
             {navLinks.map((link) => {
               const active = isActive(link.path);
+              const IconComponent = link.icon;
               return (
                 <Link
                   key={link.name}
                   to={link.path}
-                  className={`flex items-center justify-between px-3 py-2.5 rounded-lg text-sm font-semibold ${
+                  className={`flex items-center justify-between px-3.5 py-2.5 rounded-lg text-sm font-semibold ${
                     active ? 'bg-[#EBF7F9] text-[#159FB4]' : 'text-[#0D274A]'
                   }`}
                 >
-                  <span>{link.name}</span>
+                  <div className="flex items-center gap-2.5">
+                    <IconComponent className={`w-4 h-4 ${active ? 'text-[#159FB4]' : 'text-[#159FB4]/80'}`} />
+                    <span>{link.name}</span>
+                  </div>
                   <ChevronRight className="w-4 h-4 text-slate-400" />
                 </Link>
               );
@@ -176,9 +196,10 @@ const Navbar = () => {
 
             <Link
               to="/contact"
-              className="flex items-center justify-center w-full py-2.5 rounded-lg text-sm font-bold text-white bg-[#159FB4]"
+              className="flex items-center justify-center gap-2 w-full py-2.5 rounded-lg text-sm font-bold text-white bg-[#159FB4] hover:bg-[#118496] transition-colors"
             >
-              Contact Us
+              <PhoneCall className="w-4 h-4" />
+              <span>Contact Us</span>
             </Link>
           </div>
         </div>

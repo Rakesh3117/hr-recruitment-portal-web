@@ -1,5 +1,4 @@
 import { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import { 
   Briefcase, 
   CheckCircle2, 
@@ -14,7 +13,12 @@ import {
   Send,
   Upload,
   Search,
-  DollarSign
+  DollarSign,
+  Layers,
+  UserCheck,
+  Users,
+  ShieldCheck,
+  Mail
 } from 'lucide-react';
 import careersData from '../data/careers.mocks.js';
 import statsData from '../data/stats.mocks.js';
@@ -121,11 +125,8 @@ const Careers = () => {
         <div className="max-w-content mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-5">
             
-            <div className="flex items-center justify-center gap-2">
-              <Link to="/" className="text-xs text-slate-400 hover:text-white transition-colors">Home</Link>
-              <span className="text-xs text-slate-500">/</span>
-              <span className="text-xs font-bold text-[#159FB4]">Careers</span>
-              <span className="ml-2 inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/10 text-[#C59B4B] border border-white/15">
+            <div className="flex items-center justify-center">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider bg-white/10 text-[#C59B4B] border border-white/15">
                 <Sparkles className="w-3.5 h-3.5 text-[#C59B4B]" />
                 <span>We Are Expanding</span>
               </span>
@@ -155,9 +156,10 @@ const Careers = () => {
                 <button
                   type="button"
                   onClick={scrollToPositions}
-                  className="w-full sm:w-auto px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-[#159FB4] hover:bg-[#118496] transition-colors whitespace-nowrap shadow-md cursor-pointer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-[#159FB4] hover:bg-[#118496] transition-colors whitespace-nowrap shadow-md cursor-pointer"
                 >
-                  Find Roles
+                  <Search className="w-3.5 h-3.5 text-white" />
+                  <span>Find Roles</span>
                 </button>
               </div>
             </div>
@@ -268,22 +270,32 @@ const Careers = () => {
             </h2>
           </div>
 
-          {/* Department Filter Tabs */}
+          {/* Department Filter Tabs with Icons */}
           <div className="flex flex-wrap items-center gap-1.5">
-            {['All', 'Talent Acquisition', 'Sourcing', 'Sales', 'Compliance'].map(dept => (
-              <button
-                key={dept}
-                type="button"
-                onClick={() => setSelectedDept(dept)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
-                  selectedDept === dept
-                    ? 'bg-[#0D274A] text-white shadow-xs'
-                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                }`}
-              >
-                {dept}
-              </button>
-            ))}
+            {[
+              { id: 'All', label: 'All', icon: Layers },
+              { id: 'Talent Acquisition', label: 'Talent Acquisition', icon: UserCheck },
+              { id: 'Sourcing', label: 'Sourcing', icon: Users },
+              { id: 'Sales', label: 'Sales', icon: TrendingUp },
+              { id: 'Compliance', label: 'Compliance', icon: ShieldCheck }
+            ].map(dept => {
+              const DeptIcon = dept.icon;
+              return (
+                <button
+                  key={dept.id}
+                  type="button"
+                  onClick={() => setSelectedDept(dept.id)}
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                    selectedDept === dept.id
+                      ? 'bg-[#0D274A] text-white shadow-xs'
+                      : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                  }`}
+                >
+                  <DeptIcon className="w-3.5 h-3.5" />
+                  <span>{dept.label}</span>
+                </button>
+              );
+            })}
           </div>
         </div>
 
@@ -356,10 +368,11 @@ const Careers = () => {
                 <button
                   type="button"
                   onClick={() => handleApplyClick(role)}
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#159FB4] hover:bg-[#118496] shadow-xs hover:shadow-md transition-all cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#159FB4] hover:bg-[#118496] shadow-xs hover:shadow-md transition-all cursor-pointer group"
                 >
+                  <Send className="w-3.5 h-3.5 text-white" />
                   <span>Apply Now</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                 </button>
               </div>
 
@@ -426,7 +439,7 @@ const Careers = () => {
               href="mailto:VMHRMPL@GMAIL.COM?subject=Spontaneous%20Application%20-%20VM%20HRM"
               className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-[#0D274A] bg-white hover:bg-slate-100 shadow-md transition-all"
             >
-              <Send className="w-4 h-4 text-[#159FB4]" />
+              <Mail className="w-4 h-4 text-[#159FB4]" />
               <span>Email Your Resume</span>
             </a>
           </div>
@@ -460,9 +473,10 @@ const Careers = () => {
                 <button
                   type="button"
                   onClick={() => setSelectedRole(null)}
-                  className="px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-[#0D274A] hover:bg-[#081B34] transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-[#0D274A] hover:bg-[#081B34] transition-colors cursor-pointer"
                 >
-                  Close Window
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                  <span>Close Window</span>
                 </button>
               </div>
             ) : (
@@ -564,9 +578,13 @@ const Careers = () => {
                       className="w-full py-3 rounded-xl text-xs font-bold text-white bg-[#159FB4] hover:bg-[#118496] shadow-md transition-all cursor-pointer flex items-center justify-center gap-2"
                     >
                       {submitting ? (
-                        <span>Submitting Application...</span>
+                        <>
+                          <CheckCircle2 className="w-3.5 h-3.5 animate-spin" />
+                          <span>Submitting Application...</span>
+                        </>
                       ) : (
                         <>
+                          <Send className="w-3.5 h-3.5 text-white" />
                           <span>Submit Application</span>
                           <ArrowRight className="w-3.5 h-3.5" />
                         </>

@@ -164,6 +164,7 @@ const Industries = () => {
                   to={`/employers?industry=${encodeURIComponent(industry.name)}`}
                   className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-bold text-primary hover:text-primary-hover group-hover:translate-x-1 transition-all duration-fast"
                 >
+                  <Briefcase className="w-3.5 h-3.5" />
                   <span>Hire {industry.name} Talent</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>

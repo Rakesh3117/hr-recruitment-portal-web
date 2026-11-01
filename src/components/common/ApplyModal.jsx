@@ -11,7 +11,8 @@ import {
   Phone,
   Clock,
   Calendar,
-  Building2
+  Building2,
+  Send
 } from 'lucide-react';
 import { FormField, TextInput, SelectInput, TextArea } from './FormFields';
 
@@ -116,9 +117,10 @@ const ApplyModal = ({ job, isOpen, onClose }) => {
               <button
                 type="button"
                 onClick={handleReset}
-                className="mt-4 px-6 py-2.5 rounded-lg bg-primary text-white text-sm font-semibold hover:bg-primary-hover transition-colors"
+                className="mt-4 inline-flex items-center gap-2 px-6 py-2.5 rounded-lg bg-primary text-white text-sm font-semibold hover:bg-primary-hover transition-colors"
               >
-                Close & Return
+                <CheckCircle2 className="w-4 h-4" />
+                <span>Close & Return</span>
               </button>
             </div>
           ) : (
@@ -252,7 +254,8 @@ const ApplyModal = ({ job, isOpen, onClose }) => {
                   disabled={submitting}
                   className="w-full py-3 rounded-lg bg-primary hover:bg-primary-hover text-white text-sm font-semibold transition-all shadow-sm flex items-center justify-center gap-2"
                 >
-                  {submitting ? 'Transmitting Profile...' : 'Submit Confidential Application'}
+                  <Send className="w-4 h-4" />
+                  <span>{submitting ? 'Transmitting Profile...' : 'Submit Confidential Application'}</span>
                 </button>
                 <p className="text-[11px] text-grey text-center mt-2">
                   🔒 We respect your privacy. Profiles are never shared without explicit consent.

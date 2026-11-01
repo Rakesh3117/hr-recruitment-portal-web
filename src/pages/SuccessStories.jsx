@@ -3,7 +3,9 @@ import {
   Quote, 
   ArrowRight, 
   ShieldCheck, 
-  Award
+  Award,
+  Briefcase,
+  Building2
 } from 'lucide-react';
 import VerifiedBadge from '../components/common/VerifiedBadge';
 import testimonialsData from '../data/testimonials.mocks.js';
@@ -240,15 +242,18 @@ const SuccessStories = () => {
           <div className="pt-3 flex flex-wrap justify-center gap-3">
             <Link
               to="/employers"
-              className="px-7 py-3.5 rounded-xl text-sm font-bold text-white bg-teal hover:bg-teal-hover shadow-md"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-white bg-teal hover:bg-teal-hover shadow-md group"
             >
-              Submit Your Requirement →
+              <Briefcase className="w-4 h-4 text-white" />
+              <span>Submit Your Requirement</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </Link>
             <Link
               to="/partner-with-us"
-              className="px-7 py-3.5 rounded-xl text-sm font-bold text-primary bg-white hover:bg-lavender-light border border-border shadow-xs"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-primary bg-white hover:bg-lavender-light border border-border shadow-xs"
             >
-              Explore Enterprise Partnership
+              <Building2 className="w-4 h-4 text-primary" />
+              <span>Explore Enterprise Partnership</span>
             </Link>
           </div>
         </div>

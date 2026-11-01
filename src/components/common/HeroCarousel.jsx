@@ -18,14 +18,14 @@ const slides = [
   {
     id: 1,
     tagline: 'Recruit. Train. Place. Grow.',
-    headlinePart1: 'Empowering Business Growth Through',
-    highlight: 'Innovation',
-    headlinePart2: '& Talent',
-    description: 'VM Human Resource Management Private Limited connects businesses with skilled talent and delivers comprehensive corporate training, software consulting, and workforce solutions.',
-    primaryBtn: { text: 'View Services', link: '/services' },
-    secondaryBtn: { text: 'Contact Us', link: '/contact' },
+    headlinePart1: 'Find Your Next Opportunity &',
+    highlight: 'Apply for Jobs',
+    headlinePart2: 'with Top Companies',
+    description: 'VM Human Resource Management Private Limited connects ambitious professionals with leading enterprises. Explore verified career openings, receive industry-aligned training, and get placed fast.',
+    primaryBtn: { text: 'Apply for Job', link: '/careers' },
+    secondaryBtn: { text: 'Hire Talent', link: '/contact' },
     image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1400&q=80',
-    floatingBadge1: { number: '10,000+', text: 'Placed Candidates', icon: TrendingUp },
+    floatingBadge1: { number: '2000+', text: 'Deployed Candidates', icon: TrendingUp },
     floatingBadge2: { number: '100%', text: 'Pre-Screened Profiles', icon: ShieldCheck }
   },
   {
@@ -34,11 +34,11 @@ const slides = [
     headlinePart1: 'Connecting Top-Tier Talent with',
     highlight: 'Leading',
     headlinePart2: 'Enterprises',
-    description: 'From specialized software engineers to leadership hiring and flexible contract staffing, we deliver verified, high-performance talent tailored to your needs.',
+    description: 'From executive leadership hiring to flexible contract staffing and role readiness, we deliver verified, high-performance talent tailored to your needs.',
     primaryBtn: { text: 'Hire Talent', link: '/contact' },
-    secondaryBtn: { text: 'Explore Careers', link: '/careers' },
+    secondaryBtn: { text: 'Apply for Job', link: '/careers' },
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1400&q=80',
-    floatingBadge1: { number: '500+', text: 'Corporate Clients', icon: Award },
+    floatingBadge1: { number: '100+', text: 'Happy Clients', icon: Award },
     floatingBadge2: { number: '24-48h', text: 'Fast Profile Turnaround', icon: Users }
   },
   {
@@ -46,9 +46,9 @@ const slides = [
     tagline: 'Skill Development & Placement Excellence',
     headlinePart1: 'Industry-Aligned Corporate',
     highlight: 'Training',
-    headlinePart2: '& Upskilling',
+    headlinePart2: '& Job Readiness',
     description: 'Bridging the competency gap with hands-on technical workshops, role readiness, and end-to-end placement support for modern organizations.',
-    primaryBtn: { text: 'Our Training Programs', link: '/services' },
+    primaryBtn: { text: 'Apply for Job', link: '/careers' },
     secondaryBtn: { text: 'Talk to a Recruiter', link: '/contact' },
     image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1400&q=80',
     floatingBadge1: { number: '10+ Years', text: 'Industry Experience', icon: Briefcase },
@@ -126,17 +126,22 @@ const HeroCarousel = () => {
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
               <Link
                 to={active.primaryBtn.link}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-white bg-[#0D274A] hover:bg-[#081B34] transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl text-sm font-bold text-white bg-[#0D274A] hover:bg-[#081B34] transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5 group"
               >
+                <Briefcase className="w-4 h-4 text-[#159FB4]" />
                 <span>{active.primaryBtn.text}</span>
-                <ArrowRight className="w-4 h-4 text-[#159FB4]" />
+                <ArrowRight className="w-4 h-4 text-[#159FB4] group-hover:translate-x-1 transition-transform" />
               </Link>
 
               <Link
                 to={active.secondaryBtn.link}
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl text-sm font-bold text-[#0D274A] bg-white hover:bg-slate-50 border border-slate-200 transition-all shadow-xs hover:shadow-sm hover:-translate-y-0.5"
               >
-                <Phone className="w-4 h-4 text-[#159FB4]" />
+                {active.secondaryBtn.link === '/careers' ? (
+                  <Briefcase className="w-4 h-4 text-[#159FB4]" />
+                ) : (
+                  <Phone className="w-4 h-4 text-[#159FB4]" />
+                )}
                 <span>{active.secondaryBtn.text}</span>
               </Link>
             </div>

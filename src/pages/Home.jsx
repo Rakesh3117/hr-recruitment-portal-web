@@ -7,8 +7,8 @@ import {
   Mail,
   MapPin,
   GraduationCap,
-  Code2,
-  Layers,
+  Briefcase,
+  UserCheck,
   ChevronRight,
   Send,
   Sparkles
@@ -19,39 +19,39 @@ import HeroCarousel from '../components/common/HeroCarousel.jsx';
 const Home = () => {
   const { contactInfo, company, milestones } = statsData;
 
-  // 4 Core services with contextual HR & tech imagery
+  // 4 Core HR & Staffing Services
   const coreServices = [
     {
-      id: 'software-development',
-      title: 'Software Development',
-      desc: 'Crafting custom applications and tech solutions tailored to meet your enterprise business objectives.',
-      icon: <Code2 className="w-5 h-5 text-[#159FB4]" />,
-      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80',
-      badge: 'Tech Engineering'
+      id: 'recruitment-staffing',
+      title: 'Recruitment & Staffing',
+      desc: 'Connecting companies with vetted professionals through permanent, direct-hire, and volume workforce solutions.',
+      icon: <Users className="w-5 h-5 text-[#159FB4]" />,
+      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80',
+      badge: 'Talent Acquisition'
     },
     {
-      id: 'it-consulting',
-      title: 'IT Services & Consulting',
-      desc: 'Delivering expert technology consulting to optimize your IT infrastructure, team strategy, and execution.',
-      icon: <Layers className="w-5 h-5 text-[#0D274A]" />,
-      image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80',
-      badge: 'Strategy'
+      id: 'executive-search',
+      title: 'Executive Search & Leadership',
+      desc: 'Confidential executive search mapping industry leaders and CXOs to steer enterprise transformation.',
+      icon: <UserCheck className="w-5 h-5 text-[#0D274A]" />,
+      image: 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=600&q=80',
+      badge: 'Leadership Mandates'
     },
     {
       id: 'training-development',
       title: 'Training & Skill Development',
-      desc: 'Targeted corporate readiness and technical skill workshops that prepare candidates for day-one productivity.',
+      desc: 'Targeted corporate readiness and domain skill workshops that prepare candidates for day-one productivity.',
       icon: <GraduationCap className="w-5 h-5 text-[#C59B4B]" />,
       image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=600&q=80',
       badge: 'Upskilling'
     },
     {
-      id: 'recruitment-staffing',
-      title: 'Recruitment & Staffing',
-      desc: 'Connecting companies with vetted professionals through permanent, contract, and volume workforce solutions.',
-      icon: <Users className="w-5 h-5 text-[#159FB4]" />,
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80',
-      badge: 'Talent Acquisition'
+      id: 'contract-staffing',
+      title: 'Contract Staffing & Compliance',
+      desc: 'Agile workforce deployment with 100% statutory, labor code, PF/ESIC, and payroll management.',
+      icon: <Briefcase className="w-5 h-5 text-[#159FB4]" />,
+      image: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80',
+      badge: 'Workforce Solutions'
     }
   ];
 
@@ -140,8 +140,9 @@ const Home = () => {
                 <div className="pt-3 border-t border-slate-100">
                   <Link
                     to="/services"
-                    className="inline-flex items-center gap-1 text-xs font-bold text-[#159FB4] group-hover:text-[#0D274A] transition-colors"
+                    className="inline-flex items-center gap-1.5 text-xs font-bold text-[#159FB4] group-hover:text-[#0D274A] transition-colors"
                   >
+                    <Briefcase className="w-3.5 h-3.5" />
                     <span>Learn More</span>
                     <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </Link>
@@ -172,7 +173,7 @@ const Home = () => {
               </h2>
 
               <p className="text-sm text-slate-300 leading-relaxed">
-                {company.legalName} specializes in providing customized IT services, corporate training, and staffing solutions. Dedicated to driving business growth through innovation and strategic workforce management. Our expert team collaborates closely with clients to optimize operations and achieve sustainable success in a dynamic environment.
+                {company.legalName} specializes in executive recruitment, corporate training, and comprehensive workforce staffing solutions. Dedicated to driving business growth through strategic workforce management and verified talent pipelines. Our expert team collaborates closely with clients to optimize staffing and achieve sustainable success.
               </p>
 
               {/* 3 Value Pillars */}
@@ -365,10 +366,10 @@ const Home = () => {
                       className="w-full px-3.5 py-2.5 rounded-lg border border-slate-200 text-sm text-[#0D274A] focus:ring-2 focus:ring-[#159FB4] focus:outline-none bg-slate-50"
                       required
                     >
-                      <option value="Software Development">Software Development</option>
-                      <option value="Digital Marketing">Digital Marketing</option>
-                      <option value="IT Services & Consulting">IT Services & Consulting</option>
                       <option value="Recruitment & Staffing">Recruitment & Staffing</option>
+                      <option value="Executive Search & Leadership">Executive Search & Leadership</option>
+                      <option value="Training & Skill Development">Training & Skill Development</option>
+                      <option value="Contract Staffing & Compliance">Contract Staffing & Compliance</option>
                     </select>
                   </div>
 

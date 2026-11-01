@@ -9,7 +9,8 @@ import {
   User, 
   Mail, 
   Phone, 
-  GraduationCap
+  GraduationCap,
+  RotateCcw
 } from 'lucide-react';
 import jobsData from '../data/jobs.mocks.js';
 import ApplyModal from '../components/common/ApplyModal';
@@ -178,9 +179,10 @@ const JobSeekers = () => {
                 <button
                   type="button"
                   onClick={handleReset}
-                  className="px-6 py-2.5 rounded-xl text-sm font-semibold text-primary bg-lavender-light hover:bg-lavender-soft transition-colors duration-fast cursor-pointer"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-semibold text-primary bg-lavender-light hover:bg-lavender-soft transition-colors duration-fast cursor-pointer"
                 >
-                  Submit Another Profile
+                  <RotateCcw className="w-4 h-4" />
+                  <span>Submit Another Profile</span>
                 </button>
               </div>
             </div>
@@ -510,9 +512,10 @@ const JobSeekers = () => {
                 <button
                   type="button"
                   onClick={() => setSelectedJobForModal(job)}
-                  className="px-3.5 py-1.5 rounded-lg text-xs font-bold text-white bg-primary hover:bg-primary-hover transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold text-white bg-primary hover:bg-primary-hover transition-colors cursor-pointer"
                 >
-                  Apply Now
+                  <Send className="w-3.5 h-3.5" />
+                  <span>Apply Now</span>
                 </button>
               </div>
             </div>

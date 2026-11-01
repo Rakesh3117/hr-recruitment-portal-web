@@ -10,7 +10,9 @@ import {
   ShieldCheck, 
   Clock, 
   Users, 
-  Share2
+  Share2,
+  Send,
+  ArrowRight
 } from 'lucide-react';
 import jobsData from '../data/jobs.mocks.js';
 import domainsData from '../data/domains.mocks.js';
@@ -111,9 +113,10 @@ const JobDetails = () => {
             <button
               type="button"
               onClick={() => setIsApplyModalOpen(true)}
-              className="w-full sm:w-auto px-8 py-3.5 rounded-xl text-sm font-bold text-white bg-primary hover:bg-primary-hover shadow-md hover:shadow-lg transition-all cursor-pointer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl text-sm font-bold text-white bg-primary hover:bg-primary-hover shadow-md hover:shadow-lg transition-all cursor-pointer"
             >
-              Apply Now
+              <Send className="w-4 h-4 text-white" />
+              <span>Apply Now</span>
             </button>
             <button
               type="button"
@@ -211,9 +214,10 @@ const JobDetails = () => {
             <button
               type="button"
               onClick={() => setIsApplyModalOpen(true)}
-              className="px-8 py-3.5 rounded-xl text-sm font-bold text-white bg-primary hover:bg-primary-hover shadow-md hover:shadow-lg transition-all cursor-pointer"
+              className="inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl text-sm font-bold text-white bg-primary hover:bg-primary-hover shadow-md hover:shadow-lg transition-all cursor-pointer"
             >
-              Apply Now
+              <Send className="w-4 h-4 text-white" />
+              <span>Apply Now</span>
             </button>
           </div>
 
@@ -311,9 +315,11 @@ const JobDetails = () => {
             </p>
             <Link
               to="/employers"
-              className="inline-block text-xs font-bold text-teal hover:underline pt-1"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-teal hover:underline pt-1 group"
             >
-              Submit a Requirement →
+              <Briefcase className="w-3.5 h-3.5 text-teal" />
+              <span>Submit a Requirement</span>
+              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
             </Link>
           </div>
 

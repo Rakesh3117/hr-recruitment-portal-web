@@ -9,7 +9,10 @@ import {
   Mail, 
   Phone, 
   MapPin, 
-  ArrowRight
+  ArrowRight,
+  RotateCcw,
+  Home,
+  PhoneCall
 } from 'lucide-react';
 
 const Employers = () => {
@@ -136,15 +139,17 @@ const Employers = () => {
                   <button
                     type="button"
                     onClick={handleReset}
-                    className="px-6 py-2.5 rounded-xl text-sm font-semibold text-primary bg-lavender-light hover:bg-lavender-soft transition-colors duration-fast cursor-pointer"
+                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-semibold text-primary bg-lavender-light hover:bg-lavender-soft transition-colors duration-fast cursor-pointer"
                   >
-                    Submit Another Requirement
+                    <RotateCcw className="w-4 h-4" />
+                    <span>Submit Another Requirement</span>
                   </button>
                   <Link
                     to="/"
-                    className="px-6 py-2.5 rounded-xl text-sm font-semibold text-navy bg-background-secondary hover:bg-border transition-colors duration-fast"
+                    className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl text-sm font-semibold text-navy bg-background-secondary hover:bg-border transition-colors duration-fast"
                   >
-                    Back to Home
+                    <Home className="w-4 h-4" />
+                    <span>Back to Home</span>
                   </Link>
                 </div>
               </div>
@@ -421,10 +426,11 @@ const Employers = () => {
               <div className="pt-2">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-primary-hover"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-primary hover:text-primary-hover group"
                 >
+                  <PhoneCall className="w-3.5 h-3.5 text-teal" />
                   <span>Go to Contact Hub</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </Link>
               </div>
             </div>

@@ -65,19 +65,14 @@ export const statsData = {
       description: "Decade of cumulative expertise across recruitment and workforce training."
     },
     {
-      number: "500+",
+      number: "100+",
       label: "Happy Clients",
       description: "Corporate partners relying on our talent acquisition and staffing solutions."
     },
     {
-      number: "10,000+",
+      number: "2000+",
       label: "Deployed Candidates",
       description: "Pre-screened professionals placed in high-impact career opportunities."
-    },
-    {
-      number: "250+",
-      label: "Number of Projects",
-      description: "Successful turnkey staffing, training, and volume recruitment engagements."
     },
     {
       number: "50+",
